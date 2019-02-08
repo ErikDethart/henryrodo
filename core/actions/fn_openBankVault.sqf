@@ -1,10 +1,6 @@
-/*
-	File: fn_openBankVault.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Start drilling the bank vault door.
-*/
+//	File: fn_openBankVault.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Start drilling the bank vault door.
 
 if (life_action_in_use) exitWith {};
 if (life_bank_drilling) exitWith {hint "The bank vault is already being drilled!"};

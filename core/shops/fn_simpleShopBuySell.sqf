@@ -1,10 +1,6 @@
-/*
-	File: fn_simpleShopBuySell.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Master handling of the weapon shop for buying / selling an item.
-*/
+//	File: fn_simpleShopBuySell.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Master handling of the weapon shop for buying / selling an item.
 private["_price","_item","_itemInfo","_bad","_exit","_qty"];
 if((lbCurSel 38403) == -1) exitWith {hint "You need to select an item to buy/sell."};
 _price = lbValue[38403,(lbCurSel 38403)]; if(isNil "_price") then {_price = 0;};
@@ -30,7 +26,7 @@ if(_bad != "") exitWith {hint _bad};
 if ((uiNamespace getVariable ["Weapon_Shop", ""]) == "rebel") then
 {
 	_point = capture_pole_1 getVariable["capture_data",["Drug Cartel","0",0.5]];
-	
+
 	_armsDealer = ((_point select 1) != "0" && (_point select 1) == life_gang && (_point select 2) == 1);
 	_turfOwned = 0;
 	{ if (_x select 1 == life_gang) then { _turfOwned = _turfOwned + 1; } } foreach life_turf_list;

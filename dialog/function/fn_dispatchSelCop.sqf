@@ -1,12 +1,6 @@
-/*
-	File: fn_dispatchSelCop.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Player has selected a cop as target in dispatch.
-	Please ask for permission to use this and stop stealing my stuff.
-*/
-
+//	File: fn_dispatchSelCop.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Player has selected a cop as target in dispatch.
 disableSerialization;
 
 if (isNull (findDisplay 39500)) exitWith {};

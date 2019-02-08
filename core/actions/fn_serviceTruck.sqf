@@ -1,11 +1,9 @@
-/*
-	File: fn_serviceTruck.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Main functionality for the service truck.
-	*Needs to be revised for new system and flow*
-*/
+//	File: fn_serviceTruck.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description:
+//	Main functionality for the service truck.
+//	*Needs to be revised for new system and flow*
+
 private["_nearby"];
 _nearby = nearestObjects[(vehicle player),["Car","Ship","Air"],10];
 

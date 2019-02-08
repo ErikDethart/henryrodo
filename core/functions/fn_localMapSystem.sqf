@@ -1,6 +1,5 @@
-/*
-	Description: Initiates the local map system, sets the zones, etc
-*/
+//	Description: Initiates the local map system, sets the zones, etc
+
 localMap_zoneLocations = [
 	[[3598.78,13113,3.903], 600, "zone1"],  	//Kavala
 	[[4493.07,14035.8,0], 350, "zone2"], 		//Kavala checkpoint
@@ -130,7 +129,7 @@ private["_zone","_zoneCheck"];
 				};
 			};
 		};
-		
+
 		if(!((_x select 0) in _shitObjects)) then {
 			missionNamespace setVariable [(format["localMap_%1_objectList",_zone]),(missionNamespace getVariable [(format["localMap_%1_objectList",_zone]),[]]) + [_x]];
 		};
@@ -157,7 +156,7 @@ localMap_fnc_loadArea = {
 	if(mapDebugEnabled) then {
 		hint format["Dynamicaly loaded %1 objects in zone: %2", count (call compile format["localMap_%1_activeObjects",_this]),_this];
 	};
-	
+
 
 	(call compile format["localMap_%1_status = 'active';",_this]);
 };
@@ -175,11 +174,11 @@ localMap_fnc_unloadArea = {
 	}foreach (call compile format["localMap_%1_activeObjects",_this]);
 
 	(call compile format["localMap_%1_activeObjects = [];",_this]);
-	
+
 	if(mapDebugEnabled) then {
 		hint format["Dynamicaly un-loaded %1 objects in zone: %2", _objectsRemoved,_this];
 	};
-	
+
 	(call compile format["localMap_%1_status = 'idle';",_this]);
 };
 

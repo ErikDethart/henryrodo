@@ -1,11 +1,6 @@
-/*
-	File: fn_inviteGang.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Shows invitation UI or sends invitation to other player
-*/
-
+//	File: fn_inviteGang.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Shows invitation UI or sends invitation to other player
 private ["_send", "_allPlayers", "_display", "_units"];
 
 _send = [_this,0,false,[false]] call BIS_fnc_param;

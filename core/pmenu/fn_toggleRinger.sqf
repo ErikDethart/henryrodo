@@ -1,10 +1,7 @@
-/*
-	File: fn_sidechat.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Sidechat
-*/
+//	File: fn_sidechat.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Sidechat
+
 if(life_ringer) then
 {
 	life_ringer = false;

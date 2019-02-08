@@ -1,10 +1,7 @@
-/*
-	File: fn_healHospital.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Doesn't matter, will be revised later.
-*/
+//	File: fn_healHospital.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Doesn't matter, will be revised later.
+
 if(!([50] call life_fnc_debitCard)) exitWith {};
 titleText["The doctor is healing you... don't be scared...","PLAIN"];
 uiSleep 7;

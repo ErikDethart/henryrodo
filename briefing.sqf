@@ -10,16 +10,16 @@ player createDiarySubject ["civrules","Civ Rules"];
 player createDiarySubject ["Features","Features"];
 player createDiarySubject ["controls","Controls"];
 
-/*  Example
-	player createDiaryRecord ["", //Container
-		[
-			"", //Subsection
-				"
-				TEXT HERE<br/><br/>
-				"
-		]
-	];
-*/
+//  Example
+//	player createDiaryRecord ["", //Container
+//		[
+//			"", //Subsection
+//				"
+//				TEXT HERE<br/><br/>
+//				"
+//		]
+//	];
+
 
 // Asylum Section
 	player createDiaryRecord ["asylum",
@@ -31,7 +31,7 @@ player createDiarySubject ["controls","Controls"];
 				"
 		]
 	];
-	
+
 	player createDiaryRecord ["asylum",
 		[
 			"Website/Forums",
@@ -41,7 +41,7 @@ player createDiarySubject ["controls","Controls"];
 				"
 		]
 	];
-		
+
 	player createDiaryRecord ["asylum",
 		[
 			"Loot Crates",
@@ -52,7 +52,7 @@ player createDiarySubject ["controls","Controls"];
 				"
 		]
 	];
-	
+
 	player createDiaryRecord ["asylum",
 		[
 			"Donations",
@@ -63,8 +63,8 @@ player createDiarySubject ["controls","Controls"];
 				"
 		]
 	];
-		
-	
+
+
 // General Rules
 
 	player createDiaryRecord ["generalrules",
@@ -74,7 +74,7 @@ player createDiarySubject ["controls","Controls"];
 				1: Vehicles are not a weapon. You can use a vehicle to defend yourself if you are in immediate danger and the threat is directly in front of your vehicle. Bannable uses of vehicles include but are not limited to: running innocent people over for fun, ramming into stationary vehicles with the intent to blow them up, turning around to run over someone shooting at you from behind.<br/>
 				2: Vehicle mounted weapons fall under the same rules as any other weapon.<br/>
 				3: Disconnecting or re-spawning while being engaged by another player is a bannable offense (Combat Logging). Claims of RDM/other rule violations are not a defense for Combat Logging.<br/>
-				4: Illegal areas are marked in red text on the map and include drug fields, drug processing areas, drug dealers, black market factories, cartels, and rebel outposts.<br/>  
+				4: Illegal areas are marked in red text on the map and include drug fields, drug processing areas, drug dealers, black market factories, cartels, and rebel outposts.<br/>
 				5: Players in and around illegal areas are responsible for their own survival as <b>RDM RULES DO NOT APPLY</b>. See our forums for a detailed list of the illegal area ranges.<br/>
 				6: Random Death Matching (RDM):  Is the act of killing a player outside of an illegal area without valid RP reason and communication via in-game direct voice communication or cell phone text messages.  RDM is  a bannable offence. Example: you tell someone to STOP and put their hands on their head. If they comply you can role-play out robbing them, if they do not you are allowed to kill. If someone complies with your demands, you must continue the roleplay and find another reason to kill them.<br/>
 				7: Warning shots are allowed at helicopters that are hovering or attempting to land near your position.  If the helicopter does not turn away, shooting it down is allowed. Remember, sufficient time must be given to allow the pilot to react and decide to leave.<br/>
@@ -87,7 +87,7 @@ player createDiarySubject ["controls","Controls"];
 				"
 		]
 	];
-	
+
 	// Illegal Areas
 
 	player createDiaryRecord ["redzones",
@@ -113,7 +113,7 @@ player createDiarySubject ["controls","Controls"];
 				"
 		]
 	];
-	
+
 // Laws
 
 	player createDiaryRecord ["laws",
@@ -138,7 +138,7 @@ player createDiarySubject ["controls","Controls"];
 				"
 		]
 	];
-	
+
 // Cop Rules
 	player createDiaryRecord ["coprules",
 		[
@@ -159,7 +159,7 @@ player createDiarySubject ["controls","Controls"];
 		]
 
 	];
-	
+
 	player createDiaryRecord ["coprules",
 		[
 		"Chain of Command",
@@ -176,7 +176,7 @@ player createDiarySubject ["controls","Controls"];
 			"
 		]
 	];
-	
+
 // Civ Rules
 	player createDiaryRecord ["civrules",
 		[
@@ -188,18 +188,18 @@ player createDiarySubject ["controls","Controls"];
 				"
 		]
 	];
-	
+
 // Housing Section
 	player createDiaryRecord ["features",
 		[
 			"Features",
 				"
-					1: Player Housing: The first step to owning a home is obtaining a home owner license from the DMV. With the license, find a vacant home in the world and you may see a buy house action menu option. You may lock doors of your homes and with access to Home Improvements, place storage containers in your homes. Larger and more expensive homes will offer more storage ability. You have the ability to spawn at your home upon death. Additionally, you may own garages and access your garage from them! (Be careful, vehicles larger than the garage may result in explosions).<br/>    
+					1: Player Housing: The first step to owning a home is obtaining a home owner license from the DMV. With the license, find a vacant home in the world and you may see a buy house action menu option. You may lock doors of your homes and with access to Home Improvements, place storage containers in your homes. Larger and more expensive homes will offer more storage ability. You have the ability to spawn at your home upon death. Additionally, you may own garages and access your garage from them! (Be careful, vehicles larger than the garage may result in explosions).<br/>
 					2: Hostage Taking: You can take hostages in Asylum Life by having another player press the TAB key, this will activate surrender mode. You may also shoot your target with a less-lethal weapon. When your target is in surrender mode or downed, you can restrain, escort, put into, and pull them out of vehicles.<br/>
-					3: Cartels: Gangs may take control of various cartel locations in order to gain financial or other benefits. Claim your territory!<br/>    
+					3: Cartels: Gangs may take control of various cartel locations in order to gain financial or other benefits. Claim your territory!<br/>
 					4: Turfs: Much like Cartels, Turfs are capturable by gangs and may be used as a spawn location. Capture of multiple Turfs can result in various discounts and perks.<br/>
-					5: Bounty Hunting: Take justice into your own hands. Gear up and track up to four wanted fugitives across the island. Return them to a courthouse or the Skiptracer Base for arrest and be rewarded with cash!<br/>        
-					6: Full Saving: On Aslyum Life, everything saves. Your location, your equipment, your inventory items, and your vehicles.<br/>     
+					5: Bounty Hunting: Take justice into your own hands. Gear up and track up to four wanted fugitives across the island. Return them to a courthouse or the Skiptracer Base for arrest and be rewarded with cash!<br/>
+					6: Full Saving: On Aslyum Life, everything saves. Your location, your equipment, your inventory items, and your vehicles.<br/>
 					7: Crafting System: By gathering multiple resources from various areas, you can now combine them to create new materials and items. Visit a Firearms, Vehicle, or Black Market Factory to see the crafting recipes!<br/>
 					8: Racing: When prompted, join a Rally Race to compete for cash prizes!<br/>
 					9: Parole: When caught by the police, a civilian may be given the option to be placed on parole. Violating of parole will alert the police to your location, so stay out of trouble!<br/>
@@ -211,8 +211,8 @@ player createDiarySubject ["controls","Controls"];
 				"
 		]
 	];
-	
-	
+
+
 // Controls Section
 	player createDiaryRecord ["controls",
 		[
@@ -222,7 +222,7 @@ player createDiarySubject ["controls","Controls"];
 				4: Holster active weapon<br/>
 				5: Open phone messaging<br/>
 				6: Activate vehicle nitrous<br/><br/>
-				
+
 				TAB: Surrender<br/>
 				H: Holster active weapon<br/>
 				Y: Open player menu<br/>
@@ -230,7 +230,7 @@ player createDiarySubject ["controls","Controls"];
 				F: Siren (if cop or paramedic)<br/>
 				L: Speed radar (if cop)<br/>
 				T: Vehicle trunk<br/><br/>
-				
+
 				Custom 1: Open player menu<br/>
 				Custom 2: Pickup nearby items<br/>
 				Custom 3: Open virtual inventory<br/>

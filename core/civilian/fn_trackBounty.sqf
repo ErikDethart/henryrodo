@@ -1,11 +1,6 @@
-/*
-	File: fn_trackBounty.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Track a wanted criminal
-*/
-
+//	File: fn_trackBounty.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Track a wanted criminal
 private ["_chance","_animal","_animals","_msg","_error","_dir","_bearing","_comp","_distance","_message"];
 
 _isNew = true;

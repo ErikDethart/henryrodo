@@ -1,10 +1,7 @@
-/*
-	File: fn_impoundAction.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Impounds the vehicle
-*/
+//	File: fn_impoundAction.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Impounds the vehicle
+
 private["_vehicle","_type","_time","_price","_vehicleData","_upp","_ui","_progress","_pgText","_cP","_seize"];
 _seize = _this select 3;
 _vehicle = cursorTarget;
@@ -25,7 +22,7 @@ _countAmmo1 = count (_vehAmmo select 0);
 _exit = false;
 _sideVehicle = _vehicle getVariable["dbInfo",[""]] select 4;
 
-if(_sideVehicle == "cop") then 
+if(_sideVehicle == "cop") then
 {
 	{if(_x != "ToolKit") exitWith {_exit = true}} forEach (_vehItem select 0);
 	if(_countWeapons1 != 0 || _countAmmo1 != 0 || (_vehicle getVariable["Trunk",[[],0]]) select 1 > 0) then {_exit = true};
@@ -41,8 +38,8 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 	_vehicleData = _vehicle getVariable["vehicle_info_owners",[]];
 	if(count _vehicleData == 0) exitWith {deleteVehicle _vehicle};
 	_vehicleName = getText(configFile >> "CfgVehicles" >> (typeOf _vehicle) >> "displayName");
-	
-	if (_seize) then 
+
+	if (_seize) then
 	{
 [0,format["%1 your %2 is being seized by the police.",(_vehicleData select 0) select 1,_vehicleName]] remoteExecCall ["life_fnc_broadcast",-2];
 		_upp = "Seizing Vehicle";
@@ -50,7 +47,7 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 [0,format["%1 your %2 is being impounded by the police.",(_vehicleData select 0) select 1,_vehicleName]] remoteExecCall ["life_fnc_broadcast",-2];
 		_upp = "Impounding Vehicle";
 	};
-	
+
 	life_action_in_use = true;
 
 	disableSerialization;
@@ -73,7 +70,7 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 		if (!life_action_in_use) exitWith {};
 	};
 	5 cutText ["","PLAIN"];
-	
+
 	if(player distance _vehicle > 10) exitWith {hint "Action cancelled."; life_action_in_use = false;};
 	if(!alive player) exitWith {life_action_in_use = false;};
 	if (!life_action_in_use) exitWith {};
@@ -88,8 +85,8 @@ if((_vehicle isKindOf "Car") || (_vehicle isKindOf "Air") || (_vehicle isKindOf 
 				case (_vehicle isKindOf "Ship"): {_price = life_impound_boat;};
 				case (_vehicle isKindOf "Air"): {_price = life_impound_air;};
 			};
-			
-			if (_seize) then 
+
+			if (_seize) then
 			{
 				_vehicle setVariable ["insured", false, true];
 [_vehicle] remoteExecCall ["ASY_fnc_vehicleDead",2];

@@ -1,10 +1,6 @@
-/*
-	File: fn_useItem.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Main function for item effects and functionality through the player menu.
-*/
+//	File: fn_useItem.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Main function for item effects and functionality through the player menu.
 
 if (player getVariable ["restrained", false]) exitWith {};
 
@@ -19,7 +15,7 @@ switch (true) do
 	{
 		hint "Loot crate keys are used to open loot crates, which can get you awesome and rare rewards. You can find loot crates while exploring the world, but they can also be purchased from the market.";
 	};
-	
+
 	case (_item == "water" or _item == "coffee" or _item == "soda"):
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then
@@ -28,7 +24,7 @@ switch (true) do
 			if (life_revive_fatigue == 0) then { player setFatigue 0; };
 		};
 	};
-	
+
 	case (_item in ["beer","moonshine","whiskeyc_1","whiskeyc_2","whiskeyc_3","whiskeyr_1","whiskeyr_2","whiskeyr_3","scotch_1","scotch_2","scotch_3","rum_0","rum_1","rum_2","rum_3","gingerale_0","gingerale_1","gingerale_2","gingerale_3"]):
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then
@@ -37,7 +33,7 @@ switch (true) do
 			[_item] spawn life_fnc_beer;
 		};
 	};
-	
+
 	case (_item in ["treasure_1","treasure_2","treasure_3","treasure_4","treasure_5"]):
 	{
 		closeDialog 0;
@@ -48,13 +44,13 @@ switch (true) do
 			hint "The map appears to show a mysterious jungle on a strange island, but otherwise seems to be worthless.";
 		};
 	};
-	
+
 	case (_item == "shovel"):
 	{
 		while {dialog} do {closeDialog 0};
 		[] spawn life_fnc_dig;
 	};
-	
+
 	case (_item == "ducttape"):
 	{
 		if(([false,"plateMetal",1] call life_fnc_handleInv)) then
@@ -68,7 +64,7 @@ switch (true) do
 			hint "You could craft a shank with this if you had something hard and sharp.";
 		};
 	};
-	
+
 	case (_item == "campfire"):
 	{
 		if (vehicle player != player) exitWith{ _exit = true; hint "Starting a fire in a vehicle is hazardous to your health!"};
@@ -83,7 +79,7 @@ switch (true) do
 			_fire addAction["Clean Up Campfire",{deleteVehicle cursorObject},cursorObject,-1,false,false,"",'!isNull cursorObject && (player distance cursorObject) < 4 && (typeOf cursorObject) == "Land_Campfire_F" '];
 		};
 	};
-	
+
 	case (_item == "blindfold"):
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then
@@ -91,22 +87,22 @@ switch (true) do
 			[] spawn life_fnc_blindfold;
 		};
 	};
-	
+
 	case (_item in ["","lootcrate1"] && life_inv_lootcrate1 > 0):
 	{
 		[1] call life_fnc_inspectLootCrate;
 	};
-	
+
 	case (_item in ["","lootcrate2"] && life_inv_lootcrate2 > 0):
 	{
 		[2] call life_fnc_inspectLootCrate;
 	};
-	
+
 	case (_item in ["","lootcrate3"] && life_inv_lootcrate3 > 0):
 	{
 		[3] call life_fnc_inspectLootCrate;
 	};
-	
+
 /*	case (_item == "woodaxe"):
 	{
 		[] spawn life_fnc_woodAxe;
@@ -116,35 +112,35 @@ switch (true) do
 	{
 		titleText["This item is used via the action menu while looking at an injured person.","PLAIN"];
 	};
-	
+
 	case (_item == "redgull"):
 	{
 		closeDialog 0;
 		[] spawn life_fnc_redgull;
 	};
-	
+
 	case (_item == "vammo"):
 	{
 		[] spawn life_fnc_vehAmmo;
 	};
-	
+
 	/*case (_item == "protest"):
 	{
 		[] spawn life_fnc_protest;
 	};*/
-	
+
 	case(_item in ["roadCone","roadBarrier","cncBarrier","cncBarrierL","barGate","bagwallshort","bagwalllong","bagwallround","razorwire"]):
 	{
 		if (!(75 in life_talents) && playerSide == west) exitWith { hint "You have no idea how to use this."; };
 		[_item] spawn life_fnc_placeObject;
 	};
-	
+
 	case(_item == "ladder"):
 	{
 		if (life_roleSWAT != 2) exitWith { hint "This can only be used by the SWAT team leader."; };
 		[_item] spawn life_fnc_placeObject;
 	};
-	
+
 	case (_item == "pcp"):
 	{
 		if(([false,_item,1] call life_fnc_handleInv)) then
@@ -157,11 +153,11 @@ switch (true) do
 				player enableFatigue false;
 				waitUntil {!alive player OR ((time - life_pcp_effect) > (5 * 60))};
 				player enableFatigue true;
-				
+
 			};
 		};
 	};
-	
+
 	case (_item == "spikeStrip"):
 	{
 		if(!isNull life_spikestrip) exitWith {hint "You already have a Spike Strip active in deployment"};
@@ -175,17 +171,17 @@ switch (true) do
 	{
 		[] spawn life_fnc_searchWreck;
 	};
-		
+
 	case (_item == "nitro"):
 	{
 		[] spawn life_fnc_nitro;
 	};
-	
+
 	case (_item == "speedbomb"):
 	{
 		[] spawn life_fnc_speedBomb;
 	};
-	
+
 	case (_item == "caralarm"):
 	{
 		[_item] spawn life_fnc_alarm;
@@ -194,63 +190,63 @@ switch (true) do
 	{
 		[_item] spawn life_fnc_alarm;
 	};
-	
+
 	case (_item == "manflesh"):
 	{
 		hint "Human organs can't be eaten. Maybe if they were cooked on a fire?";
 	};
-	
+
 	case (_item == "fuelF"):
 	{
 		if(vehicle player != player) exitWith {hint "You can't refuel the vehicle while in it!"};
 		[] spawn life_fnc_jerryRefuel;
 	};
-	
+
 	case (_item ==  "adrenalineShot"):
 	{
 		[] spawn life_fnc_adrenalineShot;
 	};
-	
+
 	case (_item == "lockpick"):
 	{
 		[] spawn life_fnc_lockpick;
 	};
-	
+
 	case (_item in ["storage1","storage2","agingbarrel"]):
 	{
 		[_item] call life_fnc_placeStorage;
 	};
-	
+
 	case (_item in ["manfleshp","berry","ginger","banana","apple","salema","ornate","mackerel","tuna","mullet","catshark","turtle","turtlesoup","donuts","tbacon","peach","redburger","chickenp","dogp","sheepp","goatp","rabbitp","snakep","toasty","sandwich","kebab","donerkebab"]):
 	{
 		[_item] call life_fnc_eatFood;
 	};
-	
+
 	case (_item == "tracker"):
 	{
 		[] spawn life_fnc_tracker;
 	};
-		
+
 	case (_item == "pickaxe"):
 	{
 		[] spawn life_fnc_pickAxeUse;
 	};
-	
+
 	case (_item in ["marijuana","marijuanam","cocapaste"]):
 	{
 		[_item] spawn life_fnc_marijuana;
 	};
-	
+
 	case (_item == "cocainep"):
 	{
 		[] spawn life_fnc_cocaine;
 	};
-	
+
 	case (_item == "heroinp"):
 	{
 		[] spawn life_fnc_heroin;
 	};
-	
+
 	case (_item == "meth"):
 	{
 		[] spawn life_fnc_meth;
@@ -260,25 +256,25 @@ switch (true) do
 	{
 		[] spawn life_fnc_crank;
 	};
-	
+
 	case (_item in ["tent1","tent2"]):
 	{
 		[_item] spawn life_fnc_tent;
 	};
-	
+
 	case (_item == "bank_money"):
 	{
 		if (time - (player getVariable ["banktrace",-1000]) < 400) exitWith {hint "The dye packs are still active, so you can't break the money bands yet."};
 		["cash","add",life_inv_bank_money] call life_fnc_updateMoney;
 		hint format["You have broken down %1 banded bank money into cash.",[life_inv_bank_money] call life_fnc_numberText];
-		life_inv_bank_money=0;	
+		life_inv_bank_money=0;
 	};
-	
+
 	default
 	{
 		hint "This item isn't usable.";
 	};
 };
-	
+
 [false] spawn life_fnc_inventory;
 [] call life_fnc_hudUpdate;

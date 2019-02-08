@@ -1,11 +1,9 @@
 #include "..\..\macro.h"
 if(scriptAvailable(0.275)) exitWith {};
-/*
-	File: fn_createDialogCustom.sqf
-	Author: Poseidon
+//	File: fn_createDialogCustom.sqf
+//	Author: Poseidon
+//	Description: Adds extra functionality for creating dialogs such as animations.
 
-	Description: Adds extra functionality for creating dialogs such as animations.
-*/
 params [["_dialogName", "", [""]],["_asDisplay", false, [false]],["_closeLast", true, [false]]];
 private _dialogID = getNumber(missionconfigfile >> _dialogName >> "idd");
 private _location = getText(missionconfigfile >> _dialogName >> "location");

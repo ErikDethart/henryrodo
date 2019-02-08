@@ -1,10 +1,6 @@
-/*
-	File: fn_donation.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Populate donation reward display app for smartphone
-*/
+//	File: fn_donation.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Populate donation reward display app for smartphone
 private["_display","_icon","_rewards"];
 
 disableSerialization;

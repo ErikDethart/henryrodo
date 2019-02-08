@@ -1,11 +1,6 @@
-/*
-	File: fn_virt_menu.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Initialize the virtual shop menu.
-*/
-
+//	File: fn_virt_menu.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Initialize the virtual shop menu.
 _unit = cursorTarget;
 if (isNull _unit) then { _unit = _this select 0; };
 

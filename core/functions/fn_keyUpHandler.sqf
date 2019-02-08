@@ -1,10 +1,7 @@
-/*
-	File: fn_keyUpHandler.sqf
-	Author: Skalicon & Paratus
+//	File: fn_keyUpHandler.sqf
+//	Author: Skalicon & Paratus
+//	Description: Main key handler for event 'keyDown'
 
-	Description:
-	Main key handler for event 'keyDown'
-*/
 private ["_handled","_veh","_locked","_owners","_index","_weapon","_items","_primary","_ammo"];
 params [
 	"_ctrl",

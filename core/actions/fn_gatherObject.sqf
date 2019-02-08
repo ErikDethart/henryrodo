@@ -1,10 +1,6 @@
-/*
-	File: fn_gatherObject.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Get berries off that bush!
-*/
+//	File: fn_gatherObject.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Get berries off that bush!
 
 private["_bush","_var","_item","_name"];
 

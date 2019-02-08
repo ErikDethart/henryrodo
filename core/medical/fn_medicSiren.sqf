@@ -1,10 +1,6 @@
-/*
-	File: fn_medicSiren.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Starts the paramedic siren sound for other players
-*/
+//	File: fn_medicSiren.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Starts the paramedic siren sound for other players
 params [
 	["_vehicle",objNull,[objNull]],
 	"_logic"
@@ -16,6 +12,6 @@ for "_i" from 0 to 1 step 0 do {
 	if (count crew _vehicle isEqualTo 0) exitWith {};
 	if (!alive _vehicle) exitWith {};
 	if (isNull _vehicle || isNull _logic) exitWith {};
-	_logic say3D ["SirenMedic",650]; 
+	_logic say3D ["SirenMedic",650];
 	uiSleep 15;
 };

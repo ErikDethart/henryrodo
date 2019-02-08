@@ -1,10 +1,6 @@
-/*
-		File: fn_painkillers.sqf
-		Author: John "Paratus" VanderZwet
-		
-		Description: Removes pain effects
-*/
-
+//	File: fn_painkillers.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Removes pain effects
 _unit = cursorTarget;
 _target = [_this,3,objNull,[objNull]] call BIS_fnc_param; // index 3 due to addAction
 if (_target == player) then { _unit = player; };

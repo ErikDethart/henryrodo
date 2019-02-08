@@ -1,11 +1,8 @@
-/*
-	File: fn_dispatchMessage.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Process messaging actions in dispatch.
-	Please ask for permission to use this and stop stealing my stuff.
-*/
+//	File: fn_dispatchMessage.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description:
+//	Process messaging actions in dispatch.
+//	Please ask for permission to use this and stop stealing my stuff.
 
 disableSerialization;
 

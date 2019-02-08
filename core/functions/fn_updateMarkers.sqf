@@ -1,10 +1,7 @@
-/*
-	File: fn_updateMarkers.sqf
-	Author: Gnashes
-	
-	Description:
-	Changes settings of selected markers from the settings menu.
-*/
+//	File: fn_updateMarkers.sqf
+//	Author: Gnashes
+//	Description: Changes settings of selected markers from the settings menu.
+
 params[
 	["_color",[],[[]]],
 	["_value",1,[0]]

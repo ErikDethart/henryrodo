@@ -1,11 +1,9 @@
 #include "..\..\macro.h"
 if(scriptAvailable(5)) exitWith {};
-/*
-	File: fn_infamyContractMenuChoose.sqf
-	Author: Poseidon
+//	File: fn_infamyContractMenuChoose.sqf
+//	Author: Poseidon
+//	Description: This is the page for picking a contract.
 
-	Description: This is the page for picking a contract.
-*/
 disableSerialization;
 private _display = life_infamyContractDialogInfo select 0;
 private _controlGroup = life_infamyContractDialogInfo select 1;

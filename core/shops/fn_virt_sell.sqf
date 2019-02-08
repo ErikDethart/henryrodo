@@ -1,10 +1,6 @@
-/*
-	File: fn_virt_sell.sqf
-	Author: Bryan "Tonic" Boardwine
-
-	Description:
-	Sell a virtual item to the store / shop
-*/
+//	File: fn_virt_sell.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Sell a virtual item to the store / shop
 private["_type","_index","_price","_var","_amount","_name","_point"];
 if((lbCurSel 2402) == -1) exitWith {};
 _type = lbData[2402,(lbCurSel 2402)];

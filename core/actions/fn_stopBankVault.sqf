@@ -1,10 +1,6 @@
-/*
-	File: fn_stopBankVault.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Stop bank vault drilling.
-*/
+//	File: fn_stopBankVault.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Stop bank vault drilling.
 
 if (life_action_in_use) exitWith {};
 if (!life_bank_drilling) exitWith {hint "The bank vault is not being drilled!"};

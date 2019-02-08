@@ -1,10 +1,6 @@
-/*
-	File: fn_buyLottery.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Prompt to buy a lottery ticket and process order if confirmed
-*/
+//	File: fn_buyLottery.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Prompt to buy a lottery ticket and process order if confirmed
 if ((call life_adminlevel) > 1) exitWith {};
 if(time - life_last_sold < 5) exitWith {hint "You cannot rapidly buy lotto tickets!"};
 _jackpot = life_configuration select 8;

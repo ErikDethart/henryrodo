@@ -1,10 +1,7 @@
-/*
-	File: fn_loadGear.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Used for loading cop saved gear loadout.
-*/
+//	File: fn_loadGear.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Used for loading cop saved gear loadout.
+
 private["_loadout","_primary","_launcher","_handgun","_magazines","_uniform","_vest","_backpack","_items","_primitems","_secitems","_handgunitems","_uitems","_vitems","_bitems","_handle"];
 
 _loadout = cop_gear;

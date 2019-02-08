@@ -1,10 +1,6 @@
-/*
-	File: fn_restrainAction.sqf
-	Author: Skalicon
-
-	Description:
-	Retrains the client.
-*/
+//	File: fn_restrainAction.sqf
+//	Author: Skalicon
+//	Description: Retrains the client.
 
 private["_enforcer","_target"];
 _enforcer = [_this,0,objNull,[objNull]] call BIS_fnc_param;
@@ -43,7 +39,7 @@ _startTime = time;
 _maxRestrainTime = 10 * 60;
 _wasCop = (side _enforcer == west);
 
-if(_wasCop) then 
+if(_wasCop) then
 {
 	life_old_group = group player;
 	if(count units group player > 1) then {[player] join grpNull};
@@ -52,7 +48,7 @@ player setVariable["restrainedBy",group _enforcer,true];
 _continue = true;
 while {_continue} do
 {
-	
+
 	if(isNull objectParent player) then {_target playMove "AmovPercMstpSnonWnonDnon_Ease"};
 	waitUntil {
 		_timeUp = (!_wasCop || (vehicle player == player && _wasCop && ({side _x == west && player distance _x < 500} count allPlayers == 0))) && time - _startTime > _maxRestrainTime &&  !(_target getVariable ["Escorting",false]) && !(_target getVariable ["transporting",false]);

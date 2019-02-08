@@ -1,7 +1,5 @@
-/*
-	File: fn_applyCharge.sqf
-	Author: John "Paratus" VanderZwet
-*/
+//	File: fn_applyCharge.sqf
+//	Author: John "Paratus" VanderZwet
 
 disableSerialization;
 if(lbCurSel 5521 == -1) exitWith {hint "You did not select a charge..."};

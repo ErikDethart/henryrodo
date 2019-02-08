@@ -1,10 +1,6 @@
-/*
-	File: fn_crank.sqf
-	Author: John "Paratus" VanderZwet and Bamf
-	
-	Description:
-	Not even once!
-*/
+//	File: fn_crank.sqf
+//	Author: John "Paratus" VanderZwet and Bamf
+//	Description: Not even once!
 
 if (!([false,"crankp",1] call life_fnc_handleInv)) exitWith {};
 
@@ -22,8 +18,8 @@ if (life_crank_effect == 0) then
 		"chromAberration" ppEffectEnable true;
 		"chromAberration" ppEffectAdjust [life_drug_level / 10,life_drug_level / 10,true];
 		"chromAberration" ppEffectCommit 1;
-		uiSleep 2.25;	
-		
+		uiSleep 2.25;
+
 		while {alive player && ((time - life_crank_effect) < (4 * 60))} do
 		{
 			"ColorInversion" ppEffectEnable true;
@@ -34,7 +30,7 @@ if (life_crank_effect == 0) then
 			"chromAberration" ppEffectCommit 1;
 			uiSleep 2;
 		};
-		
+
 		"chromAberration" ppEffectEnable false;
 		"ColorInversion" ppEffectEnable false;
 		life_crank_effect = 0;

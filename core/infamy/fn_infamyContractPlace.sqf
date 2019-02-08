@@ -1,12 +1,8 @@
 #include "..\..\macro.h"
 if(scriptAvailable(5)) exitWith {};//This cooldown will prevent people from adding multiple contracts on accident to the same target
-/*
-	File: fn_infamyContractPlace.sqf
-	Author: Poseidon
-
-	Description: Called when player selects a target and provides a value for the desired contract
-*/
-
+//	File: fn_infamyContractPlace.sqf
+//	Author: Poseidon
+//	Description: Called when player selects a target and provides a value for the desired contract
 params [
 	["_bountyValueControlID", 0, [0]],
 	["_targetPlayer", "", [""]]

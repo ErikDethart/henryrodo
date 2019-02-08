@@ -1,10 +1,6 @@
-/*
-	File: fn_gangConTake.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Takes as much from the container as possible
-*/
+//	File: fn_gangConTake.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Takes as much from the container as possible
 
 private ["_container","_near","_tooNear","_short","_captureId","_amount"];
 _container = [_this,0,objNull,[objNull]] call BIS_fnc_param;

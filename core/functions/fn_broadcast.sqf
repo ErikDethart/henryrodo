@@ -1,12 +1,7 @@
 if (isServer && isDedicated) exitWith {};
-/*
-	File: fn_broadcast.sqf
-	Author: Bryan "Tonic" Boardwine
-
-	Description:
-	Broadcast system used in the life mission for multi-notification purposes.
-*/
-
+//	File: fn_broadcast.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Broadcast system used in the life mission for multi-notification purposes.
 params [
     ["_type",0,[[],0]],
     ["_message","",[""]],

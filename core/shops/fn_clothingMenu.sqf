@@ -1,11 +1,6 @@
-/*
-	File: fn_clothingMenu.sqf
-	Author: Bryan "Tonic" Boardwine
-
-	Description:
-	Opens and initializes the clothing store menu.
-	Started clean, finished messy.
-*/
+//	File: fn_clothingMenu.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Opens and initializes the clothing store menu.
 private["_list","_clothes","_pic","_filter"];
 createDialog "Life_Clothing";
 disableSerialization;
@@ -15,15 +10,14 @@ if (isNull _unit) then { _unit = _this select 0; };
 
 if ((vehicle player) != player) exitWith { hint "This action cannot be performed from within a vehicle." };
 if ((player distance _unit) > 7) exitWith { hint "You are too far away." };
-if(lineIntersects[eyePos player, aimPos _unit,player,_unit]) exitWith {hint "It would be hard to buy things through the wall, don't you think?"};
-//Cop / Civ Pre Check
+if(lineIntersects[eyePos player, aimPos _unit,player,_unit]) exitWith {hint "It would be hard to buy things through the wall, don't you think?";};
 if((_this select 3) in ["bruce","dive","reb","kart","skip"] && playerSide != civilian && !(life_coprole in ["all","detective"])) exitWith {hint "You need to be a civilian to use this store!"; closeDialog 0;};
 if(((_this select 3) == "reb" && !license_civ_rebel) && ({player distance2D getMarkerPos format["turf_label_%1",_x] < 50} count [1,2,3] == 0)) exitWith {hint "You don't have rebel training yet!"; closeDialog 0;};
 if((_this select 3) in ["cop","copdive"] && playerSide != west) exitWith {hint "You need to be a cop to use this store!"; closeDialog 0;};
 if((_this select 3) == "kart" && !(104 in life_talents)) exitWith{hint "You're simply not talented enough to wear these epic clothes."; closeDialog 0;};
 if((_this select 3) == "skip" && !(126 in life_talents)) exitWith{hint "You must be a Master Bounty Hunter to shop here!."; closeDialog 0;};
 if !(isNil "life_restartLock") exitWith {hint "You cannot access this menu right now. Try again after the restart!"; closeDialog 0;};
-if (player getVariable ["playerSurrender",false]) exitWith {hint "Why don't you put your hands down, and then we'll talk"};
+if (player getVariable ["playerSurrender",false]) exitWith {hint "You can not shop with your hands up!";};
 life_clothing_store = _this select 3;
 
 //License Check?

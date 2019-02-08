@@ -1,11 +1,7 @@
-/*
-	File: fn_sellOil.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Sells the oil to the oil trader.
-	Will be revised.
-*/
+//	File: fn_sellOil.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Sells the oil to the oil trader. Will be revised.
+
 private["_index","_price","_val"];
 _index = ["oilp",buy_array] call life_fnc_index;
 _price = floor (((buy_array select _index) select 1));

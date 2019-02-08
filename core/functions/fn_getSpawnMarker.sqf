@@ -1,11 +1,6 @@
-/*
-	File: fn_getSpawnMarker.sqf
-	Author: Skalicon / John "Paratus" VanderZwet
-	
-	Description:
-	Spawn marker thing but Skali forgot to put the header in it!
-*/
-
+//	File: fn_getSpawnMarker.sqf
+//	Author: Skalicon / John "Paratus" VanderZwet
+//	Description: Spawn marker thing but Skali forgot to put the header in it!
 private["_npc","_dist"];
 _markers = [_this,0,[],[[]]] call BIS_fnc_param;
 if (count _markers == 0) then { _markers = life_spawn_markers; };

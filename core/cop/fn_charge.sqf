@@ -1,10 +1,6 @@
-/*
-	File: fn_charge.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Prompts to add a charge to a player
-*/
+//	File: fn_charge.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Prompts to add a charge to a player
 
 life_charged = cursorTarget;
 if (isNull life_charged || !isPlayer life_charged || !alive life_charged) exitWith {};

@@ -66,7 +66,7 @@ while {life_carryWeight < life_maxWeight} do
 	if (player distance _nBuilding <= 10) exitWith { hint "You can't gather items so close to a building."};
 	if (life_carryWeight >= life_maxWeight) exitWith { titleText [format["Gathering done. You can't hold more %1.", _itemName],"PLAIN"]; };
 	if (_item == "ephedrau" && 9 in life_gangtalents) then { if (random 3 < 1) then { _count = 2} else {_count = 1}; };
-	if (_item in _rodoDrugs && (life_turf_list select 0) select 1 == life_gang) then { _count = _count * 2};
+	if (_item in _rodoDrugs && (life_turf_list select 0) select 1 == life_gang) then { _delay = _delay * 0.8; };
 	_sum = [_item,_count,life_carryWeight,life_maxWeight] call life_fnc_calWeightDiff;
 	if(_sum > 0) then
 	{

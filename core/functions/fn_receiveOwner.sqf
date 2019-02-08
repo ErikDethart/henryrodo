@@ -1,10 +1,7 @@
-/*
-	File: fn_receiveOwner.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Received home owner ID from server.
-*/
+//	File: fn_receiveOwner.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Received home owner ID from server.
+
 
 private["_id","_unit","_owner","_price","_sale"];
 
@@ -41,7 +38,7 @@ if ((getPlayerUID player) == _owner) then
 else
 {
 	ctrlShow[12516,false];
-	
+
 	if (_owner != "") then
 	{
 		if (_sale > 0) then
@@ -60,7 +57,7 @@ else
 			ctrlSetText[12509,format["Crate storage: %1",[typeOf life_menu_house] call life_fnc_houseContainers]];
 			ctrlShow[12512,false];
 		};
-		
+
 		ctrlShow[12516,false];
 		ctrlShow[12518,false];
 		ctrlShow[12520,false];

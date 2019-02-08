@@ -1,10 +1,6 @@
-/*
-	File: fn_disarmAction.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Removes weapons from an unconscious player.
-*/
+//	File: fn_disarmAction.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Removes weapons from an unconscious player.
 private["_unit","_id","_jail","_markers"];
 
 _unit = cursorTarget;

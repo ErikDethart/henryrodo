@@ -1,10 +1,6 @@
-/*
-	File: fn_detectiveGear.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Loads the detective out with the default gear.
-*/
+//	File: fn_detectiveGear.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Loads the detective out with the default gear.
 
 //{missionNamespace setVariable[_x,0];} forEach life_inv_items;
 life_carryWeight = 0;

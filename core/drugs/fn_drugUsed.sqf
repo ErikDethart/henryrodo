@@ -1,10 +1,6 @@
-/*
-	File: fn_drugUsed.sqf
-	Author: John "Paratus" VanderZwet / cptjames32
-	
-	Description:
-	Took things a little too far!
-*/
+//	File: fn_drugUsed.sqf
+//	Author: John "Paratus" VanderZwet / cptjames32
+//	Description: Took things a little too far!
 
 _item = _this select 0;
 

@@ -1,10 +1,6 @@
-/*
-	File: fn_setGroupTrackMarker.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Shows a bounty tracking marker from friends bounty
-*/
+//	File: fn_setGroupTrackMarker.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Shows a bounty tracking marker from friends bounty
 
 private ["_visible","_uid","_name","_pos","_radius"];
 

@@ -1,10 +1,7 @@
-/*
-	File: fn_turfCapture.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Begins turf capture process
-*/
+//	File: fn_turfCapture.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Begins turf capture process
+
 private ["_point","_row"];
 
 if (life_active_turf < 0) exitWith {};
@@ -49,7 +46,7 @@ while{true} do
 	_pgText ctrlSetText format["%3 (%1%2)...",round(_cP * 100),"%",_upp];
 	_members = 0; { if (_x getVariable ["gang","0"] == life_gang && player distance _x < 2000) then { _members = _members + 1; }} forEach allPlayers;
 	if(_cP >= 1) exitWith {_success=true;};
-	if(player distance _pos > 4 || life_isdowned || !alive player || speed player > 2) exitWith {};	
+	if(player distance _pos > 4 || life_isdowned || !alive player || speed player > 2) exitWith {};
 	if (_members > 5) exitWith { hint "Territory cannot be captured by a gang with more than 5 players nearby." };
 	if !(isNull objectParent player) exitWith { hint "You cannot capture a turf from inside of a vehicle!" };
 	if (!life_action_in_use) exitWith {};

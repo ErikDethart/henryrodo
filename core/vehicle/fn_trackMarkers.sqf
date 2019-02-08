@@ -1,10 +1,6 @@
-/*
-	File: fn_trackMarkers.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Track objects. Only initializes when the actual map is open.
-*/
+//	File: fn_trackMarkers.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Track objects. Only initializes when the actual map is open.
 private["_markers","_vehicleName"];
 
 while {true} do
@@ -101,7 +97,7 @@ while {true} do
 			};
 		};
 	} foreach allPlayers;
-	
+
 	[] spawn
 	{
 		if (life_gang != "0") then
@@ -135,13 +131,13 @@ while {true} do
 					}
 					else { _marker setMarkerTextLocal "Contested gang turf"; };
 				} forEach life_turf_list;
-				
+
 				if(!visibleMap) exitWith {};
 				uiSleep 4;
 			};
 		};
 	};
-	
+
 	while {visibleMap || !isNull (findDisplay 39500)} do
 	{
 		{
@@ -157,10 +153,10 @@ while {true} do
 				};
 			};
 		} foreach _markers;
-		
+
 		if(!visibleMap && isNull (findDisplay 39500)) exitWith {};
 		uiSleep 0.02;
 	};
-	
+
 	{deleteMarkerLocal (_x select 0);} foreach _markers;
 };

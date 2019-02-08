@@ -1,10 +1,6 @@
-/*
-	File: fn_airhorn.sqf
-	Author: Chronic [MIT]
-
-	Description:
-	Plays an airhorn sound from the given object
-*/
+//	File: fn_airhorn.sqf
+//	Author: Chronic [MIT]
+//	Description: Plays an airhorn sound from the given object
 
 private ["_hornLogic", "_vehicle"];
 

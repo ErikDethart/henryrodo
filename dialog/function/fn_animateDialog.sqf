@@ -1,10 +1,8 @@
-/*
-	File: fn_animateDialog.sqf
-	Author: Poseidon
-	
-	Description: Performs the specified animations on the dialogs by applying animations to each control in the created dialog.
-	_mode is true for when you create a dialog, false is for close and will reverse the animation if one is provided.
-*/
+//	File: fn_animateDialog.sqf
+//	Author: Poseidon
+//	Description: Performs the specified animations on the dialogs by applying animations to each control in the created dialog.
+//	_mode is true for when you create a dialog, false is for close and will reverse the animation if one is provided.
+
 private["_endPosition","_hiddenPos"];//this is a proper situation to use the private array btw gnashes ;)
 params [["_dialogID", 0, [0]],["_location", "", [""]],["_mode", true, [false]]];
 if(_dialogID == 0) exitWith {};//exit if bad dialog and you're trying to open it
@@ -17,7 +15,7 @@ if(isNull _dialogControl) exitWith {};
 
 {
 	_endPosition = ctrlPosition _x;
-	
+
 	_hiddenPos = switch(_location) do {
 		case "top": {[(_endPosition select 0), (_endPosition select 1) - 1]};
 		case "bottom":{[(_endPosition select 0), (_endPosition select 1) + 1]};
@@ -41,7 +39,7 @@ if(isNull _dialogControl) exitWith {};
 		_x ctrlSetPosition _hiddenPos;
 		_x ctrlSetFade 1;//Hide the display instantly, for best effect hide all elements in the actual dialog.hpp
 		_x ctrlCommit 0;
-		
+
 		//This is the start animation area
 		if(_location == "grow") then {_x ctrlSetScale 1;};
 		_x ctrlSetPosition [_endPosition select 0, _endPosition select 1];

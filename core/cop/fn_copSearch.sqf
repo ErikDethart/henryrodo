@@ -1,10 +1,7 @@
-/*
-	File: fn_copSearch.sqf
-	Author: Bryan "Tonic" Boardwine
+//	File: fn_copSearch.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Returns information on the search.
 
-	Description:
-	Returns information on the search.
-*/
 private["_civ","_invs","_license","_robber","_runner","_guns","_gun","_holsterLabel","_money","_alcohol","_class","_className","_index"];
 _civ = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 _license = [_this,1,"",[""]] call BIS_fnc_param;
@@ -32,7 +29,7 @@ if(count _invs > 0) then
 
 	//[player, _illegal] spawn life_fnc_copSplit;
 [0,format["%1 has $%2 worth of contraband on them.",name _civ,[_illegal] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",west];
-	//[floor (_illegal / 25)] spawn life_fnc_earnPrestige; 
+	//[floor (_illegal / 25)] spawn life_fnc_earnPrestige;
 }
 	else
 {

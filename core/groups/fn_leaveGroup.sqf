@@ -1,10 +1,7 @@
-/*
-	File: fn_leaveGroup.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Functionality for leaving the group.
-*/
+//	File: fn_leaveGroup.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Functionality for leaving the group.
+
 private["_index","_gang","_name","_group","_locked","_owner","_ownerID","_new_owner"];
 _index = [life_my_group,life_group_list] call life_fnc_index;
 if(_index == -1) exitWith {life_my_group = ObjNull;};
@@ -26,7 +23,7 @@ if(getPlayerUID player == _ownerID) then
 				_new_owner = _x;
 			};
 		} foreach (units (group player));
-		
+
 		life_group_list set[_index,[_name,_group,_locked,str(_new_owner),(getPlayerUID _new_owner)]];
 		publicVariable "life_group_list";
 [_new_owner,_group] remoteExecCall ["life_fnc_clientGroupLeader",_new_owner];

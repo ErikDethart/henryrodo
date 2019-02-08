@@ -1,28 +1,28 @@
-	/*
+/*
 	Author: code34 nicolas_boiteux@yahoo.fr
 	Copyright (C) 2013 Nicolas BOITEUX
 
-	Real weather for MP GAMES v 1.2 
-	
+	Real weather for MP GAMES v 1.2
+
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
 	the Free Software Foundation, either version 3 of the License, or
 	(at your option) any later version.
-	
+
 	This program is distributed in the hope that it will be useful,
 	but WITHOUT ANY WARRANTY; without even the implied warranty of
 	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 	GNU General Public License for more details.
-	
+
 	You should have received a copy of the GNU General Public License
-	along with this program.  If not, see <http://www.gnu.org/licenses/>. 
+	along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	*/
 
 	private ["_lastrain", "_rain", "_fog", "_mintime", "_maxtime", "_overcast", "_realtime", "_random", "_skiptime", "_timeforecast", "_timeratio", "_timesync", "_wind"];
-	
+
 	// Real time vs fast time
 	// true: Real time is more realistic weather conditions change slowly (ideal for persistent game)
-	// false: fast time give more different weather conditions (ideal for non persistent game) 
+	// false: fast time give more different weather conditions (ideal for non persistent game)
 	_realtime = false;
 
 	// Random time before new forecast
@@ -46,10 +46,10 @@
 	// shortest time do not improve weather sync
 	_timesync = 60;
 
-	/////////////////////////////////////////////////////////////////
+	/////////////////////////////////
 	// Do not edit below
-	/////////////////////////////////////////////////////////////////
-	
+	/////////////////////////////////
+
 	if(_mintime > _maxtime) exitwith {hint format["Real weather: Max time: %1 can no be higher than Min time: %2", _maxtime, _mintime];};
 	_timeforecast = _mintime;
 
@@ -60,7 +60,7 @@
 	wcweather = [rain, fog, overcast, wind, date];
 
 	// add handler
-	if (local player) then {        
+	if (local player) then {
 			"wcweather" addPublicVariableEventHandler {
 					wcweather = _this select 1;
 					60 setRain (wcweather select 0);
@@ -71,7 +71,7 @@
 			};
 	};
 
-	// accelerate time 
+	// accelerate time
 	if!(_realtime) then {
 			[_skiptime] spawn {
 					private["_skiptime"];

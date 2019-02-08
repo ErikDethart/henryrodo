@@ -1,10 +1,6 @@
-/*
-	File: fn_chemlightUse.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Lets you hold chemlights in your hand!
-*/
+//	File: fn_chemlightUse.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Lets you hold chemlights in your hand!
 private["_color"];
 _color = _this select 3;
 if(!isNil "life_chemlight") exitWith {};

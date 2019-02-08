@@ -1,10 +1,7 @@
-/*
-	File: fn_initMedic.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Initializes the medic..
-*/
+//	File: fn_initMedic.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Initializes the medic..
+
 private["_end"];
 life_maxTalents = 9;
 life_maxWeight = 80;

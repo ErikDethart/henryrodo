@@ -1,10 +1,7 @@
-/*
-	File: fn_gangBank.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Update gang ATM UI with received value
-*/
+//	File: fn_gangBank.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Update gang ATM UI with received value
+
 private ["_value"];
 
 _value = [_this,0,0,[0]] call BIS_fnc_param;

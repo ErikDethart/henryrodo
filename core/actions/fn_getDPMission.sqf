@@ -1,11 +1,7 @@
-/*
-	File: fn_getDPMission.sqf
-	Author: John "Paratus" VanderZwet
+//	File: fn_getDPMission.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Selects a random DP point for a delivery mission.
 
-	Description:
-	Selects a random DP point for a delivery mission.
-	Needs to be revised.
-*/
 private["_dp","_target"];
 _target = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _type = [_this,3,0,[0]] call BIS_fnc_param;

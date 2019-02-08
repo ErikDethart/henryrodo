@@ -1,10 +1,7 @@
-/*
-	File: fn_initLaser.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Laser tag has begun!
-*/
+//	File: fn_initLaser.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Laser tag has begun!
+
 private["_ret","_bad","_time","_bail","_esc","_countDown","_jailed"];
 _team = [_this,0,1,[1]] call BIS_fnc_param;
 _endTime = time + 200; //[_this,1,0,[0]] call BIS_fnc_param;

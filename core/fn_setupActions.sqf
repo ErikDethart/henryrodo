@@ -1,9 +1,6 @@
-/*
-	File: fn_setupActions.sqf
+//	File: fn_setupActions.sqf
+//	Description: Populates player-bound actions.
 
-	Description:
-	Populates player-bound actions.
-*/
 switch (playerSide) do
 {
 	case west:
@@ -52,9 +49,6 @@ switch (playerSide) do
 		life_actions pushBack (player addAction["Impound Vehicle",life_fnc_impoundAction,false,90,false,false,"",'!isNull cursorTarget && alive cursorTarget && (player distance cursorTarget) < 6 && speed cursorTarget < 2 && (cursorTarget isKindOf "Car" || cursorTarget isKindOf "Air" || cursorTarget isKindOf "Ship" ) && !(typeOf cursorTarget in ["O_MRAP_02_F", "B_G_Offroad_01_armed_F","O_LSV_02_armed_F","I_C_Offroad_02_LMG_F"] || (cursorTarget getVariable["illegalVehicle",false]))' ]);
 		//Seize Vehicle
 		life_actions pushBack (player addAction["<t color='#FF0000'>Seize Vehicle</t>",life_fnc_impoundAction,true,0,false,false,"",'!isNull cursorTarget && alive cursorTarget && (player distance cursorTarget) < 6 && speed cursorTarget < 2 && (cursorTarget isKindOf "Car" || cursorTarget isKindOf "Air" || cursorTarget isKindOf "Ship" ) && (typeOf cursorTarget in ["O_MRAP_02_F", "B_G_Offroad_01_armed_F","O_LSV_02_armed_F","I_C_Offroad_02_LMG_F"] || (cursorTarget getVariable["illegalVehicle",false]))']);
-
-		//Access Criminal Records
-		life_actions pushBack (player addAction["<t color='#0000FF'>Criminal Records</t>",life_fnc_crimeRecord,true,0,false,false,"",'vehicle player != player && driver (vehicle player) == player' ]);
 
 		//Send to jail
 		life_actions pushBack (player addAction["Send to Jail",life_fnc_arrestAction,"",0,false,false,"",'!isNull cursorTarget && isPlayer cursorTarget && (side cursorTarget != west) && (cursorTarget getVariable ["restrained",false]) && alive cursorTarget && (player distance cursorTarget < 3.5) && ({player distance (getMarkerPos _x) < 30} count ["police_hq_1","police_hq_2","police_hq_3","police_hq_4","police_hq_5","jail_release2"] > 0) && !(cursorTarget getVariable ["Escorting",false]) ']);
@@ -424,14 +418,7 @@ switch (playerSide) do
 			life_actions pushBack (player addAction ["Bolt Cut Gate", life_fnc_openGate, "",0,false,false,"",' ((typeOf cursorTarget) == "Land_BarGate_F" && (cursorTarget getVariable ["gate_max", 0]) == 0 && (player distance cursorTarget) < 7 && life_inv_boltCutter > 0) ']);
 		};
 		life_actions pushBack (player addAction ["Begin Drilling Vault", life_fnc_openBankVault,false,4,true,true,"",' player distance (getMarkerPos "life_bank_door") < 4 && life_inv_drill > 0 && !life_bank_drilling && life_bank_last < serverTime - 1200 ']);
-		if({player distance getMarkerPos format["race_%1_start",_x] < 25} count [1,2,3,4,5] > 0) then {
-			life_actions pushBack (player addAction ["Join Race", life_fnc_joinRace,1,0,false,false,"",' {player distance getMarkerPos format["race_%1_start",_x] < 15} count [1,2,3,4,5] > 0 && vehicle player != player && driver (vehicle player) == player ']);
-		};
 		life_actions pushBack (player addAction ["Open Treasure Chest",{[nil,nil,nil,cursorTarget] call life_fnc_openInventory},"",0,false,false,"",' (player distance cursorTarget) < 4 && typeOf cursorTarget == "Box_East_Support_F" && (cursorTarget getVariable ["Treasure",false]) ']);
-		//life_actions pushBack (player addAction ["Join Race Two", life_fnc_joinRace,2,0,false,false,"",' (player distance (getMarkerPos "race_2_start")) < 15 && vehicle player != player && driver (vehicle player) == player ']);
-		//life_actions pushBack (player addAction ["Join Race Three", life_fnc_joinRace,3,0,false,false,"",' (player distance (getMarkerPos "race_3_start")) < 15 && vehicle player != player && driver (vehicle player) == player ']);
-		//life_actions pushBack (player addAction ["Join Race Four", life_fnc_joinRace,4,0,false,false,"",' (player distance (getMarkerPos "race_4_start")) < 15 && vehicle player != player && driver (vehicle player) == player ']);
-		//life_actions pushBack (player addAction ["Join Race Five", life_fnc_joinRace,5,0,false,false,"",' (player distance (getMarkerPos "race_5_start")) < 15 && vehicle player != player && driver (vehicle player) == player ']);
 	};
 };
 //Vehicle Towing

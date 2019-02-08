@@ -1,10 +1,6 @@
-/*
-	File: fn_bank_debit.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Purchases a shiny new debit card.
-*/
+//	File: fn_bank_debit.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Purchases a shiny new debit card.
 
 if (life_inv_debitcard > 0) exitWith {hint "You already have a debit card."};
 //if (life_donator < 2) exitWith {hint "You have been declined for a debit card by the bank due to a poor credit score.  Must be donor level 2 or above."};

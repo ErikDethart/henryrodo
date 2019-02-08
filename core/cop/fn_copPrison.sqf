@@ -1,10 +1,7 @@
-/*
-	File: fn_copPrison.sqf
-	Author: John "Paratus" VanderZwet
+//	File: fn_copPrison.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: If possible, queries cop for going to prison defense
 
-	Description:
-	If possible, queries cop for going to prison defense
-*/
 if (player in (list prison_area)) exitWith {};
 life_confirm_response = false;
 private _startPos = getPosATL player;

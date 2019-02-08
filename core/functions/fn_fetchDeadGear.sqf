@@ -1,10 +1,6 @@
-/*
-	File: fn_fetchDeadGear.sqf
-	Author: Bryan "Tonic" Boardwine
-
-	Description:
-	Fetches gear off of a body.
-*/
+//	File: fn_fetchDeadGear.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Fetches gear off of a body.
 
 if (time - life_last_death_gear < 5) exitWith {life_dead_gear};
 

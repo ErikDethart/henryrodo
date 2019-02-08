@@ -1,10 +1,7 @@
-/*
-	File: fn_changeClothes.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Used in the clothing store to show a 'preview' of the piece of clothing.
-*/
+//	File: fn_changeClothes.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Used in the clothing store to show a 'preview' of the piece of clothing.
+
 disableSerialization;
 private["_control","_selection","_data","_price","_total","_totalPrice","_cost"];
 _control = (_this select 0) select 0;

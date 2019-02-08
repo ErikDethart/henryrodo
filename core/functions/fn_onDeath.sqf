@@ -1,10 +1,7 @@
-/*
-	File: fn_onDeath.sqf
-	Author: John "Paratus" VanderZwet
+//	File: fn_onDeath.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Does whatever it needs to when a player dies.
 
-	Description:
-	Does whatever it needs to when a player dies.
-*/
 private["_unit","_killer","_weapons","_handle","_gangPoints","_bountyAmount"];
 closeDialog 0;
 _unit = [_this,0,objNull,[objNull]] call BIS_fnc_param;
@@ -111,7 +108,6 @@ if (!isNull (findDisplay 39500)) then { closeDialog 0 };
 } forEach [["requesting_medic",false],["Revive",true],["name",name _unit]/*,["ToD",_time]*/];
 
 life_respawned = false;
-life_race = 0;
 life_alcohol_level = 0;
 "RadialBlur" ppEffectEnable false;
 life_alive = false;

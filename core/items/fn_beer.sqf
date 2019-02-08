@@ -1,14 +1,10 @@
-/*
-	File: fn_beer.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Feeling.. good?
-*/
+//	File: fn_beer.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Feeling.. good?
 
 _item = _this select 0;
 
-life_alcohol_level = if (_item == "beer") then { life_alcohol_level + 0.10 } else { life_alcohol_level + 0.30 };  
+life_alcohol_level = if (_item == "beer") then { life_alcohol_level + 0.10 } else { life_alcohol_level + 0.30 };
 if (life_alcohol_level > 1) then { life_alcohol_level = 1; };
 [] call life_fnc_hudUpdate;
 

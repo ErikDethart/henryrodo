@@ -1,10 +1,7 @@
-/*
-	File: fn_serviceChopper.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Main functionality for the chopper service paid, to be replaced in later version.
-*/
+//	File: fn_serviceChopper.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Main functionality for the chopper service paid, to be replaced in later version.
+
 disableSerialization;
 
 if (life_action_in_use) exitWith {hint "You are already doing an action. Please wait for it to end."};

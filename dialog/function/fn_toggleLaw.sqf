@@ -1,10 +1,6 @@
-/*
-	File: fn_toggleLaw.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Toggle laws from governor menu
-*/
+//	File: fn_toggleLaw.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Toggle laws from governor menu
 
 _paramID = [_this,0,0,[0]] call BIS_fnc_param;
 

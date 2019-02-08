@@ -1,11 +1,6 @@
-/*
-	File: fn_medicRespond.sqf
-	Author: speed
-
-	Description:
-	Tasks the medic to revive the player whose call they accepted
-*/
-
+//	File: fn_medicRespond.sqf
+//	Author: speed
+//	Description: Tasks the medic to revive the player whose call they accepted
 private["_caller"];
 _caller = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 

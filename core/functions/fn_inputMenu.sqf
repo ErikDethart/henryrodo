@@ -1,15 +1,11 @@
-/*
-	File: fn_inputMenu.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Call to request user input.
-	
-	Parameter(s):
-	0 - Message: STRING or STRUCTURED TEXT
-	1 - Title: STRING
-	2 - Submit Button Label: STRING
-*/
+//	File: fn_inputMenu.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Call to request user input.
+
+//	Parameter(s):
+//	0 - Message: STRING or STRUCTURED TEXT
+//	1 - Title: STRING
+//	2 - Submit Button Label: STRING
 private["_msg","_title","_submit","_display","_titleBox","_submitButton","_label"];
 disableSerialization;
 

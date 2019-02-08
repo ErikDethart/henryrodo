@@ -1,10 +1,7 @@
-/*
-	File: fn_receiveMoney.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Receives money
-*/
+//	File: fn_receiveMoney.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Receives money
+
 private["_unit","_val","_from"];
 _unit = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 _val = [_this,1,"",[""]] call BIS_fnc_param;

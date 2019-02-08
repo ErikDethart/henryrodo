@@ -1,10 +1,7 @@
-/*
-	File: fn_pardon.sqf
-	Author: John "Paratus" VanderZwet
+//	File: fn_pardon.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Pardons the selected player.
 
-	Description:
-	Pardons the selected player.
-*/
 private["_display","_list","_uid","_exit","_unit"];
 disableSerialization;
 if((player getVariable ["playerSurrender",false]) || (player getVariable ["restrained",false])) exitWith {hint "How could you possibly pardon someone right now?"};

@@ -1,11 +1,10 @@
-/*
-	File: fn_addAction.sqf
-	Author: Alan
-	
-	FLAGS:
-	TRUE = Add;
-	FALSE = Remove;
-*/
+//	File: fn_addAction.sqf
+//	Author: Alan
+
+//	FLAGS:
+//	TRUE = Add;
+//	FALSE = Remove;
+
 private ["_flag","_unit","_msg","_func","_actionID","_args","_dist"];
 _flag = [_this,0,true,[true]] call BIS_fnc_param;
 _unit = [_this,1,ObjNull,[ObjNull]] call BIS_fnc_param;

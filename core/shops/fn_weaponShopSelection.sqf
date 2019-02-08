@@ -1,10 +1,6 @@
-/*
-	File: fn_weaponShopSelection.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Checks the weapon & adds the price tag.
-*/
+//	File: fn_weaponShopSelection.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Checks the weapon & adds the price tag.
 private["_control","_index","_priceTag","_price","_item"];
 _control = [_this,0,controlNull,[controlNull]] call BIS_fnc_param;
 _index = [_this,1,-1,[0]] call BIS_fnc_param;
@@ -43,7 +39,7 @@ if (count _mags > 0) then
 {
 	_shop = uiNamespace getVariable ["Weapon_Shop", ""];
 	_addons = [_shop] call life_fnc_weaponAddons;
-	
+
 	{
 		_addonEntry = [];
 		_mag = _x;
@@ -68,7 +64,7 @@ if (count _mags > 0) then
 			_magList lbSetValue[(lbSize _magList)-1,_magPrice];
 		};
 	} forEach _mags;
-	
+
 	_compatibleItems = [];
     {
         _cfgCompatibleItems = _x >> "compatibleItems";
@@ -84,7 +80,7 @@ if (count _mags > 0) then
             };
         };
     } foreach configproperties [configFile >> "CfgWeapons" >> _item >> "WeaponSlotsInfo","isclass _x"];
-	
+
 	{
 		_addonEntry = [];
 		_mag = _x;
@@ -109,5 +105,5 @@ if (count _mags > 0) then
 			_magList lbSetValue[(lbSize _magList)-1,_magPrice];
 		};
 	} forEach _compatibleItems;
-		
+
 };

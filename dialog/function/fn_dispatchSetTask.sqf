@@ -1,12 +1,6 @@
-/*
-	File: fn_dispatchSetTask.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Assign or clear a task for the selected cop.
-	Please ask for permission to use this and stop stealing my stuff.
-*/
-
+//	File: fn_dispatchSetTask.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Assign or clear a task for the selected cop.
 disableSerialization;
 
 private ["_task","_taskList"];

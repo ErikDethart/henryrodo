@@ -1,10 +1,7 @@
-/*
-	File: fn_robVehicle.sqf
-	Author: Skalicon
-	
-	Description:
-	Allows the player to rob the vehicle for events.
-*/
+//	File: fn_robVehicle.sqf
+//	Author: Skalicon
+//	Description: Allows the player to rob the vehicle for events.
+
 private["_vehicle","_funds"];
 _vehicle = cursorTarget;
 if (isNull _vehicle) exitWith{

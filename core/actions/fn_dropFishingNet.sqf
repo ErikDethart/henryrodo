@@ -1,10 +1,6 @@
-/*
-	File: fn_dropFishingNet.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Drops a virtual fishing net from the boat.
-*/
+//	File: fn_dropFishingNet.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Drops a virtual fishing net from the boat.
 private["_fish","_type","_range","_delay"];
 if(!(vehicle player isKindOf "Ship")) exitWith {};
 _range = 30;
@@ -31,11 +27,11 @@ if(count _fish == 0) exitWith {titleText["Didn't catch any fish...","PLAIN"]; li
 			case ((typeOf _x) == "Catshark_F") : {_type = "catshark";_maxweight = 2;};
 			default {_type = "";};
 		};
-		
+
 		uiSleep 3;
-		
+
 		_weight = round ((random _maxweight) * 100) / 100;
-		
+
 		if (random 12000 < 1) then
 		{
 			//_type = ["treasure_1","treasure_2","treasure_3","treasure_4","treasure_5"] call BIS_fnc_selectRandom;

@@ -1,11 +1,6 @@
-/*
-	File: fn_dig.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Dig up a treasure map site!
-*/
-
+//	File: fn_dig.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Dig up a treasure map site!
 _map = -1;
 _maps = [];
 _position = [0,0,0];

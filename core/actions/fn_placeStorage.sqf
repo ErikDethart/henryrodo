@@ -1,10 +1,6 @@
-/*
-	File: fn_placeStorage.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Place storage container in owned house
-*/
+//	File: fn_placeStorage.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Place storage container in owned house
 
 private["_item", "_house", "_owners", "_uid", "_maxCount", "_count", "_handle"];
 //if (true) exitWith { hint "HOUSE STORAGE is temporarily disabled until we resolve an issue after the recent Arma patch from Bohemia."; };

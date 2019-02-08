@@ -1,10 +1,6 @@
-/*
-	File: fn_pickupItems.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Dialog code for picking up items.
-*/
+//	File: fn_pickupItems.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Dialog code for picking up items.
 private["_objects","_items","_list","_lastItems","_itemName","_itemInfo","_picture"];
 disableSerialization;
 
@@ -31,12 +27,12 @@ while {!isNull (findDisplay 1520)} do
 		{
 			_itemInfo = _x getVariable ["item", ["Unknown",0]];
 			if (_itemInfo select 0 == "money") then {
-				_list lbAdd format["$%1 Cash", [_itemInfo select 1] call life_fnc_numberText]; 
+				_list lbAdd format["$%1 Cash", [_itemInfo select 1] call life_fnc_numberText];
 			}else{
 				if (_itemInfo select 0 == "scalp") then {
 					_list lbAdd format["%1's scalp.", ((_itemInfo select 1) select 2)];
 				}else{
-					_list lbAdd format["%1x %2", _itemInfo select 1, [([_itemInfo select 0,0] call life_fnc_varHandle)] call life_fnc_varToStr]; 
+					_list lbAdd format["%1x %2", _itemInfo select 1, [([_itemInfo select 0,0] call life_fnc_varHandle)] call life_fnc_varToStr];
 				};
 			};
 		} foreach _items;

@@ -1,10 +1,7 @@
-/*
-	File: fn_restrain.sqf
-	Author: Skalicon
-	
-	Description:
-	Retrains the target.
-*/
+//	File: fn_restrain.sqf
+//	Author: Skalicon
+//	Description: Retrains the target.
+
 private["_unit"];
 _unit = cursorTarget;
 if((_unit getVariable ["restrained",false])) exitWith {};

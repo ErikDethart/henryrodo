@@ -1,10 +1,6 @@
-/*
-	File: fn_civLoadGear.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Loads saved civilian gear, this is limited for a reason and that's balance.
-*/
+//	File: fn_civLoadGear.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Loads saved civilian gear, this is limited for a reason and that's balance.
 
 if (count civ_gear == 16) then // OLD SYSTEM!
 {
@@ -13,7 +9,7 @@ if (count civ_gear == 16) then // OLD SYSTEM!
 	_itemArray = civ_gear;
 
 	waitUntil {!(isNull (findDisplay 46))};
-	if(count _itemArray == 0) exitWith 
+	if(count _itemArray == 0) exitWith
 	{
 		if(headGear player != "") then {removeHeadgear player;};
 		if(goggles player != "") then {removeGoggles player;};
@@ -53,15 +49,15 @@ if (count civ_gear == 16) then // OLD SYSTEM!
 	if(_uniform != "") then {_handle = [_uniform,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};
 	if(_vest != "") then {_handle = [_vest,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};
 	if(_backpack != "") then {_handle = [_backpack,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};
-	
+
 	{_handle = [_x,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};} foreach _items;
 	if(_goggles != "") then {_handle = [_goggles,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};
 	if(_headgear != "") then {_handle = [_headgear,true,false,false,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};};
-	
+
 	if(_primary != "") then {[_primary,true,false,false,false] spawn life_fnc_handleItem;};
 	if(_launcher != "") then {[_launcher,true,false,false,false] call life_fnc_handleItem;};
 	if(_handgun != "") then {[_handgun,true,false,false,false] spawn life_fnc_handleItem;};
-	
+
 	{_handle = [_x,true,false,true,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};} foreach _primitems;
 	{_handle = [_x,true,false,true,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};} foreach _secitems;
 	{_handle = [_x,true,false,true,false] spawn life_fnc_handleItem; waitUntil {scriptDone _handle};} foreach _handgunitems;

@@ -1,6 +1,5 @@
-/*
-	Description: Function for helping spawning local vehicles in, primarily for the dynamic map system.
-*/
+//	File: fn_createLocalVehicle.sqf
+//	Description: Function for helping spawning local vehicles in, primarily for the dynamic map system.
 private["_className","_position","_direction","_vehicle"];
 _className = _this param [0,"",[""]];
 _position = _this param [1,[],[[]]];
@@ -30,7 +29,7 @@ if(typeName _direction == "ARRAY") then {
 	private ["_P", "_Y", "_R"];
 	_Y = deg (_direction select 1);
 	_P = 360 - (deg (_direction select 2));
-	_R = 360 - (deg (_direction select 0));         
+	_R = 360 - (deg (_direction select 0));
 	{
 		private _deg = call compile format [ "%1 mod 360", _x ];
 		if ( _deg < 0 ) then { _deg = linearConversion[ -0, -360, _deg, 360, 0 ]; };

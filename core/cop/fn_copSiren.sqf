@@ -1,10 +1,6 @@
-/*
-	File: fn_copSiren.sqf
-	Author: Chronic [MIT]
-
-	Description:
-	Adds a siren to a vehicle and offers several different modes
-*/
+//	File: fn_copSiren.sqf
+//	Author: Chronic [MIT]
+//	Description: Adds a siren to a vehicle and offers several different modes
 
 private["_vehicle", "_cycle", "_changeMode", "_wailLength", "_yelpLength", "_phaserLength", "_hasSiren", "_sirenDual", "_sirenType", "_dualType", "_sirenDuration", "_dualDuration", "_sirenStart"];
 _vehicle = _this select 0;		// the vehicle that the siren is on

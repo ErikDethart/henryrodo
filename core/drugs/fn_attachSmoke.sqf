@@ -1,10 +1,6 @@
-/*
-	File: fn_attachSmoke.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Marijuana is bad, mmkay?
-*/
+//	File: fn_attachSmoke.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Marijuana is bad, mmkay?
 
 _unit = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if (isNull _unit) exitWith {};

@@ -1,10 +1,7 @@
-/*
-	File: fn_mouseDownHandler.sqf
-	Author: Chronic [MIT]
+//	File: fn_mouseDownHandler.sqf
+//	Author: Chronic [MIT]
+//	Description: Main key handler for event 'mouseButtonDown'
 
-	Description:
-	Main key handler for event 'mouseButtonDown'
-*/
 params["_ctrl","_code","_shift","_ctrlKey","_alt"];
 _handled = false;
 

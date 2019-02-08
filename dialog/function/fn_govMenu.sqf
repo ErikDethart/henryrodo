@@ -1,11 +1,6 @@
-/*
-	File: fn_govMenu.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Shows governor menu
-*/
-
+//	File: fn_govMenu.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Shows governor menu
 private ["_display"];
 
 disableSerialization;

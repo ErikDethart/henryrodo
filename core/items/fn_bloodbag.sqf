@@ -1,9 +1,6 @@
-/*
-		File: fn_bloodbag.sqf
-		Author: John "Paratus" VanderZwet
-		
-		Description: Puts blood in people.
-*/
+//	File: fn_bloodbag.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Puts blood in people.
 
 _unit = cursorTarget;
 _target = [_this,3,objNull,[objNull]] call BIS_fnc_param; // index 3 due to addAction

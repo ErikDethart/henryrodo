@@ -1,10 +1,7 @@
-/*
-	File: fn_adminQuery.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Starts the query on a player.
-*/
+//	File: fn_adminQuery.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Starts the query on a player.
+
 private["_display","_text","_info","_prim","_sec","_vest","_uni","_bp","_attach","_tmp"];
 disableSerialization;
 _display = findDisplay 2900;

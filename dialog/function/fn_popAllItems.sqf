@@ -1,10 +1,7 @@
-/*
-	File: fn_popAllItems.sqf
-	Author: Alan
+//	File: fn_popAllItems.sqf
+//	Author: Alan
+//	Description: Populates textbox with all current items held in inventory.
 
-	Description:
-	Populates textbox with all current items held in inventory.
-*/
 private["_data","_index","_item","_listBox","_listBoxCtrl","_listBoxIDC","_listboxIndex","_num","_textBox","_trunk"];
 _listBox = [_this,0,[],[[]]] call BIS_fnc_param;
 _listBoxCtrl = [_listBox,0,controlNull,[controlNull]] call BIS_fnc_paramIn;
@@ -16,7 +13,7 @@ _listBoxIDC = ctrlIDC _listBoxCtrl;
 _textBox = 0;
 _trunk = false;
 
-switch (_listBoxIDC) do 
+switch (_listBoxIDC) do
 {
 	case 2005: {_textBox = 2010;};	//inventory
 	case 3502: {_textBox = 3505; _trunk = true;}; //trunk vehicle
@@ -40,5 +37,5 @@ ctrlSetText [_textBox,format["%1",_num]];
 life_last_transfer = (time-3); //Var is used to prevent spam-dropping one item, but if they're double-clicking they should be dropping all of this item. I'll see how it plays out. ~Gnash
 
 //Debug
-/* _text = ctrlText _textBox;
-hint format ["%1 :: %2 :: %3 :: %4 :: %5 :: %6 :: %7",_listBoxIDC,typeName _listBoxIDC,_listboxIndex,_item,_num,_textBox,_text]; */
+// _text = ctrlText _textBox;
+//hint format ["%1 :: %2 :: %3 :: %4 :: %5 :: %6 :: %7",_listBoxIDC,typeName _listBoxIDC,_listboxIndex,_item,_num,_textBox,_text];

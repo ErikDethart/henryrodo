@@ -1,10 +1,6 @@
-/*
-	File: fn_marketSel.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Selected market item for information
-*/
+//	File: fn_marketSel.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Selected market item for information
 private["_display","_list","_text","_data","_basePrice"];
 
 disableSerialization;

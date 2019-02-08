@@ -1,6 +1,5 @@
-/*
-	Description: Handles all position checks and progress reports for capturing cartels
-*/
+//	File: fn_cartelCapture.sqf
+//	Description: Handles all position checks and progress reports for capturing cartels
 private["_zone","_flagObject","_zoneLocation","_zoneName","_captureData"];
 _zone = _this param [0,"",[""]];
 _flagObject = call compile format["capture_pole_%1",_zone];
@@ -49,7 +48,7 @@ while{true} do {
 		_progressBar = _ui displayCtrl 38201;
 		_titleText = _ui displayCtrl 38202;
 	};
-	
+
 	uiSleep 1;
 
 	_captureData = _flagObject getVariable ["capture_data",[_zoneName,"0",0.5]];//lets keep grabbing the latest data
@@ -58,8 +57,8 @@ while{true} do {
 	_cartelMarker = format["capture_label_%1", _zone];
 	_cartelMarkerText = markerText _cartelMarker;
 	_newCartelMarkerText = _cartelMarkerText;
-	
-	_nearbyGangs = []; 
+
+	_nearbyGangs = [];
 	{
 		_targetsGang = (_x getVariable ["gang","0"]);
 		if(!(_targetsGang in _nearbyGangs) && _targetsGang != "0" && alive _x) then {
@@ -72,7 +71,7 @@ while{true} do {
 			_title = format["Capture cooldown - %1 + minutes remaining.",round(((_flagObject getVariable["capture_cooldown", serverTime - 100]) - serverTime) / 60)];
 			_titleText ctrlSetText format["%1",_title];
 		};
-		
+
 		if(((_currentDataID) != (life_gang)) && _cp > 0) then {
 			_cpRate = -0.0017;
 			_title = format["Your gang is taking ownership of %1.",_zoneName];
@@ -87,7 +86,7 @@ while{true} do {
 			_title = format["Your gang is capturing %1.",_zoneName];
 			_cpRate = 0.0017;
 		};
-		
+
 		if((time > life_infamyCartelCooldown) && (time > _cartelCapStartTime)) then {
 			[5] call life_fnc_addInfamy;
 			life_infamyCartelCooldown = (time + 60);
@@ -98,25 +97,25 @@ while{true} do {
 		if(_cP > 1) then {_cP = 1;} else {if(_cP < 0) then {_cp = 0;};};
 		_progressBar progressSetPosition _cP;
 		_titleText ctrlSetText format["%3 (%1%2)",round(_cP * 100),"%",_title];
-		
+
 		if(_currentDataID == life_gang && _cp >= 1) exitWith {//we have full cap no need to continue.
 			_captureData set [1, _currentDataID];
 			_captureData set [2, _cP];
 			_flagObject setVariable["capture_data",_captureData,true];
 			_flagObject setVariable["capture_cooldown",serverTime + 1800, true];
-			
+
 			//We got full cap lets put our name on the marker...
-			_newCartelMarkerText = format["%1 - %2", _zoneName, (player getVariable ["gangName","Captured"])]; 
+			_newCartelMarkerText = format["%1 - %2", _zoneName, (player getVariable ["gangName","Captured"])];
 
 			private _myGangBois = [];
 			{
 				_targetsGang = (_x getVariable ["gang","0"]);
-				
+
 				if(_targetsGang == life_gang && _targetsGang != "0") then {
 					_myGangBois pushBack _x;
 				};
 			}foreach (nearestObjects[_zoneLocation,["Man"],60]);
-			
+
 			if(!(_myGangBois isEqualTo [])) then {
 				[2,5] remoteExecCall ["life_fnc_addStatistic",_myGangBois];
 			};
@@ -131,7 +130,7 @@ while{true} do {
 				if(isNil {_flagObject getVariable "last_alert"}) then {//Set an alert variable so multiple players don't spam the gang with notifications
 					_flagObject setVariable["last_alert",serverTime,true];
 				};
-				
+
 				if((_flagObject getVariable["last_alert",serverTime]) < (serverTime - 300)) then {//only sends an update to enemy gang once every 5 minutes.
 					if(_currentDataID != life_gang) then {
 						[_zone] remoteExecCall ["life_fnc_capNotice",civilian];
@@ -146,7 +145,7 @@ while{true} do {
 	} else {
 		if(_currentDataID == life_gang && _currentCaptureProgress > 0.99) then {
 			_title = format["Your gang currently owns %1.",_zoneName];
-			_newCartelMarkerText = format["%1 - %2", _zoneName, (player getVariable ["gangName","Captured"])]; 
+			_newCartelMarkerText = format["%1 - %2", _zoneName, (player getVariable ["gangName","Captured"])];
 		} else {
 			if(serverTime < (_flagObject getVariable["capture_cooldown", serverTime - 100])) then {
 				_title = format["Capture cooldown - %1 + minutes remaining.",round(((_flagObject getVariable["capture_cooldown", serverTime - 100]) - serverTime) / 60)];

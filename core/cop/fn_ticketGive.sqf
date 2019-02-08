@@ -1,10 +1,7 @@
-/*
-	File: fn_ticketGive.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Gives a ticket to the targeted player.
-*/
+//	File: fn_ticketGive.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Gives a ticket to the targeted player.
+
 private["_val"];
 if(isNil {life_ticket_unit}) exitWith {hint "Person to ticket is nil"};
 if(isNull life_ticket_unit) exitWith {hint "Person to ticket doesn't exist."};

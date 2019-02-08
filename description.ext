@@ -68,7 +68,6 @@ showHUD[] = {
 #include "dialog\talent.hpp"
 #include "dialog\infamy.hpp"
 #include "dialog\admin_menu.hpp"
-#include "dialog\crimes.hpp"
 #include "dialog\cell_phone.hpp"
 #include "dialog\achievements.hpp"
 #include "dialog\wanted_list.hpp"

@@ -1,9 +1,7 @@
-/*
-	File: fn_handleDowned.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description: Downed state for rubber bullets
-*/
+//	File: fn_handleDowned.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Downed state for rubber bullets
+
 private["_obj","_inVehicle","_time","_downed","_hndlBlur","_hndlBlack","_eff1","_eff2","_effects","_dead","_source","_vehSource"];
 player setDamage 0;
 _vehSource = false;
@@ -11,8 +9,8 @@ _source = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 if(isNull _source) exitWith {player allowDamage true; life_isdowned = false;};
 
 
-if (!life_isdowned && alive player && isNull (findDisplay 7300) && {_source isKindOf "Man"}) then 
-{	
+if (!life_isdowned && alive player && isNull (findDisplay 7300) && {_source isKindOf "Man"}) then
+{
 	if(vehicle _source isKindOf "LandVehicle" && {driver (vehicle _source) == _source}) then
 	{
 		_vehSource = true;
@@ -61,7 +59,7 @@ if (!life_isdowned && alive player && isNull (findDisplay 7300) && {_source isKi
 							case 6: {"Captain"};
 						}
 					];
-		
+
 				};
 				case (side _source == civilian && (_source getVariable["gangName",""] != "" || [group _source,life_group_list] call life_fnc_index > -1)): {
 					_firstLetter = "";
@@ -96,8 +94,8 @@ if (!life_isdowned && alive player && isNull (findDisplay 7300) && {_source isKi
 	};
 
 	if(!isNull (player getVariable ["currentlyEscorting", objNull])) then {[] call life_fnc_stopEscorting;};
-	
-	if(player getVariable ["Escorting",false]) then 
+
+	if(player getVariable ["Escorting",false]) then
 	{
 		_escort = (player getVariable ["escorted_by",[objNull,false]]) select 0;
 [] remoteExecCall ["life_fnc_stopEscorting",_escort];
@@ -106,7 +104,7 @@ if (!life_isdowned && alive player && isNull (findDisplay 7300) && {_source isKi
 	life_isdowned = true;
 	player setVariable["downed",true,true];
 	player setVariable["receiveFirstAid",false,false];
-	
+
 	/*if (vehicle player == player) then {
 		_inVehicle = false;
 	} else {
@@ -114,7 +112,7 @@ if (!life_isdowned && alive player && isNull (findDisplay 7300) && {_source isKi
 		_inVehicle = true;
 	};*/
 	player setUnconscious true;
-	
+
 	disableUserInput true;
 	[] spawn { uiSleep 2; if (userInputDisabled) then { disableUserInput false; uiSleep 0.1; disableUserInput true; } };
 	_hndlBlur = ppEffectCreate ["DynamicBlur", 501];
@@ -133,16 +131,16 @@ if (!life_isdowned && alive player && isNull (findDisplay 7300) && {_source isKi
 	_downed = true;
 	_dead = false;
 
-	
+
 	while {_downed} do {
 		if (player getVariable["receiveFirstAid",false]) exitWith {_downed = false;player setVariable["receiveFirstAid",nil,true];};
 		//if(vehicle player == player) then {_inVehicle = false} else {_inVehicle = true};
-		if (alive player) then 
+		if (alive player) then
 		{
 			/*if ((vehicle player == player) && {player getVariable["restrained",false]} && {animationState player != "AmovPercMstpSnonWnonDnon_Ease"}) then {
 			player playMove "AmovPercMstpSnonWnonDnon_Ease"};*/ //Was a potential fix for moving while downed and restrained, didn't work. ~Gnash
 			if ((_vehSource && _time == 5) || (!_vehSource && _time == 60) || player getVariable["adrenaline",false]) exitWith {_downed = false; player setVariable["adrenaline",false]};
-		} else 
+		} else
 		{
 			_downed = false;
 			_dead = true;
@@ -150,7 +148,7 @@ if (!life_isdowned && alive player && isNull (findDisplay 7300) && {_source isKi
 		_time = _time + 1;
 		uiSleep 1;
 	};
-	
+
 	// The below kills pre-downed user input, which would resume on its own if only re-enabled once. ~Gnash
 	disableUserInput false;
 	disableUserInput true;
@@ -177,11 +175,11 @@ if (!life_isdowned && alive player && isNull (findDisplay 7300) && {_source isKi
 		ppEffectDestroy _hndlBlur;
 		ppEffectDestroy _hndlBlack;
 	};
-	
+
 	player setUnconscious false;
 	if (stance player == "STAND") then {[player,"AidlPercMstpSnonWnonDnon_G01","playNow"] remoteExecCall ["life_fnc_animSync",-2]; }
 	else {[player,"AmovPpneMstpSnonWnonDnon","playNow"] remoteExecCall ["life_fnc_animSync",-2]; };
-	
+
 	life_isdowned = false;
 	player setVariable["downed",false,true];
 	disableUserInput false;

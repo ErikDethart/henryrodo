@@ -1,10 +1,6 @@
-/*
-	File: fn_updateTurfMarkers.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Updates ownership on map markers
-*/
+//	File: fn_updateTurfMarkers.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Updates ownership on map markers
 
 private ["_marker"];
 

@@ -1,11 +1,6 @@
-/*
-	File: fn_createGang.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Create Gang button pressed; do checks and fire up UI
-*/
-
+//	File: fn_createGang.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Create Gang button pressed; do checks and fire up UI
 private ["_house","_uid","_owners"];
 
 _house = cursorTarget;

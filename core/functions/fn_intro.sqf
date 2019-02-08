@@ -1,11 +1,6 @@
-/*
-	File: fn_intro.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Displays introduction on init!
-*/
-
+//	File: fn_intro.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Displays introduction on init!
 private ["_civ","_cop"];
 
 //if ((call life_adminlevel) > 1) exitWith {};

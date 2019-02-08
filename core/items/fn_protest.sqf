@@ -1,11 +1,6 @@
-/*
-	File: fn_protest.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Holds a random protest sign!
-*/
-
+//	File: fn_protest.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Holds a random protest sign!
 private ["_started"];
 
 if (life_protesting) exitWith {};

@@ -1,10 +1,7 @@
-/*
-	File: fn_openLootCrate.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Request server opens a loot crate
-*/
+//	File: fn_openLootCrate.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Request server opens a loot crate
+
 private["_type","_started","_tier","_items","_itemCount"];
 
 _type = [_this,0,0,[0]] call BIS_fnc_param;

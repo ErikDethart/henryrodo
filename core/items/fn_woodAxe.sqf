@@ -1,10 +1,6 @@
-/*
-		File: fn_woodAxe.sqf
-		Author: John "Paratus" VanderZwet
-		
-		Description: Starts holding a wood axe and gives option to cut trees.
-*/
-
+//	File: fn_woodAxe.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Starts holding a wood axe and gives option to cut trees.
 ["Land_Axe_F",[1,1,1],[0,1,1],[0.03,0.34,-0.2]] call life_fnc_holdItem;
 if (isNull life_object_inhand) exitWith {};
 if (typeOf life_object_inhand != "Land_Axe_F") exitWith {};

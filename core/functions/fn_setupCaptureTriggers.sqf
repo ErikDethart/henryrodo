@@ -1,6 +1,5 @@
-/*
-	Description: Creates the triggers for handling capturing areas like cartels. Triggers are made client side and set to the location of the appropriate zone.
-*/
+//	Description: Creates the triggers for handling capturing areas like cartels. Triggers are made client side and set to the location of the appropriate zone.
+
 private["_zone","_cartelZones","_flagObject"];
 _cartelZones = ["1","2","3","4"];//arms, drug, oil, wong
 

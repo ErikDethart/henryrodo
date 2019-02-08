@@ -1,9 +1,6 @@
-/*
-	File: fn_enableActions.sqf
-	
-	Description:
-	Enable actions for several seconds.
-*/
+//	File: fn_enableActions.sqf
+//	Description: Enable actions for several seconds.
+
 
 if (player getVariable["restrained",false] || (isWeaponDeployed player)) exitWith {};
 if(life_show_actions) exitWith {};

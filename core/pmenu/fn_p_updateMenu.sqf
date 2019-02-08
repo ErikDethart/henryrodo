@@ -1,10 +1,6 @@
-/*
-	File: fn_p_updateMenu.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Updates the player menu (Virtual Interaction Menu)
-*/
+//	File: fn_p_updateMenu.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Updates the player menu (Virtual Interaction Menu)
 private["_dialog","_time","_left","_right","_inv","_lic","_licenses","_near","_near_units","_mstatus","_shrt","_side","_talents"];
 disableSerialization;
 
@@ -41,13 +37,12 @@ _time ctrlSetStructuredText parseText format ["<t align='center' shadow='0' size
 
 _left ctrlSetStructuredText parseText format ["<t shadow='0' size='0.65'>$%1%2</t>", [life_money] call life_fnc_numberText, _talentAlert];
 _right ctrlSetStructuredText parseText format ["<t shadow='0' size='0.65'>%1/%2</t>", life_carryWeight, life_maxWeight];
-/*
-if (_free > 0) then
-{
-	_talents ctrlSetStructuredText parseText format["<t size='0.8px' color='#FF0000'>Talents: %1/%2 (upgrade)<br/>%4%5 to next</t>", count life_talents, life_maxTalents, _free, _percent, "%"];
-}
-else
-{
-	_talents ctrlSetStructuredText parseText format["<t size='0.8px'>Talents: %1/%2<br/>%3%4 to next</t>", count life_talents, life_maxTalents, _percent, "%"];
-};
-*/
+//
+//if (_free > 0) then
+//{
+//	_talents ctrlSetStructuredText parseText format["<t size='0.8px' color='#FF0000'>Talents: %1/%2 (upgrade)<br/>%4%5 to next</t>", count life_talents, life_maxTalents, _free, _percent, "%"];
+//}
+//else
+//{
+//	_talents ctrlSetStructuredText parseText format["<t size='0.8px'>Talents: %1/%2<br/>%3%4 to next</t>", count life_talents, life_maxTalents, _percent, "%"];
+//};

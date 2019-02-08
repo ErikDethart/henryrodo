@@ -1,19 +1,16 @@
-/*
-	File: fn_updateMoney.sqf
+//	File: fn_updateMoney.sqf
+//	Author: Skalicon / Paratus
+//	Description:
+//	Updates the players Inventory and ATM cash.
 
-	Author: Skalicon / Paratus
+//	Parameter(s):
+//	0: String - Where the money is edited: "atm", "cash"
+//	1: String -  Operator: "add", "take", "set"
+//	2: Number - Amount of money.
 
-	Description:
-	Updates the players Inventory and ATM cash.
+//	Returns:
+//	Nothing
 
-	Parameter(s):
-	0: String - Where the money is edited: "atm", "cash"
-	1: String -  Operator: "add", "take", "set"
-	2: Number - Amount of money.
-
-	Returns:
-	Nothing
-*/
 if (X_Server) exitWith {};
 
 params [

@@ -1,11 +1,9 @@
-/*
-	File: fn_impoundMenu.sqf
-	Author: Bryan "Tonic" Boardwine
+//	File: fn_impoundMenu.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description:
+//	Not actually a impound menu, may act as confusion to some but that is what I wanted.
+//	The purpose of this menu is it is now called a 'Garage' where vehicles are stored (persistent ones).
 
-	Description:
-	Not actually a impound menu, may act as confusion to some but that is what I wanted.
-	The purpose of this menu is it is now called a 'Garage' where vehicles are stored (persistent ones).
-*/
 private["_vehicles","_control","_basePrice","_price","_sPrice","_row","_vData"];
 disableSerialization;
 _vehicles = [_this,0,[],[[]]] call BIS_fnc_param;

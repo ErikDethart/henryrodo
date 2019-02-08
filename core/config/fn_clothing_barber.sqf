@@ -1,10 +1,7 @@
-/*
-	File: fn_clothing_barber.sqf
-	Author: John "Paratus" VanderZwet
+//	File: fn_clothing_barber.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Master configuration file for barber shop
 
-	Description:
-	Master configuration file for barber shop
-*/
 private["_filter"];
 _filter = [_this,0,0,[0]] call BIS_fnc_param;
 //Classname, Custom Display name (use nil for Cfg->DisplayName, price

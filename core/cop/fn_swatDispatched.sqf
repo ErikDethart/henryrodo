@@ -1,9 +1,6 @@
-/*
-	File: swatDispatched.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description: Requested for SWAT duty!
-*/
+//	File: swatDispatched.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Requested for SWAT duty!
 
 params [
 	["_deployPositions",[],[[]]],

@@ -1,10 +1,7 @@
-/*
-	File: fn_huntingZone.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Spawns up animals local to the client.
-*/
+//	File: fn_huntingZone.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Spawns up animals local to the client.
+
 private["_enable","_presence","_total","_animals","_pos"];
 
 _enable = [_this,0,false,[false]] call BIS_fnc_param;
@@ -78,7 +75,7 @@ else
 			deleteVehicle _x;
 		};
 	} foreach life_animals_array;
-	
+
 	life_animals_array = [];
 	life_animals_spawned = false;
 	life_animals_spawned_time = time;

@@ -1,10 +1,7 @@
-/*
-	File: fn_recipes.sqf
-	Author: John "Paratus" VanderZwet
+//	File: fn_recipes.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Recipes for crafting items
 
-	Description:
-	Recipes for crafting items
-*/
 private["_shop"];
 _shop = _this;
 _items = [];

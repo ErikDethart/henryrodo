@@ -1,10 +1,7 @@
-/*
-	File: fn_settingsMenu
-	Author: Bryan "Tonic" Boardwine
+//	File: fn_settingsMenu
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Setup the settings menu.
 
-	Description:
-	Setup the settings menu.
-*/
 private["_page"];
 _page = param [0,1,[0]];
 

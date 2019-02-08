@@ -1,11 +1,6 @@
-/*
-	File: fn_giveMoney.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Gives the selected amount of money to the selected player.
-*/
-
+//	File: fn_giveMoney.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description:Gives the selected amount of money to the selected player.
 if (life_corruptData) exitWith { hint "YOUR PLAYER DATA IS DAMAGED. You must log out to the lobby and rejoin. Your progress will not save until you do this. Most likely caused by a script-kiddie." };
 
 private["_unit","_amount"];

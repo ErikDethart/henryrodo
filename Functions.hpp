@@ -327,8 +327,6 @@ class Life_Client_Core
 		class setTitle {};
 		class forceRagDoll {};
 		class execute {};
-		class karaoke {};
-		class playKaraoke {};
 		class netSetVar {};
 		class getMoneyCap {};
 		class face {};
@@ -473,9 +471,6 @@ class Life_Client_Core
 		class trackBounty {};
 		class removeBounty {};
 		class retrieveBounty {};
-		class joinRace {};
-		class raceWon {};
-		class startRace {};
 		class policeRecruit {};
 		class requestTrial {};
 		class jurySummons {};
@@ -518,7 +513,6 @@ class Life_Client_Core
 		class copSplit {};
 		class copLights {};
 		class copPrison {};
-		class crimeRecord {};
 		class stopPrisonBreak {};
 		class crimesReceived {};
 		class earnPrestige {};

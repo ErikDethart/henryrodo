@@ -1,10 +1,7 @@
-/*
-	File: fn_knockoutAction.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Knocks out the target.
-*/
+//	File: fn_knockoutAction.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Knocks out the target.
+
 private["_target"];
 _target = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 

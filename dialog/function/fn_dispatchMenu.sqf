@@ -1,11 +1,6 @@
-/*
-	File: fn_dispatchMenu.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Requests and displays dispatcher dialog
-	Please ask for permission to use this and stop stealing my stuff.
-*/
+//	File: fn_dispatchMenu.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Requests and displays dispatcher dialog Please ask for permission to use this and stop stealing my stuff.
 
 disableSerialization;
 

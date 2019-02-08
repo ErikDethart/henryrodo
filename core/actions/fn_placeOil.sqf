@@ -1,10 +1,6 @@
-/*
-	File: fn_placeOil.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Place an oil barrel in a boat.
-*/
+//	File: fn_placeOil.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Place an oil barrel in a boat.
 
 _vehicle = cursorTarget;
 

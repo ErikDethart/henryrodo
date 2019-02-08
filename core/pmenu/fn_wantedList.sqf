@@ -1,12 +1,7 @@
-/*
-	Copyright © 2013 Bryan "Tonic" Boardwine, All rights reserved
-	See http://armafiles.info/life/list.txt for servers that are permitted to use this code.
-	File: fn_wantedList.sqf
-	Author: Bryan "Tonic" Boardwine"
+//	File: fn_wantedList.sqf
+//	Author: Bryan "Tonic" Boardwine"
+//	Description: Displays wanted list information sent from the server.
 
-	Description:
-	Displays wanted list information sent from the server.
-*/
 private["_info","_display","_list","_units","_entry"];
 disableSerialization;
 _info = [_this,0,[],[[]]] call BIS_fnc_param;

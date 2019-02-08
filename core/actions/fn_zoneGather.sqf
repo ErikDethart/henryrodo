@@ -1,11 +1,6 @@
-/*
-	File: fn_zoneGather.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Gather an object based on distance and stuff
-*/
-
+//	File: fn_zoneGather.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Gather an object based on distance and stuff
 private["_item","_count"];
 
 _item = [_this,0,"",[""]] call BIS_fnc_param;

@@ -1,10 +1,7 @@
-/*
-	File: fn_repairTruck.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Main functionality for toolkits, to be revised in later version.
-*/
+//	File: fn_repairTruck.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Main functionality for toolkits, to be revised in later version.
+
 private["_veh","_delay","_consume","_rand"];
 _veh = cursorTarget;
 if(isNull _veh) exitwith {};
@@ -13,7 +10,7 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 		_delay = 0.27; // sec per 1 percent
 		if (!("ToolKit" in (items player)) && !(114 in life_talents) && !(83 in life_talents)) then { _delay = _delay * 4; };
 		if ((66 in life_talents) || (84 in life_talents)) then { _delay =  _delay - 0.1; };
-	
+
 		_displayName = getText(configFile >> "CfgVehicles" >> (typeOf _veh) >> "displayName");
 		_upp = format["Repairing %1",_displayName];
 		//Setup our progress bar.
@@ -27,11 +24,11 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 		_cP = 0.01;
 		_success = false;
 		_started = getPosASL player;
-		
+
 		life_action_in_use = true;
-		
+
 [player,"Acts_carFixingWheel","playNow",21] remoteExecCall ["life_fnc_animSync",-2];
-		
+
 		while{true} do
 		{
 			if(!isNull findDisplay 602) exitWith {};
@@ -48,19 +45,19 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 			if(player getVariable ["playerSurrender",false]) exitWith {};
 			if (!life_action_in_use) exitWith {};
 		};
-		
+
 [player,""] remoteExecCall ["life_fnc_animSync",-2];
-		
+
 		5 cutText ["","PLAIN"];
 		life_action_in_use = false;
-		
+
 		if (!_success) exitWith { hint "Your repair has been interrupted and failed." };
-		
+
 		_consume = true;
 		if ((67 in life_talents)) then
 		{
 			_rand = floor (random 4);
-			if (_rand == 0) then { _consume = false; };			
+			if (_rand == 0) then { _consume = false; };
 		};
 		if (_consume && playerSide != west) then
 		{
@@ -72,7 +69,7 @@ if((_veh isKindOf "Car") OR (_veh isKindOf "Ship") OR (_veh isKindOf "Air")) the
 			titleText["You have repaired that vehicle without even scratching your tools.","PLAIN"];
 		};
 		_veh setDamage 0;
-		
+
 		life_experience = life_experience + 2;
 //[40, player, format["Repaired vehicle %1", typeOf _veh]] remoteExecCall ["ASY_fnc_logIt",2];
 };

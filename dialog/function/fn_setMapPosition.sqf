@@ -1,10 +1,7 @@
-/*
-	File: fn_setMapPosition.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Sets the given control / maps focus position
-*/
+//	File: fn_setMapPosition.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Sets the given control / maps focus position
+
 disableSerialization;
 private["_control","_time","_zoom","_position"];
 _control = [_this,0,controlNull,[controlNull]] call BIS_fnc_param;

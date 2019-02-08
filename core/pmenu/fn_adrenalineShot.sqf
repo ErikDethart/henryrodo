@@ -1,9 +1,6 @@
-/*
-		File: adrenalineShot.sqf
-		Author: Mike "Revir" Berlin
-		
-		Description: Flips a vehicle
-*/
+//	File: adrenalineShot.sqf
+//	Author: Mike "Revir" Berlin
+
 if (!([false,"adrenalineShot",1] call life_fnc_handleInv)) exitWith {};
 
 life_action_in_use = true;

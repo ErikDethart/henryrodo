@@ -1,10 +1,7 @@
-/*
-	File: fn_processAction.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Master handling for processing an item.
-*/
+//	File: fn_processAction.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Master handling for processing an item.
+
 private["_vendor","_type","_itemInfo","_oldItem","_newItem","_cost","_upp","_hasLicense","_itemName","_oldVal","_ui","_progress","_pgText","_cP","_vals","_delayInt","_nBuilding","_vehicle"];
 _vendor = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _vehicle = cursorObject;
@@ -144,7 +141,7 @@ _oldOldVal = _oldVal;
 if (_capture) then
 {
 	_point = (call compile format["capture_pole_%1",((_itemInfo select 4) + 1)]) getVariable["capture_data",["Drug Cartel","0",0.5]];
-	
+
 	if (((_point select 1) != life_gang) || (_point select 2) < 1) then
 	{
 		_oldVal = switch (true) do
@@ -154,7 +151,7 @@ if (_capture) then
 			//case (_type == "drilledoil"): { _oldVal };
 			default { floor(_oldVal * 0.80) };
 		};
-	};	
+	};
 };
 
 //Adds the new item

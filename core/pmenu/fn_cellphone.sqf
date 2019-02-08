@@ -1,10 +1,7 @@
-/*
-	File: fn_cellphone.sqf
-	Author: John "Paratus" VanderZwet
+//	File: fn_cellphone.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Opens the cellphone menu?
 
-	Description:
-	Opens the cellphone menu?
-*/
 private["_display","_units","_type","_allPlayers","_playableSorted","_name"];
 
 disableSerialization;

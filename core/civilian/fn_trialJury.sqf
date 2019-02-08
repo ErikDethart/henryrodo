@@ -1,10 +1,6 @@
-/*
-	File: fn_trialJury.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Jury duty has begin!
-*/
+//	File: fn_trialJury.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Jury duty has begin!
 
 _defendant = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 _amount = [_this,1,1,[1]] call BIS_fnc_param;

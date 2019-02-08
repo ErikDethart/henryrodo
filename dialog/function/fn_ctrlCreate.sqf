@@ -1,9 +1,7 @@
-/*
-	File: fn_ctrlCreate.sqf
-	Author: Poseidon
-	
-	Description: Expands functionality of engine command ctrlCreate to reduce lines of code when creating a control.
-*/
+//	File: fn_ctrlCreate.sqf
+//	Author: Poseidon
+//	Description: Expands functionality of engine command ctrlCreate to reduce lines of code when creating a control.
+
 disableSerialization;
 params[
 	["_display",displayNull,[displayNull]],
@@ -19,10 +17,12 @@ private _newCtrl = controlNull;
 
 if(isNull _display || _type == "" || _idc == 0 || _sizeAndPosition isEqualTo [] || _backgroundColor isEqualTo []) exitWith {systemChat format["Control creation failed\n%1 - %2 - %3 - %4", _display, _type, _idc, _controlGroup]; _newCtrl};
 
-if(isNull _controlGroup) then {//If there was no controlgroup provided, create a control group.
+if(isNull _controlGroup) then {
+//If there was no controlgroup provided, create a control group.
 	_newCtrl = _display ctrlCreate [_type, _idc];
 }else{
-	_newCtrl = _display ctrlCreate [_type, _idc, _controlGroup];//Control group provided, create the control inside the specified group.
+	_newCtrl = _display ctrlCreate [_type, _idc, _controlGroup];
+	//Control group provided, create the control inside the specified group.
 };
 
 _newCtrl ctrlSetPosition _sizeAndPosition;
@@ -34,7 +34,8 @@ if(_fade) then {
 };
 _newCtrl ctrlSetFade 0;
 
-switch(_type) do {//Custom actions for different types.
+switch(_type) do {
+//Custom actions for different types.
 	case "RscButtonMenu":{
 		_newCtrl ctrlSetText _text;
 
@@ -71,4 +72,5 @@ if(_fade) then {
 	_newCtrl ctrlCommit 0;
 };
 
-_newCtrl;//The created control is returned
+_newCtrl;
+//The created control is returned

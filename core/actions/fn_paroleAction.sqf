@@ -1,10 +1,7 @@
-/*
-	File: fn_paroleAction.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Starts the parole process.
-*/
+//	File: fn_paroleAction.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Starts the parole process.
+
 private["_unit"];
 _unit = cursorTarget;
 disableSerialization;

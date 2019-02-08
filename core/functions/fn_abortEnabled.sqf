@@ -1,11 +1,6 @@
-/*
-	File: fn_abortEnabled.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Enables or disables abort and respawn buttons based on restrain status
-*/
-
+//	File: fn_abortEnabled.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Enables or disables abort and respawn buttons based on restrain status
 private["_display","_btnRespawn","_btnAbort","_last","_time"];
 disableSerialization;
 

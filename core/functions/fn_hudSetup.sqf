@@ -1,10 +1,7 @@
-/*
-	File: fn_hudSetup.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Setups the hud for the player?
-*/
+//	File: fn_hudSetup.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Setups the hud for the player?
+
 private["_display","_alpha","_version","_p","_pg"];
 disableSerialization;
 _display = findDisplay 46;

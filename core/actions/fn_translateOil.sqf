@@ -1,11 +1,6 @@
-/*
-	File: fn_translateOil.sqf
-	Author: Alan
-
-	Description:
-	Change oil barrel to a virtual item
-*/
-//Setup
+//	File: fn_translateOil.sqf
+//	Author: Alan
+//	Description: Change oil barrel to a virtual item
 _amount = 20;
 
 if(isNull life_holding_barrel) exitWith {};

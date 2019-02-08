@@ -1,10 +1,7 @@
-/*
-	File: fn_oilPump.sqf
-	Author: Gnashes
-	
-	Description:
-	Toggles oil truck pumps on and off
-*/
+//	File: fn_oilPump.sqf
+//	Author: Gnashes
+//	Description: Toggles oil truck pumps on and off
+
 private["_vehicle","_fuel","_pos","_ui","_progress","_pgText","_cP","_delayInt","_upp","_nBuilding"];
 
 _vehicle = param [3,ObjNull,[ObjNull]];
@@ -15,9 +12,9 @@ if (player distance2D _vehicle > 7) exitWith {systemChat "Error! Too Far Away"};
 
 if ({player distance getMarkerPos format["oil_%1",_x] < 150} count [1,2,3,4,5] == 0) exitWith { hint "You can't drill for oil at this location!"};
 
-if !(_vehicle getVariable["oilPump", false]) then {    
+if !(_vehicle getVariable["oilPump", false]) then {
     hint "The pump and drill are setting up.";
-	
+
 	//Setup our progress bar.
 	_upp = "Setting up the Drill and Pump";
 	disableSerialization;
@@ -53,7 +50,7 @@ if !(_vehicle getVariable["oilPump", false]) then {
 	life_is_processing = false;
 	life_action_in_use = false;
 	_vehicle setVariable["oilPump", true, true];
-	
+
 }
 else
 {
@@ -92,5 +89,5 @@ else
 	life_action_in_use = false;
 	(_vehicle setVariable["oilPump", false, true]);
 	_vehicle setHit [getText (configfile >> "CfgVehicles" >> typeOf _vehicle >> "HitPoints" >> "HitEngine" >> "name"), 0];
-    
+
 };

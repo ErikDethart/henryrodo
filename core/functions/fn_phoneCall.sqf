@@ -1,11 +1,6 @@
-/*
-	File: fn_phoneCall.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Initiate or receive a phone call.
-*/
-
+//	File: fn_phoneCall.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Initiate or receive a phone call.
 private ["_init","_unit","_callStart"];
 _init = [_this,0,true,[true]] call BIS_fnc_param;
 _unit = [_this,1,objNull,[objNull]] call BIS_fnc_param;

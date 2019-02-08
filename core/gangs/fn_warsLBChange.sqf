@@ -1,10 +1,6 @@
-/*
-	File: fn_warsLBChange.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Gang war UI label change
-*/
+//	File: fn_warsLBChange.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Gang war UI label change
 
 private ["_control","_index","_label","_gangId"];
 

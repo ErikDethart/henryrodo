@@ -1,10 +1,5 @@
-/*
-	File: fn_meth.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Not even once!
-*/
+//	File: fn_meth.sqf
+//	Author: John "Paratus" VanderZwet
 
 if (!([false,"meth",1] call life_fnc_handleInv)) exitWith {};
 
@@ -22,8 +17,8 @@ if (life_meth_effect == 0) then
 		"chromAberration" ppEffectEnable true;
 		"chromAberration" ppEffectAdjust [life_drug_level / 10,life_drug_level / 10,true];
 		"chromAberration" ppEffectCommit 1;
-		uiSleep 2.25;	
-		
+		uiSleep 2.25;
+
 		while {alive player && ((time - life_meth_effect) < (4 * 60))} do
 		{
 			"ColorInversion" ppEffectEnable true;
@@ -34,7 +29,7 @@ if (life_meth_effect == 0) then
 			"chromAberration" ppEffectCommit 1;
 			uiSleep 2;
 		};
-		
+
 		"chromAberration" ppEffectEnable false;
 		"ColorInversion" ppEffectEnable false;
 		life_meth_effect = 0;

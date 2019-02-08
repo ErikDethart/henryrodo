@@ -1,10 +1,7 @@
-/*
-	File: fn_initCiv.sqf
-	Author: Bryan "Tonic" Boardwine
+//	File: fn_initCiv.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Initializes the civilian.
 
-	Description:
-	Initializes the civilian.
-*/
 private["_spawnPos","_marker","_house"];
 
 [] spawn life_fnc_trackMarkers;

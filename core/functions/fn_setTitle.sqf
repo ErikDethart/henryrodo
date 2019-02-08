@@ -1,10 +1,6 @@
-/*
-	File: fn_setTitle.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Sets player title for display and persistence
-*/
+//	File: fn_setTitle.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Sets player title for display and persistence
 
 private["_title"];
 _title = [_this,0,"No Title",[""]] call BIS_fnc_param;

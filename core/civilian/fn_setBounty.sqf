@@ -1,10 +1,7 @@
-/*
-	File: fn_setBounty.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Sets the provided wanted entry as active bounty.
-*/
+//	File: fn_setBounty.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Sets the provided wanted entry as active bounty.
+
 private ["_bounty","_retarget"];
 
 _bounty = [_this,0,[],[[]]] call BIS_fnc_param;
@@ -23,7 +20,7 @@ if (_retarget) then {
 } else {
 	["BountyUpdate",[format["You have been tasked to track and arrest %1.", _bounty select 0]]] call BIS_fnc_showNotification;
 	systemChat format["Your new bounty target, %1, is currently wanted for $%2.", _bounty select 0, [_bounty select 3] call life_fnc_numberText];
-	
+
 	_bounty pushBack _marker; // Tracking markers
 };
 

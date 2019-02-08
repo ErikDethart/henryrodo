@@ -1,10 +1,7 @@
-/*
-	File: fn_housePrice.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Returns the buyable house price.
-*/
+//	File: fn_housePrice.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Returns the buyable house price.
+
 private _type = param [0,"",[""]];
 if(_type == "") exitWith {-1};
 

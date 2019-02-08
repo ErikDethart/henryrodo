@@ -1,12 +1,7 @@
 #define ctrlSelData(ctrl) (lbData[##ctrl,(lbCurSel ##ctrl)])
-/*
-	File: fn_vehStoreItem.sqf
-	Author: Bryan "Tonic" Boardwine
-
-	Description:
-	Used in the vehicle trunk menu, stores the selected item and puts it in the vehicles virtual inventory
-	if the vehicle has room for the item.
-*/
+//	File: fn_vehStoreItem.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Used in the vehicle trunk menu, stores the selected item and puts it in the vehicles virtual inventory if the vehicle has room for the item.
 private["_ctrl","_num","_totalWeight","_itemWeight","_veh_data","_inv","_index","_val","_goldWeight"];
 disableSerialization;
 
@@ -73,9 +68,9 @@ if(_ctrl == "money") then
 		life_trunk_vehicle setMass ((getMass life_trunk_vehicle) + (_num * 400));
 		life_trunk_vehicle enableRopeAttach false;
 	};
-	
+
 	if(_ctrl in ["oilp","oilu"]) then { life_trunk_vehicle enableRopeAttach false; };
-	
+
 	if(_index == -1) then
 	{
 		_inv set[count _inv,[_ctrl,_num]];

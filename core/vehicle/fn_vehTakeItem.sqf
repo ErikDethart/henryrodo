@@ -1,12 +1,7 @@
 #define ctrlSelData(ctrl) (lbData[##ctrl,(lbCurSel ##ctrl)])
-/*
-	File: fn_vehTakeItem.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Used in the vehicle trunk menu, takes the selected item and puts it in the players virtual inventory
-	if the player has room.
-*/
+//	File: fn_vehTakeItem.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Used in the vehicle trunk menu, takes the selected item and puts it in the players virtual inventory if the player has room.
 private["_ctrl","_num","_index","_data","_old","_value","_weight","_diff"];
 disableSerialization;
 if(isNull life_trunk_vehicle OR !alive life_trunk_vehicle) exitWith {hint "The vehicle either doesn't exist or is destroyed."};
@@ -47,7 +42,7 @@ if(_ctrl == "money") then
 	{
 		_data set[_index,[_ctrl,(_value - _num)]];
 	};
-	
+
 	["cash","add",_num] call life_fnc_updateMoney;
 	life_trunk_vehicle setVariable["Trunk",[_data,(_old select 1) - _weight],true];
 	[life_trunk_vehicle] call life_fnc_vehInventory;
@@ -80,7 +75,7 @@ if(_ctrl == "money") then
 		};
 	};
 //[71, player, format["Took %1 %2 from trunk of %3", _num, _ctrl, typeOf life_trunk_vehicle]] remoteExecCall ["ASY_fnc_logIt",2];
-		
+
 		if(_ctrl == "goldbar") then
 		{
 			_goldWeight = life_trunk_vehicle getVariable ["trunkWeight", 0];
@@ -89,7 +84,7 @@ if(_ctrl == "money") then
 			life_trunk_vehicle setMass ((getMass life_trunk_vehicle) - (_num * 400));
 			if ((_value - _num) == 0) then {life_trunk_vehicle enableRopeAttach true};
 		};
-		
+
 		if(_ctrl in ["oilp","oilu"]) then {if ((_value - _num) == 0) then {life_trunk_vehicle enableRopeAttach true};};
 	}
 		else

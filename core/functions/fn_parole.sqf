@@ -1,10 +1,6 @@
-/*
-	File: fn_parole.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Queries and begins parole
-*/
+//	File: fn_parole.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Queries and begins parole
 
 _unit = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 

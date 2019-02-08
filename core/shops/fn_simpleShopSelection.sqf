@@ -1,10 +1,6 @@
-/*
-	File: fn_simpleShopSelection.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Checks the weapon & adds the price tag.
-*/
+//	File: fn_simpleShopSelection.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Checks the weapon & adds the price tag.
 private["_control","_index","_priceTag","_price","_item"];
 _control = [_this,0,controlNull,[controlNull]] call BIS_fnc_param;
 _index = [_this,1,-1,[0]] call BIS_fnc_param;

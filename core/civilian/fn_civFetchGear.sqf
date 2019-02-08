@@ -1,10 +1,6 @@
-/*
-	File: fn_civFetchGear.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Fetches specific key items from the civilian for a persistent state.
-*/
+//	File: fn_civFetchGear.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Fetches specific key items from the civilian for a persistent state.
 
 /*private["_primary,_launcher","_handgun","_magazines","_uniform","_vest","_backpack","_items","_primitems","_secitems","_handgunitems","_uitems","_vitems","_bitems","_headgear","_goggles"];
 if (life_laser_inprogress) exitWith {};

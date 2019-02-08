@@ -1,10 +1,7 @@
-/*
-	File: fn_storeVehicleGarage.sqf
-	Author: Skalicon
-	
-	Description:
-	Handles everything that happens when you store a vehicle in the garage.
-*/
+//	File: fn_storeVehicleGarage.sqf
+//	Author: Skalicon
+//	Description: Handles everything that happens when you store a vehicle in the garage.
+
 private["_nearVehicle","_near","_uid"];
 _nearVehicle = objNull;
 

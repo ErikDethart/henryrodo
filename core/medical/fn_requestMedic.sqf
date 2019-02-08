@@ -1,13 +1,6 @@
-/*
-	File: fn_requestMedic.sqf
-	Author: Bryan "Tonic" Boardwine
-
-	Description:
-	N/A
-*/
+//	File: fn_requestMedic.sqf
+//	Author: Bryan "Tonic" Boardwine
 private["_medicsOnline","_doRequest"];
-
-
 _doRequest = [_this,0,false,[false]] call BIS_fnc_param;
 
 if(time - (player getVariable ["last_revived",-1000]) < 300) then { titleText[format["You were recently revived and cannot be revived again for %1 seconds.",ceil (300 - (time - (player getVariable ["last_revived",-1000])))],"PLAIN"]; };

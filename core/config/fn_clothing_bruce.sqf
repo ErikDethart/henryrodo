@@ -1,10 +1,7 @@
-/*
-	File: fn_clothing_bruce.sqf
-	Author: John "Paratus" VanderZwet
+//	File: fn_clothing_bruce.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Master configuration file for Bruce's Outback Outfits.
 
-	Description:
-	Master configuration file for Bruce's Outback Outfits.
-*/
 private["_filter","_ret"];
 _filter = [_this,0,0,[0]] call BIS_fnc_param;
 //Classname, Custom Display name (use nil for Cfg->DisplayName, price

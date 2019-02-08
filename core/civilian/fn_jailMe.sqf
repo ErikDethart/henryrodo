@@ -1,10 +1,7 @@
-/*
-	File: fn_jailMe.sqf
-	Author Bryan "Tonic" Boardwine
+//	File: fn_jailMe.sqf
+//	Author Bryan "Tonic" Boardwine
+//	Description: Once word is received by the server the rest of the jail execution is completed.
 
-	Description:
-	Once word is received by the server the rest of the jail execution is completed.
-*/
 params [
 	["_ret",[],[[]]],
 	["_jailSpawn","jail_marker2",[""]],

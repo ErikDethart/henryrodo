@@ -1,10 +1,6 @@
-/*
-	File: fn_achievementMenu.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Displays player achievements
-*/
+//	File: fn_achievementMenu.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Displays player achievements
 
 disableSerialization;
 waitUntil {!isNull (findDisplay 3100)};

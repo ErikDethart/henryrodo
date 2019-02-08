@@ -1,13 +1,8 @@
-/*
-	File: fn_confirmGovPardonEnd.sqf
-	Author: Alan
-	
-	Description:
-	Call to confirm a pardon by the governor.
-	
-	Parameter(s):
-	0 - OBJECT PLAYER
-*/
+//	File: fn_confirmGovPardonEnd.sqf
+//	Author: Alan
+//	Description: Call to confirm a pardon by the governor.
+//	Parameter(s):
+//	0 - OBJECT PLAYER
 private["_unit","_res","_uid"];
 _unit = _this select 0;
 _res = _this select 1;

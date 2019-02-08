@@ -1,10 +1,6 @@
-/*
-	File: fn_doCreateGang.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Player submitted new gang name; create it up!
-*/
+//	File: fn_doCreateGang.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Player submitted new gang name; create it up!
 
 private ["_house","_uid","_owners","_value"];
 

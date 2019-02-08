@@ -1,12 +1,6 @@
-/*
-	File: fn_learnTalent.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Player has learned a new talent, such as scripting.
-	Please either get Asylum permission to use this or create this system yourself.
-*/
-
+//	File: fn_learnTalent.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Player has learned a new talent, such as scripting. Please either get Asylum permission to use this or create this system yourself.
 [] spawn
 {
 	private["_display","_index","_id","_max","_free","_str","_talentInfo","_talents"];
@@ -16,9 +10,9 @@
 	_index = lbData[3702,lbCurSel (3702)];
 	_index = call compile format["%1", _index];
 	_learn = _display displayCtrl 3710;
-	
+
 	if (life_gangperk && life_gang_rank > 1) exitWith {};
-	
+
 	_talentInfo = if (life_gangperk) then { life_gangTalentInfo } else { life_talentInfo };
 	_talents = if (life_gangperk) then { life_gangtalents } else { life_talents };
 
@@ -40,17 +34,17 @@
 			if (_id == (_x select 3) && (_x select 0) in _talents) exitWith { _gotChild = _x; };
 		} forEach _talentInfo;
 		if (count _gotChild > 0) exitWith { hint format["You can't unlearn this talent as it has a child talent, %1, which will need to be unlearned first.", _gotChild select 2] };
-		
+
 		_handle = [format["<t align='center'>If you proceed you will unlearn the talent %1 for a cost of $%2!</t>", _talent select 2, [life_respec_fee] call life_fnc_numberText]] spawn life_fnc_confirmMenu;
 		waitUntil {scriptDone _handle};
 		if(!life_confirm_response) exitWith {};
-		
+
 		if (life_atmmoney < life_respec_fee) exitWith { hint "You don't have enough money in your bank to unlearn this talent." };
 		["atm","take",life_respec_fee] call life_fnc_updateMoney;
-		
+
 		if (life_gangperk) then { life_gangtalents = life_gangtalents - [_id]; }
 		else { life_talents = life_talents - [_id]; };
-		
+
 		hint format["You have unlearned the talent, %1.", _talent select 2];
 	}
 	else
@@ -68,7 +62,7 @@
 		hint _str;
 		systemChat _str;
 	};
-	
+
 	[] spawn life_fnc_talentMenu;
 
 	if (life_gangperk) then

@@ -1,10 +1,7 @@
-/*
-	File: fn_robAction.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Starts the robbing process?
-*/
+//	File: fn_robAction.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Starts the robbing process?
+
 private["_target"];
 _target = cursorTarget;
 

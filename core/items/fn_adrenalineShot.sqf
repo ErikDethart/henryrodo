@@ -1,10 +1,6 @@
-/*
-		File: fn_adrenalineShot.sqf
-		Author: Mike "Revir" Berlin
-		
-		Description: Brings a player back from being downed.
-	
-*/
+//	File: fn_adrenalineShot.sqf
+//	Author: Mike "Revir" Berlin
+//	Description: Brings a player back from being downed.
 
 if (!([false,"adrenalineShot",1] call life_fnc_handleInv)) exitWith {};
 _units = player nearEntities["Man",5];

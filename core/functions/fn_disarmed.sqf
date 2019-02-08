@@ -1,10 +1,6 @@
-/*
-	File: fn_disarmed.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Disarmed by a police officer.
-*/
+//	File: fn_disarmed.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Disarmed by a police officer.
 
 _cop = [_this,0,ObjNull,[Objnull]] call BIS_fnc_param;
 if (isNull _cop) exitWith {};

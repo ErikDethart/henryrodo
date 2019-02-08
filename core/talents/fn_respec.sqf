@@ -1,11 +1,6 @@
-/*
-	File: fn_respec.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Clears all talent points, at a cost.
-*/
-
+//	File: fn_respec.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Clears all talent points, at a cost.
 private ["_display","_label"];
 
 _cost = life_respec_fee * (count life_talents);

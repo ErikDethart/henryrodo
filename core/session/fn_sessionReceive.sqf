@@ -1,13 +1,10 @@
 #include "..\..\macro.h"
-/*
-	File: fn_sessionReceive.sqf
-	Author: Bryan "Tonic" Boardwine
-
-	Description:
-	Received information from the server and sorts information and
-	initializes the player, if no data is found it starts the session
-	creation process.
-*/
+//	File: fn_sessionReceive.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description:
+//	Received information from the server and sorts information and
+//	initializes the player, if no data is found it starts the session
+//	creation process.
 
 if (isDedicated) exitWith {};
 private["_session","_item"];

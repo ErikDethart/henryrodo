@@ -1,11 +1,6 @@
-/*
-	File: fn_showEndorse.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Updates data shown on endorsement UI
-*/
-
+//	File: fn_showEndorse.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Updates data shown on endorsement UI
 disableSerialization;
 waitUntil {!isnull (findDisplay 6700)};
 if (life_wealthPrestige < 1) exitWith{closeDialog 0};

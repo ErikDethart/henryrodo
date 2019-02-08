@@ -1,10 +1,6 @@
-/*
-	File: fn_policeRequired.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Checks that enough police are online for the event and shows an error if not. Returns true if police are present.
-*/
+//	File: fn_policeRequired.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Checks that enough police are online for the event and shows an error if not. Returns true if police are present.
 params [
 	["_required",1,[1]],
 	["_ignoreFed",false,[false]]

@@ -1,11 +1,6 @@
-/*
-	File: fn_kickGang.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Removes the selected member from the gang
-*/
-
+//	File: fn_kickGang.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Removes the selected member from the gang
 if (life_gang_rank > 1) exitWith {hint "You are not high enough in rank to kick someone from your gang";};
 disableSerialization;
 

@@ -1,10 +1,6 @@
-/*
-	File: fn_setGroupPass.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Sets password for the group.
-*/
+//	File: fn_setGroupPass.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Sets password for the group.
 private["_dialog","_index","_members","_sel","_user"];
 disableSerialization;
 

@@ -1,10 +1,6 @@
-/*
-	File: fn_virt_buy.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Buy a virtual item from the store.
-*/
+//	File: fn_virt_buy.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Buy a virtual item from the store.
 private["_type","_price","_amount","_diff","_name","_qty","_point"];
 _exit = false;
 if((lbCurSel 2401) == -1) exitWith {hint "You need to select an item to buy."};
@@ -41,7 +37,7 @@ ctrlEnable [2406, false];
 	_amount = _this select 3;
 	_name = _this select 4;
 	_exit = false;
-	
+
 	if(([true,_type,_amount] call life_fnc_handleInv)) then
 	{
 		if (_qty > -1) then
@@ -52,7 +48,7 @@ ctrlEnable [2406, false];
 			waitUntil {!isNil {life_approved}};
 		} else { life_approved = true };
 		if (!life_approved) then { _price = _price * 1.25 };
-		
+
 		if (life_shop_type != "rebel") then
 		{
 			if(!([(_price * _amount)] call life_fnc_debitCard)) exitWith {_exit = true;};
@@ -69,11 +65,11 @@ ctrlEnable [2406, false];
 		};
 		[] call life_fnc_virt_update;
 		PlaySound "purchase";
-		
+
 		_cut = 0;
 		_extra = ".";
 		_point = capture_pole_4 getVariable["capture_data",["Drug Cartel","0",0.5]];
-		
+
 		if (life_shop_type == "rebel" && ((_point select 2) == 1 && ((_point select 1) != life_gang || life_gang == "0"))) then
 		{
 			_cut = floor ((_price * _amount) * 0.08); // 8% added to cartel
@@ -84,7 +80,7 @@ ctrlEnable [2406, false];
 			capture_container_4 setVariable ["gangContainer", _var, true];
 			_extra = format[", with $%1 going to the owner of the arms dealer.", [_cut] call life_fnc_numberText];
 		};
-		
+
 		hint format["You bought %1 %2 for $%3%4",_amount,_name,[(_price * _amount)] call life_fnc_numberText,_extra];
 	}
 	else

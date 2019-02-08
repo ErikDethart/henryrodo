@@ -1,11 +1,6 @@
-/*
-	File: fn_invitedGang.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Received an invitation to join a gang
-*/
-
+//	File: fn_invitedGang.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Received an invitation to join a gang
 private ["_unit","_id","_name"];
 
 _unit = [_this,0,objNull,[objNull]] call BIS_fnc_param;

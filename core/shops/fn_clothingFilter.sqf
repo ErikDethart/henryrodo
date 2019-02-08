@@ -1,10 +1,7 @@
-/*
-	File: fn_clothingFilter.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Functionality for filtering clothing types in the menu.
-*/
+//	File: fn_clothingFilter.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Functionality for filtering clothing types in the menu.
+
 disableSerialization;
 private["_control","_selection","_list","_filter","_qty","_price"];
 _control = _this select 0;

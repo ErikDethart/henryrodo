@@ -1,10 +1,7 @@
-/*
-	File: fn_createMarker.sqf
-	Author: Skalicon
-	
-	Description:
-	Adds a maker to the map locally
-*/
+//	File: fn_createMarker.sqf
+//	Author: Skalicon
+//	Description: Adds a maker to the map locally
+
 Private["_playerName","_pos","_marker","_text"];
 _playerName = [_this,0,"",[""]] call BIS_fnc_param;
 _prefix = [_this,2,"911",["911"]] call BIS_fnc_param;

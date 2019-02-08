@@ -1,10 +1,6 @@
-/*
-	File: fn_swatGear.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Loads equipment based on SWAT role
-*/
+//	File: fn_swatGear.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Loads equipment based on SWAT role
 
 private ["_role","_water"];
 

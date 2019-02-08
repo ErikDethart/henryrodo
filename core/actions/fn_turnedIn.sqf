@@ -1,11 +1,6 @@
-/*
-	File: fn_turnedIn.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Wanted player has turned themselves in!
-*/
-
+//	File: fn_turnedIn.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Wanted player has turned themselves in!
 private ["_jail"];
 
 _jail = [_this,3,false,[false]] call BIS_fnc_param;

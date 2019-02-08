@@ -1,6 +1,5 @@
-/*
-	File: fn_holsterWeapon.sqf
-*/
+//	File: fn_holsterWeapon.sqf
+
 private["_state","_text"];
 _state = [_this,3,true,[true]] call BIS_fnc_param;
 if (vehicle player != player) exitWith {};

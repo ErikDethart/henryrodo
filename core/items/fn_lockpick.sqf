@@ -1,11 +1,8 @@
-/*
-	File: fn_lockpick.sqf
-	Author: Bryan "Tonic" Boardwine
-	Modified by: Skalicon & Paratus
+//	File: fn_lockpick.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Modified by: Skalicon & Paratus
+//	Description: Main functionality for lockpicking a car or restrained player.
 
-	Description:
-	Main functionality for lockpicking a car or restrained player.
-*/
 private["_unit","_dice","_uid","_owners","_chance","_alarmSound"];
 _unit = cursorTarget;
 if (!((vehicle player) isEqualTo player)) exitWith {hint "You cannot lockpick while inside a vehicle.";};

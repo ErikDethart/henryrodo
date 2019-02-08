@@ -1,10 +1,6 @@
-/*
-	File: fn_pickupObject.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Removes a placed object from the world.
-*/
+//	File: fn_pickupObject.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Removes a placed object from the world.
 private ["_item","_index","_object"];
 
 _item = cursorTarget;

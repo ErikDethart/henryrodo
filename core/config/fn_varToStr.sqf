@@ -1,11 +1,7 @@
-/*
-	File: fn_varToStr.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Takes the long-name (variable) and returns a display name for our
-	virtual item.
-*/
+//	File: fn_varToStr.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Takes the long-name (variable) and returns a display name for our virtual item.
+
 private["_var"];
 _var = [_this,0,"",[""]] call BIS_fnc_param;
 if(_var == "") exitWith {""};
@@ -187,7 +183,7 @@ switch (_var) do
 	case "life_inv_sandwich": {"Sandwich"};
 	case "life_inv_kebab": {"Kebab"};
 	case "life_inv_donerkebab": {"Doner Kebab"};
-	
+
 	//License Block
 	case "license_civ_driver": {"Driver License"};
 	case "license_civ_air": {"Pilot License"};

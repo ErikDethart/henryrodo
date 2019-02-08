@@ -1,11 +1,6 @@
-/*
-	File: fn_setAggressive.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Sets all online members of a gang or group as aggressive
-*/
-
+//	File: fn_setAggressive.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Sets all online members of a gang or group as aggressive
 private["_unit","_lastTime"];
 _unit = [_this,0,ObjNull,[Objnull]] call BIS_fnc_param;
 _recursive = [_this,1,false,[false]] call BIS_fnc_param;

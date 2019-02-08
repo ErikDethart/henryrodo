@@ -1,10 +1,6 @@
-/*
-	File: fn_pumpRepair.sqf
-	
-	Author: Gnashes
-	
-	Description: Quick simple action that is only temp.
-*/
+//	File: fn_pumpRepair.sqf
+//	Author: Gnashes
+//	Description: Quick simple action that is only temp.
 
 _veh = vehicle player;
 if (_veh == player) exitWith {};
@@ -29,10 +25,10 @@ if((_veh isKindOf "Car") || (_veh isKindOf "Ship") || (_veh isKindOf "Air")) the
 	_progress progressSetPosition 0.01;
 	_cP = 0.01;
 	_started = getPosASL _veh;
-	
+
 	if (life_action_in_use) exitWith { systemChat "You are already performing an action." };
 	life_action_in_use = true;
-	
+
 	while {true} do
 	{
 		uiSleep _delay;
@@ -46,11 +42,11 @@ if((_veh isKindOf "Car") || (_veh isKindOf "Ship") || (_veh isKindOf "Air")) the
 		if(player getVariable ["downed",false]) exitWith {};
 		if (!life_action_in_use) exitWith {};
 	};
-	
+
 	5 cutText ["","PLAIN"];
 	life_action_in_use = false;
 };
-		
+
 if (!_success) exitWith { hint "The repair has been interrupted and failed. Stay still next time!" };
 
 

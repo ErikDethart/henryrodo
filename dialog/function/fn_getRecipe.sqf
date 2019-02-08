@@ -1,11 +1,6 @@
-/*
-	File: fn_getRecipe.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Opens the factory UI and populates recipes
-*/
-
+//	File: fn_getRecipe.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Opens the factory UI and populates recipes
 private ["_class","_display","_items","_name","_color","_canCraft","_title","_icon","_sellPrice"];
 
 if (isNull (findDisplay 1800)) exitWith {};
@@ -68,10 +63,10 @@ lbClear _recipeItems;
 {
 	_req = _x select 1;
 	if ((life_turf_list select 2) select 1 == life_gang) then { _req = ceil (_req * 0.75); };
-	
+
 	if ((call compile (_x select 0)) >= _req) then { _color = [0, 1, 0, 1]; }
 	else { _color = [1, 0, 0, 1]; _canCraft = false };
-	
+
 	_recipeItems lbAdd format ["%1x %2", _req, [_x select 0] call life_fnc_vartoStr];
 	_recipeItems lbSetColor [(lbSize _recipeItems)-1, _color];
 } forEach _items;

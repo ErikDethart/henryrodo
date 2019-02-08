@@ -1,14 +1,11 @@
-/*
-	File: fn_fedSuccess.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Ugh coming up with a name for it was stupid but whatever.
-	If the robbery was successful on the Federal reserve then punish
-	everyone and take some money.
+//	File: fn_fedSuccess.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description:
+//	Ugh coming up with a name for it was stupid but whatever.
+//	If the robbery was successful on the Federal reserve then punish
+//	everyone and take some money.
+//	Support for Bank Insurance is there.
 
-	Support for Bank Insurance is there.
-*/
 private["_funds"];
 _funds = [_this,0,-1,[0]] call BIS_fnc_param;
 if(_funds == -1) exitWith {};

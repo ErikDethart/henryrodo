@@ -1,10 +1,7 @@
-/*
-	File: fn_finishDispatch.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Dispatch task situation completed
-*/
+//	File: fn_finishDispatch.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Dispatch task situation completed
+
 private["_id"];
 _id = [_this,0,0,[0]] call BIS_fnc_param;
 _success = [_this,1,false,[false]] call BIS_fnc_param;

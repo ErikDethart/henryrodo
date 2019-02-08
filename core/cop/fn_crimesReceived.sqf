@@ -1,10 +1,6 @@
-/*
-	File: fn_crimesReceived.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Got criminal history from the server.
-*/
+//	File: fn_crimesReceived.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Got criminal history from the server.
 
 _crimes = [_this,0,[[],[]],[[]]] call BIS_fnc_param;
 

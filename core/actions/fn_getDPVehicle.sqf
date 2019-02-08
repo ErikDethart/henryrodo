@@ -1,10 +1,7 @@
-/*
-	File: fn_getDPVehicle.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Selects a random DP point for a vehicle delivery mission.
-*/
+//	File: fn_getDPVehicle.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Selects a random DP point for a vehicle delivery mission.
+
 private["_dp","_target"];
 _target = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _vehType = [_this,1,1,[1]] call BIS_fnc_param;
@@ -52,6 +49,6 @@ time spawn
 	}
 	else if (time - _time > 600) then
 	{
-	
+
 	};
 };

@@ -1,10 +1,6 @@
-/*
-	File: fn_civDefault.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Default civ loadout.
-*/
+//	File: fn_civDefault.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Default civ loadout.
 //Strip the player down
 RemoveAllWeapons player;
 {player removeMagazine _x;} foreach (magazines player);

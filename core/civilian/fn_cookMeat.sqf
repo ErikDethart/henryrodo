@@ -1,10 +1,7 @@
-/*
-	File: fn_cookMeat.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Cooks all meat in player's virtual inventory.
-*/
+//	File: fn_cookMeat.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Cooks all meat in player's virtual inventory.
+
 private["_corpse","_animals","_success"];
 
 _meats = 0;
@@ -43,10 +40,10 @@ if (_cookedMan) then
 		{
 			_vd = (getPosASL player) vectorDiff (getPosASL _x);
 			_dir = (_vd select 0) atan2 (_vd select 1);
-			if (_dir < 0) then {_dir = 360 + _dir}; 
+			if (_dir < 0) then {_dir = 360 + _dir};
 			_comp = ["north", "north east", "east", "south east", "south", "south west", "west", "north west", "north"];
 			_bearing = _comp select (round (_dir / 45));
-			
+
 [[0,1,2],format["You smell burning flesh %1 meters to the %2!", round (player distance _x), _bearing]] remoteExecCall ["life_fnc_broadcast",_x];
 		};
 	} forEach allPlayers;

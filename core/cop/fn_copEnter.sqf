@@ -1,10 +1,7 @@
-/*
-	File: fn_copEnter.sqf
-	Author: Skalicon
-	
-	Description:
-	Allows Cops to enter locked Vehicles
-*/
+//	File: fn_copEnter.sqf
+//	Author: Skalicon
+//	Description: Allows Cops to enter locked Vehicles
+
 if((playerSide != west) && {!license_civ_bounty}) exitWith {};
 _position = param[3];
 

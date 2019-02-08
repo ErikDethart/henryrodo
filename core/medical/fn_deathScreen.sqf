@@ -1,12 +1,8 @@
-/*
-	File: fn_deathScreen.sqf
-	Author: Bryan "Tonic" Boardwine
-	Modified by: John "Paratus" VanderZwet
+//	File: fn_deathScreen.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Modified by: John "Paratus" VanderZwet
+//	Description: Handles stuff being displayed on the death screen while it is currently active.
 
-	Description:
-	Handles stuff being displayed on the death screen while
-	it is currently active.
-*/
 private["_medicsOnline","_medicsNear","_medicsButton"];
 disableSerialization;
 

@@ -1,10 +1,6 @@
-/*
-	File: fn_openInventory.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Starts the initialization of vehicle virtual inventory menu.
-*/
+//	File: fn_openInventory.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Starts the initialization of vehicle virtual inventory menu.
 private["_vehicle","_veh_data"];
 if (life_action_in_use) exitWith {};
 if(dialog) exitWith {};

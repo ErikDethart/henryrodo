@@ -1,10 +1,6 @@
-/*
-	File: fn_cell_call.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Opens the cell call/phone menu
-*/
+//	File: fn_cell_call.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description:Opens the cell call/phone menu
 private["_display","_units","_type","_allPlayers","_playableSorted","_name","_status"];
 
 disableSerialization;

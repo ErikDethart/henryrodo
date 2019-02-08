@@ -1,11 +1,6 @@
-/*
-	File: fn_equipGear.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Initializes custom gear textures
-*/
-
+//	File: fn_equipGear.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Initializes custom gear textures
 private ["_customTexture","_hiddenTextures"];
 
 _customTexture = switch (uniform player) do

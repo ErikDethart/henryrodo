@@ -1,10 +1,7 @@
-/*
-	File: fn_sellGarage.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Sells a vehicle from the garage.
-*/
+//	File: fn_sellGarage.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Sells a vehicle from the garage.
+
 private["_vehicle","_vid","_pid","_unit","_price","_handle"];
 disableSerialization;
 if(lbCurSel 2801 == -1) exitWith {hint "You did not select a vehicle..."};

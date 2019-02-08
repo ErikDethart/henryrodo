@@ -1,10 +1,7 @@
-/*
-	File: fn_joinEvent.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Player joins into an event as a participant
-*/
+//	File: fn_joinEvent.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Player joins into an event as a participant
+
 
 if (count life_active_event == 0) exitWith {};
 

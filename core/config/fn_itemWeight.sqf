@@ -1,10 +1,7 @@
-/*
-	File: fn_itemWeight.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Gets the items weight and returns it.
-*/
+//	File: fn_itemWeight.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Gets the items weight and returns it.
+
 private["_item"];
 _item = [_this,0,"",[""]] call BIS_fnc_param;
 if(_item == "") exitWith {};
@@ -21,7 +18,7 @@ switch (_item) do
 	case "apple": {1};
 	case "water": {1};
 	case "berry": {1};
-	
+
 	case "sugar": {1};
 	case "sugarcane": {2};
 	case "plank": {3};
@@ -39,7 +36,7 @@ switch (_item) do
 	case "rum_1": {3};
 	case "rum_2": {3};
 	case "rum_3": {3};
-	
+
 	case "saltwater": {1};
 	case "moonshine": {3};
 	case "scotch_0": {3};
@@ -160,7 +157,7 @@ switch (_item) do
 	case "ephedra": {2};
 	case "meth": {2};
 	case "crank": {2};
-	case "crankp": {2};	
+	case "crankp": {2};
 	case "phos": {2};
 	case "hydro": {2};
 	case "storage1": {10};

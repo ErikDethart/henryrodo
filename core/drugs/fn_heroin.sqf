@@ -1,10 +1,6 @@
-/*
-	File: fn_heroin.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Say hello to my little friend!
-*/
+//	File: fn_heroin.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Say hello to my little friend!
 
 if (!([false,"heroinp",1] call life_fnc_handleInv)) exitWith {};
 
@@ -24,9 +20,9 @@ if (life_heroin_effect == 0) then
 		"chromAberration" ppEffectEnable true;
 		"chromAberration" ppEffectAdjust [life_drug_level / 10,life_drug_level / 10,true];
 		"chromAberration" ppEffectCommit 1;
-		
+
 		waitUntil {!alive player || ((time - life_heroin_effect) > (4 * 60))};
-		
+
 		"chromAberration" ppEffectEnable false;
 		"colorCorrections" ppEffectEnable false;
 		life_heroin_effect = 0;

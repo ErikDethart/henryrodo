@@ -1,10 +1,7 @@
-/*
-	File: fn_showBanned.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Player was banned. Tell them why!
-*/
+//	File: fn_showBanned.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Player was banned. Tell them why!
+
 private["_message"];
 _message = [_this,0,"",[""]] call BIS_fnc_param;
 if (_message == "") exitWith {};

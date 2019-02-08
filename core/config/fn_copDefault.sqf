@@ -1,10 +1,7 @@
-/*
-	File: fn_copDefault.sqf
-	Author: Bryan "Tonic" Boardwine
+//	File: fn_copDefault.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Default cop configuration.
 
-	Description:
-	Default cop configuration.
-*/
 //Strip the player down
 RemoveAllWeapons player;
 {player removeMagazine _x;} foreach (magazines player);

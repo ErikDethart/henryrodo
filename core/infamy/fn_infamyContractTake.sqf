@@ -1,11 +1,9 @@
 #include "..\..\macro.h"
 if(scriptAvailable(1)) exitWith {};
-/*
-	File: fn_infamyContractTake.sqf
-	Author: Poseidon
+//	File: fn_infamyContractTake.sqf
+//	Author: Poseidon
+//	Description: Called when a player clicks on a contract in the browse page. Sets up variables and starts the tracking script.
 
-	Description: Called when a player clicks on a contract in the browse page. Sets up variables and starts the tracking script.
-*/
 params [["_contractID", 0, [0]],["_targetID", "", [""]],["_targetName", "", [""]],["_targetBounty", 0, [0]]];
 if(_targetID == "" || _targetBounty == 0 || _targetName == "") exitWith {hint "That contract cannot be accepted due to an error."};
 if(_targetID == getPlayerUID player) exitWith {hint "You cannot accept a contract against yourself!";};

@@ -1,11 +1,6 @@
-/*
-	File: fn_vehicleGarageLBChange.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Called when a new selection is made in the list box and
-	displays various bits of information about the vehicle.
-*/
+//	File: fn_vehicleGarageLBChange.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Called when a new selection is made in the list box and displays various bits of information about the vehicle.
 disableSerialization;
 private["_control","_index","_className","_basePrice","_vehicleInfo","_colorArray","_ctrl","_vData","_price"];
 _control = _this select 0;

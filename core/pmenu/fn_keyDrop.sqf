@@ -1,10 +1,6 @@
-/*
-	File: fn_keyDrop.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Drops the key.
-*/
+//	File: fn_keyDrop.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Drops the key.
 private["_dialog","_list","_sel","_vehicle","_impounded","_owners","_index","_index2","_i"];
 disableSerialization;
 

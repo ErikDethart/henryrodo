@@ -1,11 +1,6 @@
-/*
-	File: fn_copSplit.sqf
-	Author: John "Paratus" VanderZwet, optimized by Gnashes
-
-	Description:
-	Distributes income among all online and active police.
-*/
-
+//	File: fn_copSplit.sqf
+//	Author: John "Paratus" VanderZwet, optimized by Gnashes
+//	Description: Distributes income among all online and active police.
 params [
 	["_unit",objNull,[objNull]],
 	["_amount",0,[0]]

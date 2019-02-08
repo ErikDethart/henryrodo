@@ -1,10 +1,7 @@
-/*
-	File: fn_jerryRefuel.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Refuels the vehicle if the player has a fuel can.
-*/
+//	File: fn_jerryRefuel.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Refuels the vehicle if the player has a fuel can.
+
 private["_vehicle","_displayName","_capacity"];
 _vehicle = cursorTarget;
 if(isNull _vehicle) exitWith {hint "You need to look at the vehicle you want to refuel!"};
@@ -27,6 +24,6 @@ if(!local _vehicle) then {
 } else {
 	_vehicle setFuel _level;
 };
-	
+
 titleText[format["You have added 20 litres of fuel to the %1.",_displayName],"PLAIN"];
 [true,"fuelE",1] call life_fnc_handleInv;

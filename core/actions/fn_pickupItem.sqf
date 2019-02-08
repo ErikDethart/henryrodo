@@ -1,10 +1,7 @@
-/*
-	File: fn_pickupItem.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Master handling for picking up an item.
-*/
+//	File: fn_pickupItem.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Master handling for picking up an item.
+
 private["_obj","_itemInfo","_itemName","_illegal","_diff","_duped"];
 
 if((time - life_action_delay) < 1) exitWith {hint "You can't rapidly use action keys!"};
@@ -23,8 +20,8 @@ if(isNil "_obj" OR isNull _obj OR isPlayer _obj) exitWith {};
 _itemInfo = _obj getVariable "item";
 
 if ((_itemInfo select 0) == "money") exitWith { [_obj] call life_fnc_pickupMoney; };
-if ((_itemInfo select 0) == "scalp") exitWith { 
-	[_obj] call life_fnc_infamyPickupScalp;	
+if ((_itemInfo select 0) == "scalp") exitWith {
+	[_obj] call life_fnc_infamyPickupScalp;
 };
 
 _lockedGold = false;

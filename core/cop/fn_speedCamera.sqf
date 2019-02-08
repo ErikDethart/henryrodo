@@ -1,10 +1,7 @@
-/*
-	File: fn_speedCamera.sqf
-	Author: Alan
-	
-	Description:
-	Charges driver for speeding!
-*/
+//	File: fn_speedCamera.sqf
+//	Author: Alan
+//	Description: Charges driver for speeding!
+
 params [
 	["_speed",0,[0]],
 	["_limit",0,[0]],
@@ -19,27 +16,8 @@ if !((vehicle player) isKindOf "Car") exitWith {};
 private _ticket = "";
 
 playSound "camera";
-"colorCorrections" ppEffectEnable true;
-//"colorCorrections" ppEffectForceInNVG true;
-"colorCorrections" ppEffectAdjust [1, 15, 0, [0.5, 0.5, 0.5, 0], [0.0, 0.5, 0.0, 1],[0.3, 0.3, 0.3, 0.05]];    
-"colorCorrections" ppEffectCommit 0;  
-uiSleep 0.01;   
-"colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, 1],  [1, 1, 1, 1]];    
-"colorCorrections" ppEffectCommit 0.05;   
-uiSleep 0.05;   
-"colorCorrections" ppEffectEnable false;
-uiSleep 0.1;
-"colorCorrections" ppEffectEnable true;
-//"colorCorrections" ppEffectForceInNVG true;
-"colorCorrections" ppEffectAdjust [1, 15, 0, [0.5, 0.5, 0.5, 0], [0.0, 0.5, 0.0, 1],[0.3, 0.3, 0.3, 0.05]];    
-"colorCorrections" ppEffectCommit 0;  
-uiSleep 0.01;   
-"colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, 1],  [1, 1, 1, 1]];    
-"colorCorrections" ppEffectCommit 0.05;   
-uiSleep 0.05;   
-"colorCorrections" ppEffectEnable false;
 /* - TO BE RE-ENABLED ONCE WE GET THE SERVER MEMORY ISSUES RESOLVED
-if (!license_civ_driver) then 
+if (!license_civ_driver) then
 {
 	[player,"dwl"] remoteExec ["life_fnc_addWanted", 2];
 	_ticket = format ["<t align='center'><t size='2'>Speeding Ticket<br/><br/><t size='1.5'>Current Speed: <br/>%1 km/h<br/>Speed Limit: <br/>%2 km/h<br/>Charge Added: Driving without a license<br/><br/><t size='1'>You have been photographed by a speed camera and are fined for speeding. You have received an additional fine for driving without a license.",round(_speed), _limit];

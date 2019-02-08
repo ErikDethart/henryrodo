@@ -1,11 +1,6 @@
-/*
-	File: fn_prestigeInfo.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Displays details about the selected speciality.
-	Please either get Asylum permission to use this or create this system yourself.
-*/
+//	File: fn_prestigeInfo.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Displays details about the selected speciality. Please either get Asylum permission to use this or create this system yourself.
 private["_display","_text","_index","_talent","_label","_req","_learn"];
 disableSerialization;
 _display = findDisplay 1700;

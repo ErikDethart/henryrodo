@@ -1,16 +1,9 @@
-/*
-	File: fn_simpleShopMenu.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Something
-*/
-
+//	File: fn_simpleShopMenu.sqf
+//	Author: Bryan "Tonic" Boardwine
 private ["_magName","_magConfig","_unit","_config"];
 
 _unit = cursorTarget;
 if (isNull _unit) then { _unit = _this select 0; };
-
 
 if ((vehicle player) != player) exitWith { hint "This action cannot be performed from within a vehicle." };
 if ((player distance _unit) > 10) exitWith { hint "You are too far away." };

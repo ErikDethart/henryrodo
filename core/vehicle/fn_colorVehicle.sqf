@@ -1,10 +1,6 @@
-/*
-	File: fn_colorVehicle.sqf
-	Author: John "Paratus" VanderZwet, rewritten by Gnashes
-	
-	Description:
-	Reskins the vehicle
-*/
+//	File: fn_colorVehicle.sqf
+//	Author: John "Paratus" VanderZwet, rewritten by Gnashes
+//	Description: Reskins the vehicle
 params [
 	["_vehicle",Objnull,[Objnull]],
 	["_index",-1,[0]]

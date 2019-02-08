@@ -1,10 +1,6 @@
-/*
-	File: fn_warStatus.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Status of a gang war has updated (new or cancel)
-*/
+//	File: fn_warStatus.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Status of a gang war has updated (new or cancel)
 
 private ["_gang1","_gang2","_status","_gang"];
 

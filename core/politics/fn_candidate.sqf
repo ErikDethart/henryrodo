@@ -1,10 +1,6 @@
-/*
-	File: fn_candidate.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Received data for a political candidate.
-*/
+//	File: fn_candidate.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Received data for a political candidate.
 
 private ["_data"];
 

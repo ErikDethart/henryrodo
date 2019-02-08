@@ -1,10 +1,7 @@
-/*
-	File: fn_mouseUpHandler.sqf
-	Author: Chronic [MIT]
+//	File: fn_mouseUpHandler.sqf
+//	Author: Chronic [MIT]
+//	Description: Main key handler for event 'mouseButtonUp'
 
-	Description:
-	Main key handler for event 'mouseButtonUp'
-*/
 private ["_handled","_shift","_alt","_code","_ctrl","_alt","_ctrlKey","_veh"];
 _ctrl = _this select 0;
 _code = _this select 1;

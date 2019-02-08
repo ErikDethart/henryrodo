@@ -1,10 +1,6 @@
-/*
-	File: fn_checkCopGear.sqf
-	Author: Skalicon
-
-	Description:
-	Check and removed non whitelisted gear
-*/
+//	File: fn_checkCopGear.sqf
+//	Author: Skalicon
+//	Description: Check and removed non whitelisted gear
 
 private["_gear","_whitelist","_recruit","_officer","_sergeant","_lieutenant","_captain","_depchief","_chief","_gear_x","_areEqual"];
 

@@ -1,10 +1,7 @@
-/*
-	File: fn_treasurePos.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Locations of all treasure map sites.
-*/
+//	File: fn_treasurePos.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Locations of all treasure map sites.
+
 private["_id"];
 
 _id = [_this,0,-1,[0]] call BIS_fnc_param;

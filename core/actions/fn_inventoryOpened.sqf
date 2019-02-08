@@ -1,10 +1,7 @@
-/*
-	File: fn_inventoryOpened.sqf
-	Author: John "Paratus" VanderZwet and Sgt. Chronic
+//	File: fn_inventoryOpened.sqf
+//	Author: John "Paratus" VanderZwet and Sgt. Chronic
+//	Description: Fired when a player opens a container.
 
-	Description:
-	Fired when a player opens a container.
-*/
 [] spawn {
     waitUntil {!isNull (findDisplay 602)};
     [true] spawn life_fnc_inventory;

@@ -1,10 +1,7 @@
-/*
-	File: fn_drugRunner.sqf
-	Author: John "Paratus" VanderZwet
+//	File: fn_drugRunner.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Selects a random DP point for a drug delivery mission.
 
-	Description:
-	Selects a random DP point for a drug delivery mission.
-*/
 private["_dp","_target"];
 _type = [_this select 3,0,0,[0]] call BIS_fnc_param;
 _start = [_this select 3,1,0,[0]] call BIS_fnc_param;
@@ -159,7 +156,7 @@ switch (_type) do
 		_target = 0;
 		while {_target == 0 || life_drug_target == _target} do { _target = ceil (random 5) };
 		life_drug_start = call compile format["drugrunner_%1", _target];
-		
+
 		life_delivery_expire = time + (floor ((((getPos life_drug_start) distance (getPos life_drug_end)) * (0.3 / 1000)) * 60)) + 120; // 1/4 mins per metre + 2 min
 		if (life_delivery_expire < (time + 180)) then { life_delivery_expire = time + 180; };
 		life_delivery_distance = life_delivery_distance + (life_drug_start distance life_drug_end);
@@ -275,7 +272,7 @@ switch (_type) do
 		life_drug_runner = false;
 		life_drug_end = nil;
 		life_drug_stage = 0;
-		
+
 		// Add infamy for drug runner missions
 		private _infamyReward = (_reward/100);
 		[_infamyReward] call life_fnc_addInfamy;

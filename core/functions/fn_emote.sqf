@@ -1,10 +1,6 @@
-/*
-	File: fn_emote.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Players emote.  C'mon, ask for permission before using our code, please.
-*/
+//	File: fn_emote.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Players emote.  C'mon, ask for permission before using our code, please.
 
 _unit = _this select 0;
 _msg = _this select 1;

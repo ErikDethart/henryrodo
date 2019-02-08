@@ -1,11 +1,6 @@
-/*
-	File: fn_cocaine.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Say hello to my little friend!
-*/
-
+//	File: fn_cocaine.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Say hello to my little friend!
 if (!([false,"cocainep",1] call life_fnc_handleInv)) exitWith {};
 
 life_drug_level = life_drug_level + 0.15;

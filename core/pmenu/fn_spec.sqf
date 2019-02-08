@@ -1,10 +1,9 @@
-/*
-	File: fn_spec.sqf
-	Author: ColinM9991
-	Modified for Asylum by Alan
-	Description:
-	Spectate the chosen player.
-*/
+//	File: fn_spec.sqf
+//	Author: ColinM9991
+//	Modified for Asylum by Alan
+//	Description:
+//	Spectate the chosen player.
+
 if((call life_adminlevel) < 2) exitWith {closeDialog 0;};
 
 private["_unit","_scrubMarker"];
@@ -23,7 +22,8 @@ if(param[0,false]) exitWith {
 		] call BIS_fnc_GUIMessage;
 		if(!_action || isNull _this) exitWith {};
 		[_this,"admin"] remoteExec ["life_fnc_addWanted", 2];
-		uiSleep 3; //To ensure charge is properly added before fn_jail runs
+		uiSleep 3;
+		//To ensure charge is properly added before fn_jail runs
 [true, [profileName] call life_fnc_cleanName,false,player] remoteExecCall ["life_fnc_jail",_this];
 		hint format["%1 has been sent to jail.",[name _this] call life_fnc_cleanName];
 	};

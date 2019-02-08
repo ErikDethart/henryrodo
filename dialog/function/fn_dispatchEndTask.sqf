@@ -1,12 +1,6 @@
-/*
-	File: fn_dispatchEndTask.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	End the task and inform all cops assigned to it.
-	Please ask for permission to use this and stop stealing my stuff.
-*/
-
+//	File: fn_dispatchEndTask.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: End the task and inform all cops assigned to it. Please ask for permission to use this and stop stealing my stuff.
 disableSerialization;
 
 private ["_task","_taskList","_success"];

@@ -1,10 +1,6 @@
-/*
-	File: fn_acceptWar.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Accept a gang war challenge
-*/
+//	File: fn_acceptWar.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Accept a gang war challenge
 
 private ["_dialog", "_gang"];
 

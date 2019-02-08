@@ -1,10 +1,7 @@
-/*
-	File: fn_inspectLootCrate.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Displays information for selected loot crate
-*/
+//	File: fn_inspectLootCrate.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Displays information for selected loot crate
+
 private["_type","_items"];
 
 _type = [_this,0,0,[0]] call BIS_fnc_param;

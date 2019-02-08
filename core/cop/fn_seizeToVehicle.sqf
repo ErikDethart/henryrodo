@@ -1,10 +1,7 @@
-/*
-	File: fn_seizeToVehicle.sqf
-	Author: Gnashes
+//	File: fn_seizeToVehicle.sqf
+//	Author: Gnashes
+//	Description: Seizes a player's illegal items and stores them into the nearest police vehicle.
 
-	Description:
-	Seizes a player's illegal items and stores them into the nearest police vehicle.
-*/
 private ["_vehicle"];
 _exempt = ["Binocular","ItemWatch","ItemCompass","ItemGPS","ItemMap","NVGoggles","FirstAidKit","ToolKit"];
 _vehicle = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;

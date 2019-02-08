@@ -1,10 +1,7 @@
-/*
-	File: fn_gatherOil.sqf
-	Author: Alan
-	
-	Description:
-	Player gathering oil at a rig.
-*/
+//	File: fn_gatherOil.sqf
+//	Author: Alan
+//	Description: Player gathering oil at a rig.
+
 private ["_delay"];
 _gen = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 

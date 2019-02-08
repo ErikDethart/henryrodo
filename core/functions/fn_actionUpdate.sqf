@@ -1,10 +1,7 @@
-/*
-	File: fn_actionUpdate.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Updates the HUD with action menu options.
-*/
+//	File: fn_actionUpdate.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Updates the HUD with action menu options.
+
 private["_ui","_text","_field","_i","_action"];
 disableSerialization;
 

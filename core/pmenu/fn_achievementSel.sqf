@@ -1,10 +1,7 @@
-/*
-	File: fn_achievementSel.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Selected achievement for information
-*/
+//	File: fn_achievementSel.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Selected achievement for information
+
 private["_display","_list","_text","_data"];
 
 disableSerialization;

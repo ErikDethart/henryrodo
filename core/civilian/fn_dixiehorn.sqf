@@ -1,11 +1,7 @@
-/*
-	File: fn_dixiehorn.sqf
-	Author: Bamf 
-	Credit to Chronic [MIT]
-
-	Description:
-	Plays the dixiehorn sound from the given object
-*/
+//	File: fn_dixiehorn.sqf
+//	Author: Bamf
+//	Credit to Chronic [MIT]
+//	Description: Plays the dixiehorn sound from the given object
 
 private ["_hornLogic", "_vehicle"];
 

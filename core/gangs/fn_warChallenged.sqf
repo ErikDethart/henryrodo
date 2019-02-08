@@ -1,10 +1,7 @@
-/*
-	File: fn_warChallenged.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Received a gang war challenge
-*/
+//	File: fn_warChallenged.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Received a gang war challenge
+
 
 _unit = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 _gang = [_this,1,"",[""]] call BIS_fnc_param;

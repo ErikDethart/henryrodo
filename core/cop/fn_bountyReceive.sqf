@@ -1,10 +1,7 @@
-/*
-	File: fn_bountyReceive.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Notifies the player he has received a bounty and gives him the cash.
-*/
+//	File: fn_bountyReceive.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Notifies the player he has received a bounty and gives him the cash.
+
 private["_val","_origVal","_total","_cops"];
 _val = [_this,0,"",["",0]] call BIS_fnc_param;
 _total = [_this,1,"",["",0]] call BIS_fnc_param;
@@ -42,7 +39,7 @@ if (playerSide == west) then
 	{
 		titleText[format["You and your fellow officers have been rewarded for killing this criminal, if you had arrested him you would have received much more.",[_val] call life_fnc_numberText,[_total] call life_fnc_numberText],"PLAIN"];
 	};
-	
+
 	if (_origVal > 5000) then
 	{
 		if (!(13 in life_achievements)) then { [13] call life_fnc_achievementGrant };

@@ -1,10 +1,5 @@
-/*
-	File: fn_setPain.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	OUCH!
-*/
+//	File: fn_setPain.sqf
+//	Author: John "Paratus" VanderZwet
 
 _pain = param[0,0,[0]];
 
@@ -12,7 +7,7 @@ _pain = param[0,0,[0]];
 life_pain = _pain;
 
 if (_pain > 0) then {
-	
+
 	if (life_cocaine_effect > 0) exitWith {};
 	player setVariable["pain", _pain, true];
 	systemChat "You are in pain!";

@@ -1,7 +1,4 @@
-/*
-	File: fn_clientMessage.sqf
-*/
-
+//	File: fn_clientMessage.sqf
 private["_msg","_from", "_type"];
 if (X_Server) exitWith {};
 if(isNil "life_session_completed" || {!life_session_completed}) exitWith {}; //related to script errors when logging in

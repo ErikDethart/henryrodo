@@ -1,10 +1,6 @@
-/*
-	File: fn_showTreasure.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Displays a treasure map on screen.
-*/
+//	File: fn_showTreasure.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Displays a treasure map on screen.
 
 private ["_display","_image","_map"];
 

@@ -1,10 +1,5 @@
-/* 
-	File: fn_useShank.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Shanked!
-*/
+//	File: fn_useShank.sqf
+//	Author: John "Paratus" VanderZwet
 private _unit = param [0,objNull,[objNull]];
 
 if (player distance (getMarkerPos "jail_marker2") > 70) exitWith { hint "You can't use this outside of prison!" };

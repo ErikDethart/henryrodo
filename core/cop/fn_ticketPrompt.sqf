@@ -1,10 +1,7 @@
-/*
-	File: fn_ticketPrompt
-	Author: Bryan "Tonic" Boardwine
+//	File: fn_ticketPrompt
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Prompts the player that he is being ticketed.
 
-	Description:
-	Prompts the player that he is being ticketed.
-*/
 private["_cop","_val","_display","_control"];
 if(!isNull (findDisplay 2600)) exitwith {}; //Already at the ticket menu, block for abuse?
 _cop = _this select 0;

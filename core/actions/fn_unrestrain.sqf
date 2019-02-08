@@ -1,6 +1,4 @@
-/*
-	File: fn_unrestrain.sqf
-*/
+//	File: fn_unrestrain.sqf
 private["_unit"];
 _unit = [_this,3,ObjNull,[ObjNull]] call BIS_fnc_param;
 //if (_unit != player) then { _unit = cursorTarget; };

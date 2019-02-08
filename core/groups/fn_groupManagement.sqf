@@ -1,10 +1,7 @@
-/*
-	File: fn_groupManagement.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Main initialization for the group 'management' menu.
-*/
+//	File: fn_groupManagement.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Main initialization for the group 'management' menu.
+
 private["_sleep","_group","_group","_owner","_ownerID","_units","_dialog","_members"];
 disableSerialization;
 
@@ -30,12 +27,12 @@ switch (true) do
 	{
 		ctrlShow[2623,true];
 	};
-	
+
 	case ((getPlayerUID player) == _ownerID) :
 	{
 		ctrlShow[2623,true];
 	};
-	
+
 	default
 	{
 		ctrlShow[2623,false];
@@ -54,17 +51,17 @@ for "_i" from 0 to (count _units)-1 do
 		{
 			_members lbAdd format["%1 [Leader]",name (_units select _i)];
 		};
-		
+
 		case ((getPlayerUID (_units select _i)) == _ownerID) :
 		{
 			_members lbAdd format["%1 [Founder]", name (_units select _i)];
 		};
-		
-		default 
+
+		default
 		{
 			_members lbAdd format["%1",name (_units select _i)];
 		};
 	};
-	
+
 	_members lbSetData [(lbSize _members)-1,str(_units select _i)];
 };

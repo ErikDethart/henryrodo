@@ -1,6 +1,5 @@
-/*
-	File: fn_animSync.sqf
-*/
+//	File: fn_animSync.sqf
+
 params [
 	["_unit",objNull,[objNull]],
 	["_anim","",[""]],

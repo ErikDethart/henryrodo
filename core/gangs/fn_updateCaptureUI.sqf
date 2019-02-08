@@ -1,12 +1,10 @@
-/*
-	File: fn_updateCaptureUI.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Refreshes the user interface for the capture zone the player is within.
-	
-	//this file is no longer used
-*/
+//	File: fn_updateCaptureUI.sqf
+//	Author: John "Paratus" VanderZwet
+
+//	Description:
+//	Refreshes the user interface for the capture zone the player is within.
+//this file is no longer used
+
 
 private ["_point"];
 

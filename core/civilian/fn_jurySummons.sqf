@@ -1,10 +1,6 @@
-/*
-	File: fn_jurySummons.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Summoned to jury duty.
-*/
+//	File: fn_jurySummons.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Summoned to jury duty.
 
 _defendant = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 _amount = [_this,1,1,[1]] call BIS_fnc_param;

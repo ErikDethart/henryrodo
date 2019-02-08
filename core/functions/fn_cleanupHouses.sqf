@@ -1,10 +1,6 @@
-/*
-	File: fn_cleanupHouses.sqf
-	Author: Gnashes
-	
-	Description:
-	Cleans up player housing when player disconnects
-*/
+//	File: fn_cleanupHouses.sqf
+//	Author: Gnashes
+//	Description: Cleans up player housing when player disconnects
 _houses = _this select 0;
 _gang = _this select 1;
 

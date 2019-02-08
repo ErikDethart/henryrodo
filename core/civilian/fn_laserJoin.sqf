@@ -1,10 +1,6 @@
-/*
-	File: fn_initJoin.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Player wishes to join laser tag queue for next game.
-*/
+//	File: fn_initJoin.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Player wishes to join laser tag queue for next game.
 
 if (playerSide != civilian) exitWith { hint "You can't play laser tag while on duty! GET TO WORK!"; };
 

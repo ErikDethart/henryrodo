@@ -1,10 +1,6 @@
-/*
-	File: fn_face.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Set facial expression.
-*/
+//	File: fn_face.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Set facial expression.
 
 _unit = _this select 0;
 _msg = _this select 1;

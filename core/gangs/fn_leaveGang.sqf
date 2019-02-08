@@ -1,10 +1,6 @@
-/*
-	File: fn_leaveGang.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Leave gang
-*/
+//	File: fn_leaveGang.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Leave gang
 _kicked = [_this,0,false,[false]] call BIS_fnc_param;
 if !(_kicked) then {
     _handle = [format["Are you sure you want to leave your gang, %1?",life_gang_name]] spawn life_fnc_confirmMenu;

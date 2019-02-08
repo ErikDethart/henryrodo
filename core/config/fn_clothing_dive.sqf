@@ -1,10 +1,7 @@
-/*
-	File: fn_clothing_dive.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Master configuration file for Altis Diving Shop.
-*/
+//	File: fn_clothing_dive.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Master configuration file for Altis Diving Shop.
+
 private["_filter","_ret"];
 _filter = [_this,0,0,[0]] call BIS_fnc_param;
 //Classname, Custom Display name (use nil for Cfg->DisplayName, price
@@ -18,7 +15,7 @@ switch (_filter) do
 	//Uniforms
 	case 0:
 	{
-		_ret = 
+		_ret =
 		[
 			["U_B_Wetsuit",nil,200]
 		];
@@ -27,7 +24,7 @@ switch (_filter) do
 			_ret set[count _ret,["U_O_Wetsuit",nil,200]];
 		};
 	};
-	
+
 	//Hats
 	case 1:
 	{
@@ -35,7 +32,7 @@ switch (_filter) do
 		[
 		];
 	};
-	
+
 	//Glasses
 	case 2:
 	{
@@ -44,7 +41,7 @@ switch (_filter) do
 			["G_Diving",nil,50]
 		];
 	};
-	
+
 	//Vest
 	case 3:
 	{
@@ -53,7 +50,7 @@ switch (_filter) do
 			["V_RebreatherB",nil,500]
 		];
 	};
-	
+
 	//Backpacks
 	case 4:
 	{

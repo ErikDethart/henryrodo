@@ -1,10 +1,6 @@
-/*
-	File: fn_getQuantity.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Returns the quantity of an item available for sale, -1 if unlimited.
-*/
+//	File: fn_getQuantity.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Returns the quantity of an item available for sale, -1 if unlimited.
 private["_ret"];
 
 if (playerSide in ["independent","west"]) exitWith { -1 };

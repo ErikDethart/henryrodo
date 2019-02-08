@@ -1,10 +1,7 @@
-/*
-	File: fn_newDispatch.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Sets the provided dispatch as active unless one already is
-*/
+//	File: fn_newDispatch.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Sets the provided dispatch as active unless one already is
+
 private["_id"];
 _id = [_this,0,0,[0]] call BIS_fnc_param;
 _desc = [_this,1,"",[""]] call BIS_fnc_param;

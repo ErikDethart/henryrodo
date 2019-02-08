@@ -1,13 +1,11 @@
 #include "..\..\macro.h"
 if(scriptAvailable(1)) exitWith {};
-/*
-	File: fn_infamyInitContractMenu.sqf
-	Author: Poseidon
+//	File: fn_infamyInitContractMenu.sqf
+//	Author: Poseidon
+//	Description: Starts the contract menu and sets up the main elements.
+//		Will evenetually display your current contract on this page
+//		And will display all your scalps with a button to sell a scalp.
 
-	Description: Starts the contract menu and sets up the main elements.
-		Will evenetually display your current contract on this page
-		And will display all your scalps with a button to sell a scalp.
-*/
 private["_buttonControl"];
 disableSerialization;
 ["customDialogBlank"] call life_fnc_createDialogCustom;

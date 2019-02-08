@@ -1,11 +1,6 @@
-/*
-	File: fn_showRenown.sqf
-	Author: John "Paratus" VanderZwet && Gnashes
-	
-	Description:
-	Updates data shown on Renown UI
-*/
-
+//	File: fn_showRenown.sqf
+//	Author: John "Paratus" VanderZwet && Gnashes
+//	Description: Updates data shown on Renown UI
 disableSerialization;
 waitUntil {!isnull (findDisplay 6710)};
 if (life_wealthPrestige < 10000000) exitWith{closeDialog 0};

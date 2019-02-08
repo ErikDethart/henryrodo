@@ -1,7 +1,4 @@
-/*
-	File: fn_escortAction.sqf
-*/
-
+//	File: fn_escortAction.sqf
 if (!isNull life_escort) exitWith { hint "You can only escort one person at a time." };
 
 private _unit = param[0,objNull,[objNull]];

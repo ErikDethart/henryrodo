@@ -1,10 +1,6 @@
-/*
-	File: fn_buyLicense.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Called when purchasing a license. May need to be revised.
-*/
+//	File: fn_buyLicense.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Called when purchasing a license. May need to be revised.
 private["_type","_other","_msg","_gun"];
 _type = _this select 3;
 
@@ -25,14 +21,14 @@ if (_type == "bounty") then
 {
 	_gun = ["gun",0] call life_fnc_licenseType;
 	missionNamespace setVariable[_gun select 0,true];
-	
+
 	_other = ["rebel",0] call life_fnc_licenseType;
 	if (missionNamespace getVariable[_other select 0,false]) then
 	{
 		hint "Because you have purchased a bounty hunter license, you have forfeited your rebel license.";
 		missionNamespace setVariable[_other select 0,false];
 	};
-	
+
 	_msg = parseText format["You are a bounty hunter, %1!<br/><br/>As a <t color='#FF0000'>bounty hunter</t> you must adhere to certain rules or risk the removal of your license or possibly even being banned from the server.<br/><br/><t color='#FF0000'>It is very important</t> to understand that you are still a civilian, and must obey all rules other civilians do.  Shooting another player to stun them with rubber bullets is still considered RDM if you do not engage verbally first with a warning. Do not attack unprovoked, even to stun, and always give them a chance to comply before opening fire.<br/><br/>As a bounty hunter your job is to bring in criminals when <t color='#00FF00'>police forces are not present</t>.<br/><br/>", [name player] call life_fnc_cleanName];
 	"You are a bounty hunter" hintC _msg;
 };

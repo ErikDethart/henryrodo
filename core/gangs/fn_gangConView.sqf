@@ -1,10 +1,6 @@
-/*
-	File: fn_gangConView.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Returns the contents inside a capture container
-*/
+//	File: fn_gangConView.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Returns the contents inside a capture container
 
 private ["_container"];
 _container = [_this,0,objNull,[objNull]] call BIS_fnc_param;

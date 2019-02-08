@@ -1,10 +1,6 @@
-/*
-	File: fn_storageSell.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Sell the storage container and everything in it.
-*/
+//	File: fn_storageSell.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Sell the storage container and everything in it.
 
 private["_item", "_house", "_owners", "_uid", "_maxCount", "_count", "_handle"];
 

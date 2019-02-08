@@ -1,9 +1,7 @@
-/*
-	File: fn_handleFlashbang.sqf
-	Author: Skalicon
-	
-	Description: Makes flashbangs work!
-*/
+//	File: fn_handleFlashbang.sqf
+//	Author: Skalicon
+//	Description: Makes flashbangs work!
+
 private["_hndl","_hnd2","_hnd3","_effects"];
 _goggles = {if(_x in assignedItems player) exitWith {_x}; ""} forEach ["NVGoggles","NVGoggles_OPFOR","NVGoggles_INDEP"];
 if(_goggles != "") then {player action ["nvGogglesOff", player] };

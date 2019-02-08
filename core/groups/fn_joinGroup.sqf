@@ -1,10 +1,6 @@
-/*
-	File: fn_joinGroup.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Joins the selected group if it is open.
-*/
+//	File: fn_joinGroup.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Joins the selected group if it is open.
 private["_dialog","_sel","_gangs","_gang","_group","_locked"];
 disableSerialization;
 
@@ -22,7 +18,7 @@ _password = _gang select 2;
 if(!isNull _group) then
 {
 	if(_password == "") then
-	{		
+	{
 		if (count (units _group) < life_groupCap) then
 		{
 			[player] joinSilent _group;

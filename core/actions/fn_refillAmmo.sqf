@@ -1,9 +1,5 @@
-/*
-	File: fn_refillAmmo.sqf
-	
-	Description:
-	Refill your existing magazines with bullets
-*/
+//	File: fn_refillAmmo.sqf
+//	Description: Refill your existing magazines with bullets
 
 private _magazines = [];
 private _price = 0;

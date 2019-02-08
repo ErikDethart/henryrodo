@@ -1,12 +1,7 @@
-/*
-	Copyright © 2013 Bryan "Tonic" Boardwine, All rights reserved
-	See http://armafiles.info/life/list.txt for servers that are permitted to use this code.
-	File: fn_syncData.sqf
-	Author: Bryan "Tonic" Boardwine"
+//	File: fn_syncData.sqf
+//	Author: Bryan "Tonic" Boardwine"
+//	Description: Used for player manual sync to the server.
 
-	Description:
-	Used for player manual sync to the server.
-*/
 _fnc_scriptName = "Player Synchronization";
 private["_exit"];
 if(isNil "life_session_time") then {life_session_time = false;};

@@ -1,10 +1,6 @@
-/*
-	File: fn_openVault.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Try to open a bank vault.
-*/
+//	File: fn_openVault.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Try to open a bank vault.
 
 _die = false;
 if (!isNil "life_bank_lastRobbed") then

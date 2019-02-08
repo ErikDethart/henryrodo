@@ -1,10 +1,6 @@
-/*
-	File: fn_surrenderAction.sqf
-	Author: Skalicon
-	
-	Description:
-	Surrender Animation test
-*/
+//	File: fn_surrenderAction.sqf
+//	Author: Skalicon
+//	Description: Surrender Animation test
 private["_unit","_obj","_posATL"];
 _unit = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 if(vehicle _unit != _unit) exitWith{};

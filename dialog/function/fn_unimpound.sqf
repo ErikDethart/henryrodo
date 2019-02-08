@@ -1,10 +1,7 @@
-/*
-	File: fn_unimpound.sqf
-	Author: Bryan "Tonic" Boardwine
+//	File: fn_unimpound.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Yeah... Gets the vehicle from the garage.
 
-	Description:
-	Yeah... Gets the vehicle from the garage.
-*/
 private["_vehicle","_vid","_pid","_unit","_price","_nearVehicles","_insured","_vData"];
 disableSerialization;
 

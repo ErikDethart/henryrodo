@@ -1,10 +1,6 @@
-/*
-	File: fn_messenger.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Sends messages on certain intervals.
-*/
+//	File: fn_messenger.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Sends messages on certain intervals.
 
 private ["_player"];
 _player = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;

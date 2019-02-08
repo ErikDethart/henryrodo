@@ -1,10 +1,7 @@
-/*
-	File: fn_houseMenu.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Shows house ownership menu
-*/
+//	File: fn_houseMenu.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Shows house ownership menu
+
 private["_owners","_locked","_owner","_price"];
 if(dialog) exitWith {};
 life_menu_house = cursorObject;

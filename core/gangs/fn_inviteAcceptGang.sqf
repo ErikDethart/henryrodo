@@ -1,11 +1,5 @@
-/*
-	File: fn_inviteAcceptGang.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Yes! Oh please, yes!
-*/
-
+//	File: fn_inviteAcceptGang.sqf
+//	Author: John "Paratus" VanderZwet
 if ((time - life_gang_invited) > 30) exitWith {};
 if (life_gang_invite in ["","0",0]) exitWith {};
 if (isNil "life_gang_invite") exitWith {};

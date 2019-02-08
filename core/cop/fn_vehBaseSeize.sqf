@@ -1,10 +1,7 @@
-/*
-	File: fn_vehBaseSeize.sqf
-	Author: Gnashes
-	
-	Description:
-	Searches the vehicle for illegal items, deletes them, and pays the police.
-*/
+//	File: fn_vehBaseSeize.sqf
+//	Author: Gnashes
+//	Description: Searches the vehicle for illegal items, deletes them, and pays the police.
+
 private["_vehicle","_vehicleInfo","_value"];
 _vehicle = cursorTarget;
 if(isNull _vehicle) exitWith {};
@@ -22,7 +19,7 @@ _value = 0;
 {
 	_var = _x select 0;
 	_val = _x select 1;
-	
+
 	_index = [_var,life_illegal_items] call life_fnc_index;
 	if(_index != -1) then
 	{
@@ -43,11 +40,11 @@ switch (true) do
 
 if((_value > 0) || (count(_weapons + _magazines) > 0)) then
 {
-	clearWeaponCargoGlobal _vehicle; 
-	clearMagazineCargoGlobal _vehicle; 
+	clearWeaponCargoGlobal _vehicle;
+	clearMagazineCargoGlobal _vehicle;
 	clearItemCargoGlobal _vehicle;
 
-	if(_value > 0) then 
+	if(_value > 0) then
 	{
 [0,format["A vehicle was searched and $%1 worth of drugs / contraband were seized into evidence.",[_value] call life_fnc_numberText]] remoteExecCall ["life_fnc_broadcast",-2];
 	[player, _value] spawn life_fnc_copSplit;

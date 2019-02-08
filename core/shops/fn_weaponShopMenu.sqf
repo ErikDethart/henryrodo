@@ -1,11 +1,5 @@
-/*
-	File: fn_weaponShopMenu.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Something
-*/
-
+//	File: fn_weaponShopMenu.sqf
+//	Author: Bryan "Tonic" Boardwine
 private ["_magName","_magConfig","_unit","_config"];
 
 _unit = cursorTarget;
@@ -31,7 +25,7 @@ lbClear _itemList;
 
 {
 	_itemInfo = [_x select 0] call life_fnc_fetchCfgDetails;
-	
+
 	_reqDonor = 0;
 	/*{
 		if (_itemInfo select 0 == _x select 0) then { _reqDonor = _x select 1 };
@@ -45,7 +39,7 @@ lbClear _itemList;
 		case 5: { [0.9, 0.8, 0.5, 1] };
 		default { [1, 1, 1, 1] };
 	};
-	
+
 	_itemList lbAdd format["%1",if(isNil {_x select 1}) then {_itemInfo select 1} else {_x select 1}];
 	_itemList lbSetColor[(lbSize _itemList)-1,_lineColor];
 	_itemList lbSetData[(lbSize _itemList)-1,_itemInfo select 0];

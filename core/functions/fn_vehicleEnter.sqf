@@ -1,9 +1,7 @@
-/*
-	File: fn_vehicleEnter.sqf
-	Author: John "Paratus" VanderZwet
+//	File: fn_vehicleEnter.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Got in a vehicle!
 
-	Description: Got in a vehicle!
-*/
 private["_vehicle","_position","_unit","_isTrans"];
 _vehicle = _this select 0;
 _position = _this select 1;

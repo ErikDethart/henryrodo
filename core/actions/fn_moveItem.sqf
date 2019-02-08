@@ -1,10 +1,7 @@
-/*
-	File: fn_moveItem.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Player has placed an item or taken an item from a container
-*/
+//	File: fn_moveItem.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Player has placed an item or taken an item from a container
+
 params ["_unit", "_container", "_item"];
 
 if (life_laser_inprogress) exitWith { deleteVehicle _container; };

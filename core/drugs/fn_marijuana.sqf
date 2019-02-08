@@ -1,11 +1,5 @@
-/*
-	File: fn_marijuana.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Marijuana is bad, mmkay?
-*/
-
+//	File: fn_marijuana.sqf
+//	Author: John "Paratus" VanderZwet
 private ["_item"];
 
 _item = _this select 0;

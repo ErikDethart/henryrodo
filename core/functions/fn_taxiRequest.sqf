@@ -1,10 +1,6 @@
-/*
-	File: fn_taxiRequest.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Notifies the taxi driver that someone has requested a taxi.
-*/
+//	File: fn_taxiRequest.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Notifies the taxi driver that someone has requested a taxi.
 
 if (!(18 in life_talents) && !(109 in life_talents)) exitWith {};
 params [

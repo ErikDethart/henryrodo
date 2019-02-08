@@ -1,16 +1,14 @@
-/*
-	File: fn_virt_shops.sqf
-	Author: Bryan "Tonic" Boardwine
+//	File: fn_virt_shops.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description:
+//	Config for virtual shops.
 
-	Description:
-	Config for virtual shops.
-	
-	FORMAT:
-	[Shop Name,
-		[buy],
-		[sell]
-	]
-*/
+//	FORMAT:
+//	[Shop Name,
+//		[buy],
+//		[sell]
+//	]
+
 private _shop = _this select 0;
 
 

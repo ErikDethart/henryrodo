@@ -1,25 +1,23 @@
-/*
-	File: fn_fetchVehInfo.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Used in returning information about a vehicle from Config >> "CfgVehicles"
-	
-	Return:
-	0: classname
-	1: scope
-	2: picture
-	3: displayname
-	4: vehicleclass
-	5: side
-	6: faction
-	7: Base / Superclass
-	8: Max Speed
-	9: Armor Rating
-	10: Passenger Seats
-	11: Max Horse power
-	12: Fuel Capacity
-*/
+//	File: fn_fetchVehInfo.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description:
+//	Used in returning information about a vehicle from Config >> "CfgVehicles"
+
+//	Return:
+//	0: classname
+//	1: scope
+//	2: picture
+//	3: displayname
+//	4: vehicleclass
+//	5: side
+//	6: faction
+//	7: Base / Superclass
+//	8: Max Speed
+//	9: Armor Rating
+//	10: Passenger Seats
+//	11: Max Horse power
+//	12: Fuel Capacity
+
 private["_class","_scope","_picture","_displayName","_vehicleClass","_side","_faction","_superClass","_speed","_armor","_seats","_hp","_fuel"];
 _class = [_this,0,"",[""]] call BIS_fnc_param;
 if(_class == "") exitWith {[]}; //Bad class passed.

@@ -1,9 +1,7 @@
-/*
-	File: fn_infamyRespec.sqf
-	Author: Poseidon
-	
-	Description: Clear all infamy talents for a price, this function is not yet used
-*/
+//	File: fn_infamyRespec.sqf
+//	Author: Poseidon
+//	Description: Clear all infamy talents for a price, this function is not yet used
+
 private ["_display","_label"];
 
 _cost = life_respec_fee * (count life_infamyTalents);

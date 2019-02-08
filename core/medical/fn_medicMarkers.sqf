@@ -1,10 +1,6 @@
-/*
-	File: fn_medicMarkers.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Marks downed players on the map when it's open.
-*/
+//	File: fn_medicMarkers.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Marks downed players on the map when it's open.
 private["_markers","_units"];
 _markers = [];
 _units = [];
@@ -36,7 +32,7 @@ while {true} do
 	{
 		{if(side _x == independent) then {_medics set[count _medics,_x];}} foreach allPlayers;
 	};
-	
+
 	//Create markers
 	{
 		_marker = createMarkerLocal [format["%1_marker",_x],getPos _x];

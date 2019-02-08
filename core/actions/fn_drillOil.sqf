@@ -1,10 +1,6 @@
-/*
-	File: fn_drillOil.sqf
-	Author: Gnashes
-	
-	Description:
-	Drills for oil! Fills vehicle based on percentage when loop is broken.
-*/
+//	File: fn_drillOil.sqf
+//	Author: Gnashes
+//	Description: Drills for oil! Fills vehicle based on percentage when loop is broken.
 
 if(time - life_last_sold < 10) exitWith {hint "You cannot rapidly drill for oil!"};
 

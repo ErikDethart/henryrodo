@@ -11,13 +11,6 @@ life_bank_safe_pos = switch (worldName) do
 	case "Altis": { [[16091.9,17070.5,0.00143814],[16091,17082,0.00144005],[16089.8,17092.7,0.00144005],[16022.9,17033.9,0.00143623],[16029.5,17042.1,0.00144672],[16015.2,17050.5,0.00144196],[16005.6,17043.6,0.00143623],[16017.4,16956.9,0.00144005],[16079.3,16916.9,0.00143719],[16147.6,16951.9,0.00143051],[16075.9,17089.9,0],[16017.3,16956.7,0],[16161.9,16966.5,0],[16151.7,17042,0],[16012,16863,0],[16013.1,16855.2,3.1]] };
 	case "Stratis": { [[1613.46,5174.35,0.00143862],[1607.66,5153.66,0.00143909],[1652.66,5093.51,0.00143862],[1657.2,5110.56,0.00143862],[1570.62,5127.24,0.00143909],[1592.59,5071.92,0.00143957]] };
 };
-life_race = 0;
-life_race_waypoints = [
-	["race_1_start", "race_1_wp_1", "race_1_wp_2", "race_1_wp_3", "race_1_wp_4", "race_1_wp_5", "race_1_wp_6", "race_1_wp_7", "race_1_wp_8", "race_1_wp_9", "race_1_wp_10", "race_1_wp_11", "race_1_wp_12", "race_1_wp_13", "race_1_wp_14", "race_1_wp_15", "race_1_wp_16", "race_1_wp_17", "race_1_wp_18", "race_1_wp_19", "race_1_wp_20", "race_1_end"],
-	["race_2_start", "race_2_wp_1", "race_2_wp_2", "race_2_wp_3", "race_2_wp_4", "race_2_wp_5", "race_2_wp_6", "race_2_wp_7", "race_2_wp_8", "race_2_wp_9", "race_2_wp_10", "race_2_wp_11", "race_2_wp_12", "race_2_wp_13", "race_2_wp_14", "race_2_wp_15", "race_2_wp_16", "race_2_wp_17", "race_2_wp_18", "race_2_wp_19", "race_2_end"],
-	["race_3_start", "race_3_wp_1", "race_3_wp_2", "race_3_wp_3", "race_3_wp_4", "race_3_wp_5", "race_3_wp_6", "race_3_wp_7", "race_3_wp_8", "race_3_wp_9", "race_3_wp_10", "race_3_wp_11", "race_3_wp_12", "race_3_wp_13", "race_3_wp_14", "race_3_wp_15", "race_3_wp_16", "race_3_wp_17", "race_3_wp_18", "race_3_wp_19", "race_3_wp_20", "race_3_wp_21", "race_3_wp_22", "race_3_end"],
-	["race_4_start", "race_4_wp_1", "race_4_wp_2", "race_4_wp_3", "race_4_wp_4", "race_4_wp_5", "race_4_wp_6", "race_4_wp_7", "race_4_wp_8", "race_4_wp_9", "race_4_wp_10", "race_4_wp_11", "race_4_wp_12", "race_4_wp_13", "race_4_wp_14", "race_4_wp_15", "race_4_wp_16", "race_4_wp_17", "race_4_wp_18", "race_4_wp_19", "race_4_wp_20", "race_4_wp_21", "race_4_wp_22", "race_4_wp_23", "race_4_wp_24", "race_4_wp_25", "race_4_wp_26", "race_4_wp_27", "race_4_wp_28", "race_4_wp_29", "race_4_wp_30", "race_4_wp_31", "race_4_wp_32", "race_4_wp_33", "race_4_wp_34", "race_4_wp_35", "race_4_wp_36", "race_4_wp_37", "race_4_wp_38", "race_4_wp_39", "race_4_wp_40", "race_4_wp_41", "race_4_wp_42", "race_4_wp_43", "race_4_wp_44", "race_4_wp_45", "race_4_wp_46", "race_4_wp_47", "race_4_wp_48", "race_4_wp_49", "race_4_wp_50", "race_4_wp_51", "race_4_wp_52", "race_4_wp_53", "race_4_wp_54", "race_4_wp_55", "race_4_wp_56", "race_4_wp_57", "race_4_end"]
-];
 life_phone_buttons = [
 	["Admin", "icons\phone_admin.paa", "createDialog ""life_admin_menu""", "(call life_adminlevel) > 1", "Access restricted administration menu"],
 	["Camera", "icons\phone_camera.paa", "[] call BIS_fnc_camera; closeDialog 0;", "(call life_adminlevel) > 1", "Open the admin camera"],
@@ -36,7 +29,7 @@ life_phone_buttons = [
 	["Talents", "icons\phone_talents.paa", "life_gangperk = false; createDialog ""life_talent_menu"";", "true", "View your talents and assign points"],
 	["Achieve", "icons\phone_achieve.paa", "createDialog ""life_achievement_menu"";", "true", "View your achievements"],
 	["Market", "icons\phone_market.paa", "createDialog ""life_market_menu"";", "playerSide != independent", "Current market supply and value"],
-	["Weather", "icons\phone_weather.paa", "createDialog ""life_weather_menu""", "true", "Current weather and future forecast"],
+	//["Weather", "icons\phone_weather.paa", "createDialog ""life_weather_menu""", "true", "Current weather and future forecast"],
 	["Honor", "icons\phone_wanted.paa", "createDialog 'life_prestige_menu'", "playerSide == civilian && license_civ_bounty && 126 in life_talents", "View your bounty hunter specialties and assign points"],
 	["Inventory", "icons\phone_inventory.paa", "createDialog 'life_inventory_menu'", "true", "View your virtual inventory"]
 ];

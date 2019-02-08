@@ -1,10 +1,7 @@
-/*
-	File: fn_gangHouseSelect.sqf
-	Author: Gnashes
-	
-	Description:
-	Initializes the gang house selection menu.
-*/
+//	File: fn_gangHouseSelect.sqf
+//	Author: Gnashes
+//	Description: Initializes the gang house selection menu.
+
 private["_spCfg","_sp","_menu","_from"];
 
 disableSerialization;
@@ -29,7 +26,7 @@ else
 	lbClear _menu;
 	_from = 0;
 	(_menu) ctrlSetEventHandler ["LBSelChanged","[(lbCurSel 48520)] call life_fnc_gangHousePointSelected"];
-	
+
 	for "_i" from _from to (count _spCfg)-1 do
 	{
 		_menu lbAdd ((_spCfg select _i) select 1);

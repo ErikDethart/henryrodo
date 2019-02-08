@@ -1,10 +1,7 @@
-/*
-	File: fn_newWaypoint.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Sets or cancels current dispatch waypoint
-*/
+//	File: fn_newWaypoint.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Sets or cancels current dispatch waypoint
+
 private["_pos","_remove"];
 _pos = [_this,0,[0,0,0],[[]]] call BIS_fnc_param;
 _remove = [_this,1,false,[false]] call BIS_fnc_param;

@@ -1,10 +1,7 @@
-/*
-	File: fn_houseSaleMenu.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Shows house sale menu
-*/
+//	File: fn_houseSaleMenu.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Shows house sale menu
+
 private["_display","_text","_edit","_price"];
 
 disableSerialization;

@@ -1,11 +1,6 @@
-/*
-	File: fn_juryRegister.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Jury member signing in for duty at courthouse
-*/
-
+//	File: fn_juryRegister.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Jury member signing in for duty at courthouse
 if (isNil "life_jury_registered") exitWith { hint "You have not been summoned for jury duty at this time." };
 if (life_jury_registered) exitWith { hint "You've already registered for jury duty.  Please wait near the courthouse for a few minutes."; };
 if (vehicle player != player) exitWith { hint "You cannot register for jury duty from within a vehicle." };

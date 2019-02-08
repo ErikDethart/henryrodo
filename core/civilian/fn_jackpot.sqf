@@ -1,17 +1,12 @@
-/*
-	File: fn_jackpot.sqf
-	
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Won he lottery!
-	
-	Parameter(s):
-	0: Number - Amount of money won.
+//	File: fn_jackpot.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description:
+//	Won he lottery!
 
-	Returns:
-	Nothing
-*/
+//	Parameter(s):
+//	0: Number - Amount of money won.
+
+//	Returns: Nothing
 params [["_amount", 0, [0]]];
 
 

@@ -1,10 +1,7 @@
-/*
-	File: fn_vehInvSearch.sqf
-	Author: Gnashes
+//	File: fn_vehInvSearch.sqf
+//	Author: Gnashes
+//	Description: Searches vehicle and displays hint for contents.
 
-	Description:
-	Searches vehicle and displays hint for contents.
-*/
 [] spawn {
 
 _vehicle = cursorTarget;

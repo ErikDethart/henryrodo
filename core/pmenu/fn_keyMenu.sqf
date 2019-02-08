@@ -1,11 +1,6 @@
-/*
-	File: fn_keyMenu.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Initializes the key menu
-	Will be revised.
-*/
+//	File: fn_keyMenu.sqf
+//	Author: Bryan "Tonic" Boardwine
+
 private["_display","_vehicles","_plist","_near_units","_pic","_name","_text","_color","_index"];
 disableSerialization;
 
@@ -30,21 +25,10 @@ for "_i" from 0 to (count life_vehicles)-1 do
 		{
 			_text = "";
 		};
-		
+
 		_name = getText(configFile >> "CfgVehicles" >> (typeOf _veh) >> "displayName");
 		_pic = getText(configFile >> "CfgVehicles" >> (typeOf _veh) >> "picture");
-		
-		/*
-		if(_veh distance impound_obj < 50) then
-		{
-			_vehicles lbAdd format["%1 - Impounded",_name];
-		}
-			else
-		{
-			_vehicles lbAdd format["%1 %3 - [Distance: %2m]",_name,round(player distance _veh),_text];
-		};
-		*/
-		
+
 		_vehicles lbAdd format["%1 %3",_name,round(player distance _veh),_text];
 		_vehicles lbSetPicture [(lbSize _vehicles)-1,_pic];
 		_vehicles lbSetData [(lbSize _vehicles)-1,str(_i)];

@@ -1,10 +1,6 @@
-/*
-	File: fn_forceJoinGroup.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Add player to given group object
-*/
+//	File: fn_forceJoinGroup.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Add player to given group object
 
 private ["_group"];
 waitUntil{life_session_completed}; //Unsure of the timing of when this file gets called, put this here to be safe

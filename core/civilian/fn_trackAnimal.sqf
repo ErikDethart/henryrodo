@@ -1,11 +1,6 @@
-/*
-	File: fn_trackAnimal.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Search for animals within hunting zones
-*/
-
+//	File: fn_trackAnimal.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Search for animals within hunting zones
 private ["_chance","_animal","_animals","_msg","_error","_dir","_bearing","_comp","_distance","_message","_rnd"];
 
 //if (!(121 in life_talents)) exitWith { [[0,2], "You have no idea how to track animals."] call life_fnc_broadcast; };
@@ -27,7 +22,7 @@ if (_rnd > 1 || isNull _animal) exitWith { [[0,2], "You fail to find animal trac
 
 _vd = (getPosASL player) vectorDiff (getPosASL _animal);
 _dir = (_vd select 0) atan2 (_vd select 1);
-if (_dir < 0) then {_dir = 360 + _dir}; 
+if (_dir < 0) then {_dir = 360 + _dir};
 _comp = ["north", "north east", "east", "south east", "south", "south west", "west", "north west", "north"];
 _bearing = _comp select (round (_dir / 45));
 

@@ -1,12 +1,6 @@
-/*
-	File: fn_talentMenu.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Populates the talent menu.
-	Please either get Asylum permission to use this or create this system yourself.
-*/
-
+//	File: fn_talentMenu.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Populates the talent menu.	Please either get Asylum permission to use this or create this system yourself.
 private["_display","_list","_side"];
 disableSerialization;
 waitUntil {!isNull (findDisplay 3700)};

@@ -1,11 +1,6 @@
-/*
-	File: fn_nonLethal.sqf
-	Author: Alan
-	
-	Description:
-	Handles IR Laser on weapons for cops
-*/
-
+//	File: fn_nonLethal.sqf
+//	Author: Alan
+//	Description: Handles IR Laser on weapons for cops
 _act = [_this,3,"",[""]] call BIS_fnc_param;
 
 if ((primaryWeapon player) isEqualTo "") exitWith {hint "You don't have a primary weapon equipped.";};
@@ -18,7 +13,7 @@ player setAmmo [_curWep, 0];
 uiSleep 0.5;
 player setAmmo [_curWep,_curAmmo];
 
-switch (_act) do 
+switch (_act) do
 {
 	case "add": {player removeItem "acc_pointer_IR"; player addPrimaryWeaponItem "acc_pointer_IR";};
 	case "rem": {if (player canAdd "acc_pointer_IR") then { player removePrimaryWeaponItem "acc_pointer_IR"; player addItem "acc_pointer_IR"; } else { [[0,2], "You don't have enough space in your pockets to place the IR Laser!"] call life_fnc_broadcast; };};

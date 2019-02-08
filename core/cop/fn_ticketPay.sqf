@@ -1,10 +1,7 @@
-/*
-	File: fn_ticketPay.sqf
-	Author: Bryan "Tonic" Boardwine
+//	File: fn_ticketPay.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Pays the ticket.
 
-	Description:
-	Pays the ticket.
-*/
 if(isnil {life_ticket_val} OR isNil {life_ticket_cop}) exitWith {};
 if(life_is_arrested) exitWith {};
 

@@ -1,10 +1,7 @@
-/*
-	File: fnc_playerquery.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Starts the query on a player.
-*/
+//	File: fnc_playerquery.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Starts the query on a player.
+
 private["_ret"];
 _ret = _this select 0;
 if(isNull _ret) exitWith {};

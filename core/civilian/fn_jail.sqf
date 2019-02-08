@@ -1,10 +1,7 @@
-/*
-	File: fn_jail.sqf
-	Author: Bryan "Tonic" Boardwine & John "Paratus" VanderZwet
-	
-	Description:
-	Starts the initial process of jailing.
-*/
+//	File: fn_jail.sqf
+//	Author: Bryan "Tonic" Boardwine & John "Paratus" VanderZwet
+//	Description: Starts the initial process of jailing.
+
 private ["_jail","_jailSpawn","_jailRelease"];
 _admin = [_this,0,false,[false]] call BIS_fnc_param;
 _isSkiptracer = [_this,1,false,[false]] call BIS_fnc_param;

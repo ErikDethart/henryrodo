@@ -1,11 +1,7 @@
-/*
-	File: fn_postBail.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Called when the player attempts to post bail.
-	Needs to be revised.
-*/
+//	File: fn_postBail.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Called when the player attempts to post bail.
+
 private["_unit"];
 _unit = _this select 1;
 if(life_bail_paid) exitWith {};

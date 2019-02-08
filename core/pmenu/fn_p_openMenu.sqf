@@ -1,10 +1,6 @@
-/*
-	File: fn_p_openMenu.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Opens the players smartphone
-*/
+//	File: fn_p_openMenu.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Opens the players smartphone
 
 private ["_buttons","_display","_sync","_message","_money","_inventory","_button","_text","_lastButton","_time","_hour","_min"];
 

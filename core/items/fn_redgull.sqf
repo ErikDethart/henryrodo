@@ -1,9 +1,6 @@
-/*
-		File: fn_redgull.sqf
-		Author: John "Paratus" VanderZwet
-		
-		Description: Removes fatigue temporarily
-*/
+//	File: fn_redgull.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Removes fatigue temporarily
 if (life_revive_fatigue > 0) exitWith { hint "This item has no effect due to revive fatigue." };
 
 if(([false,"redgull",1] call life_fnc_handleInv)) then

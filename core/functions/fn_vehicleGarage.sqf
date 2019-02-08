@@ -1,10 +1,6 @@
-/*
-	File: fn_vehicleGarage.sqf
-	Author: Skalicon
-
-	Description:
-	Handles everything that happens when you open the vehicle garage.
-*/
+//	File: fn_vehicleGarage.sqf
+//	Author: Skalicon
+//	Description: Handles everything that happens when you open the vehicle garage.
 private ["_marker","_unit"];
 
 _unit = objNull;

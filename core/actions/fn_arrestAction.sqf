@@ -1,18 +1,14 @@
-/*
-	File: fn_arrestAction.sqf
-	
-	Description:
-	Arrests the targeted person.
-*/
+//	File: fn_arrestAction.sqf
+//	Description: Arrests the targeted person.
 private["_unit","_id","_jail","_markers","_result"];
 
 _unit = cursorTarget;
-if(isNull _unit) exitWith {}; //Not valid
-if(isNil "_unit") exitwith {}; //Not Valid
-if(!(_unit isKindOf "Man")) exitWith {}; //Not a unit
-if(!isPlayer _unit) exitWith {}; //Not a human
-if(!(_unit getVariable ["restrained",false])) exitWith {systemChat "You cannot send this person to prison without their being restrained."}; //He's not restrained.
-if(!((side _unit) in [civilian,independent])) exitWith {systemChat "Only civilians may be sent to prison."}; //Not a civ
+if(isNull _unit) exitWith {};
+if(isNil "_unit") exitwith {};
+if(!(_unit isKindOf "Man")) exitWith {};
+if(!isPlayer _unit) exitWith {};
+if(!(_unit getVariable ["restrained",false])) exitWith {systemChat "You cannot send this person to prison without their being restrained."};
+if(!((side _unit) in [civilian,independent])) exitWith {systemChat "Only civilians may be sent to prison."};
 if(playerSide == civilian && !(_unit getVariable ["isCivRestrained",false])) exitWith {systemChat "You cannot send players restrained by a cop to jail."};
 
 _handle = [format["<t align='center'>Are you sure you want to send %1 to jail?</t>", [name _unit] call life_fnc_cleanName]] spawn life_fnc_confirmMenu;
@@ -57,7 +53,7 @@ if (playerSide == civilian) then
 	life_experience = life_experience + 150;
 	life_arrested_uid pushBackUnique (getPlayerUID _unit);
 	[getPlayerUID _unit] spawn life_fnc_removeBounty;
-	
+
 	_friends = [units group player, {player distance _x < 100 && _x != player}] call BIS_fnc_conditionalSelect;
 	_result = false;
 	if (count _friends > 0) then

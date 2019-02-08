@@ -1,10 +1,7 @@
-/*
-	File: fn_requestTrial.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Requests a trial.
-*/
+//	File: fn_requestTrial.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Requests a trial.
+
 if(profileNameSpace getVariable["asylum",false]) exitWith {titleText["You have already had your chance!","PLAIN"]};
 if (!life_can_trial) exitWith {};
 if (life_trial_inprogress) exitWith {hint "Another trial is already in process and the courts are at capacity.  Try again shortly."};

@@ -1,10 +1,6 @@
-/*
-	File: fn_voteDialog.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Display the vote governor dialog.
-*/
+//	File: fn_voteDialog.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Display the vote governor dialog.
 
 life_candidates = nil;
 if (!isNil "life_last_vote") exitWith { hint "You have already voted and cannot vote again until the next election."; };

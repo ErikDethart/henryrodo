@@ -1,7 +1,6 @@
-/*
-	File: fn_weaponShopCfg.sqf
-	Author: Bryan "Tonic" Boardwine & John "Paratus" VanderZwet
-*/
+//	File: fn_weaponShopCfg.sqf
+//	Author: Bryan "Tonic" Boardwine & John "Paratus" VanderZwet
+
 private["_shop", "_ret"];
 _shop = [_this,0,"",[""]] call BIS_fnc_param;
 if(_shop == "") exitWith {closeDialog 0}; //Bad shop type passed.

@@ -1,10 +1,7 @@
-/*
-	File: fn_placeObject.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Places an object in the world.
-*/
+//	File: fn_placeObject.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Places an object in the world.
+
 private ["_item","_index","_object"];
 
 _item = [_this,0,"",[""]] call BIS_fnc_param;

@@ -1,12 +1,6 @@
-/*
-	File: fn_dispatchSpectate.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Spectates the selected cop.
-	Please ask for permission to use this and stop stealing my stuff.
-*/
-
+//	File: fn_dispatchSpectate.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Spectates the selected cop.
 disableSerialization;
 
 private ["_task","_taskList"];

@@ -1,10 +1,6 @@
-/*
-	File: fn_placedObject.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Places an object in the world.
-*/
+//	File: fn_placedObject.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Places an object in the world.
 
 private ["_index"];
 

@@ -1,10 +1,6 @@
-/*
-	File: fn_vehicleListCfg.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Master configuration list / array for buyable vehicles & prices and their shop.
-*/
+//	File: fn_vehicleListCfg.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Master configuration list / array for buyable vehicles & prices and their shop.
 private["_shop","_return"];
 _shop = [_this,0,"",[""]] call BIS_fnc_param;
 if(_shop == "") exitWith {[]};

@@ -1,11 +1,6 @@
-/*
-	File: fn_addPrestige.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Add distributed prestige.
-*/
-
+//	File: fn_addPrestige.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Add distributed prestige.
 private ["_unit","_amount","_full"];
 
 _unit = [_this,0,objNull,[objNull]] call BIS_fnc_param;

@@ -1,10 +1,7 @@
-/*
-	File: fn_sellHouse.sqf
-	Author: John "Paratus" VanderZwet
+//	File: fn_sellHouse.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Sell a house and initiates DB removal
 
-	Description:
-	Sell a house and initiates DB removal
-*/
 private["_house", "_buildingID", "_buildingName", "_val", "_bankSale", "_uid", "_price"];
 
 _bankSale = [_this,0,true,[true]] call BIS_fnc_param;

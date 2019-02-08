@@ -1,10 +1,6 @@
-/*
-	File: fn_factory.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Opens the factory UI and populates recipes
-*/
+//	File: fn_factory.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Opens the factory UI and populates recipes
 
 private ["_factory","_display","_recipes","_recipeList","_name","_pic","_point","_show","_armsDealer"];
 

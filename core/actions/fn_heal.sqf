@@ -1,10 +1,7 @@
-/*
-	File: fn_heal.sqf
-	
-	Author: John "Paratus" Vanderzwet
-	
-	Description: Heals player through use of Medkit or First Aid Kit
-*/
+//	File: fn_heal.sqf
+//	Author: John "Paratus" Vanderzwet
+//	Description: Heals player through use of Medkit or First Aid Kit
+
 /*_healTo = switch(true) do
 {
 	case (((12 in life_talents) || (92 in life_talents)) && "Medikit" in (items player)): { 1.0 };

@@ -1,10 +1,7 @@
-/*
-	File: fn_removeBounty.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Event: player has been removed from wanted list.
-*/
+//	File: fn_removeBounty.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Event: player has been removed from wanted list.
+
 private["_uid","_owner","_unit"];
 if(X_Server) exitWith {};
 _uid = [_this,0,"",[""]] call BIS_fnc_param;
@@ -36,7 +33,7 @@ if (count life_bounty_contract > 0) then
 			if ((_x select 1) == _uid) then { _i = _forEachIndex; };
 		} forEach life_bounty_contract;
 		if (_i > -1) then
-		{	
+		{
 			player removeSimpleTask bounty_task;
 			if(11 in life_honortalents) then {(findDisplay 12 displayCtrl 51) ctrlRemoveEventHandler ["Draw",bounty_line]};
 			_bounty = life_bounty_contract select _i;
@@ -47,16 +44,16 @@ if (count life_bounty_contract > 0) then
 			};
 			life_bounty_contract set [_i, 0];
 			life_bounty_contract = life_bounty_contract - [0];
-			
+
 			// Update marker IDs on map if > removed index
 			for "_o" from 0 to 5 do { deleteMarkerLocal format["bounty_%1", _o]; deleteMarkerLocal format["bounty_dot_%1", _o]; };
 			for "_o" from 0 to (count life_bounty_contract)-1 do
 			{
 				_bount = life_bounty_contract select _o;
 				_oldPos = _bount select 5;
-				
+
 				if (_oldPos select 0 != 0) then
-				{				
+				{
 					_marker = createMarkerLocal [format["bounty_%1", _o], _oldPos];
 					_marker setMarkerShapeLocal "ELLIPSE";
 					_marker setMarkerSizeLocal [life_track_radius, life_track_radius];
@@ -75,13 +72,13 @@ if (count life_bounty_contract > 0) then
 		};
 		life_bounty_uid = life_bounty_uid - [_uid];
 		player setVariable["myBounties",life_bounty_uid,true];
-		
+
 		if (playerSide == civilian) then {
 			_index = [_uid,life_bounty_list] call life_fnc_index;
 			life_bounty_list = life_bounty_list - [life_bounty_list select _index];
 			[player,life_bounty_list] remoteExecCall ["life_fnc_bountyAdd",2];
 		};
-		
+
 		if (count units group player > 1) then
 		{
 			{

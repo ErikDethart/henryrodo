@@ -1,10 +1,7 @@
-/*
-	File: fn_keyDownHandler.sqf
-	Author: Bryan "Tonic" Boardwine and Chronic [MIT]
+//	File: fn_keyDownHandler.sqf
+//	Author: Bryan "Tonic" Boardwine and Chronic [MIT]
+//	Description: Main key handler for event 'keyDown'
 
-	Description:
-	Main key handler for event 'keyDown'
-*/
 params ["_ctrl", "_code", "_shift", "_ctrlKey", "_alt"];
 private _handled = false;
 if(visibleMap) then {

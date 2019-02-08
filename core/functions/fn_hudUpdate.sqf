@@ -1,10 +1,7 @@
-/*
-	File: fn_hudUpdate.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Updates the HUD when it needs to.
-*/
+//	File: fn_hudUpdate.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Updates the HUD when it needs to.
+
 private["_ui","_control","_text"];
 disableSerialization;
 

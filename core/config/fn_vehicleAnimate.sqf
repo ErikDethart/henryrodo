@@ -1,10 +1,6 @@
-/*
-	File: fn_vehicleAnimate.sqf
-	Author: Bryan "Tonic" Boardwine
-
-	Description:
-	Pass what you want to be animated.
-*/
+//	File: fn_vehicleAnimate.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Pass what you want to be animated.
 
 private["_vehicle","_animate","_state"];
 _vehicle = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;

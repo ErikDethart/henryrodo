@@ -1,11 +1,7 @@
-/*
-	File: fn_vis.sqf
-	Author: Alan
+//	File: fn_vis.sqf
+//	Author: Alan
+//	Description: To hide an admin
 
-	Description:
-	To hide an admin
-
-*/
 if(param[0,false]) exitWith {
 	_unit = lbData[2902,lbCurSel (2902)];
 	_unit = call compile format["%1", _unit];

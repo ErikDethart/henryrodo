@@ -1,14 +1,9 @@
-/*
-	File: sitdown.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Sit in a chair!
-*/
-
+//	File: sitdown.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Sit in a chair!
 private ["_chair","_unit","_dir","_z"];
 
-_chair = _this select 0; 
+_chair = _this select 0;
 _unit = _this select 1;
 
 if (!isNull life_sitting) exitWith { hint "You're already sitting!" };

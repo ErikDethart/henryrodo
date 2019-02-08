@@ -1,10 +1,6 @@
-/*
-	File: fn_addStatistic.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Incriments a statistic
-*/
+//	File: fn_addStatistic.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Incriments a statistic
 private ["_index","_add","_name"];
 
 _index = [_this,0,0,[0]] call BIS_fnc_param;

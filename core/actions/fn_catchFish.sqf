@@ -1,15 +1,11 @@
-/*
-	File: fn_catchFish.sqf
-	Author: Bryan "Tonic" Boardwine & John "Paratus" VanderZwet
-	
-	Description:
-	Catches a fish that is near by.
-*/
+//	File: fn_catchFish.sqf
+//	Author: Bryan "Tonic" Boardwine & John "Paratus" VanderZwet
+//	Description: Catches a fish that is near by.
 private["_fish","_type","_range"];
 _range = 3;
 if (62 in life_talents) then { _range = 5; };
 _fish = (nearestObjects[getPos player,["Fish_Base_F"],_range]) select 0;
-if(!(_fish isKindOf "Fish_Base_F")) exitWith {}; //Not a fishy!
+if(!(_fish isKindOf "Fish_Base_F")) exitWith {};
 _maxweight=0;
 switch(true) do
 {
@@ -22,7 +18,7 @@ switch(true) do
 	default {_type = "";};
 };
 
-if(_type == "") exitWith {}; //Couldn't get a type
+if(_type == "") exitWith {};
 
 _weight = round ((random _maxweight) * 100) / 100;
 

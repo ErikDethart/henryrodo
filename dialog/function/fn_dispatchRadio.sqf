@@ -1,11 +1,8 @@
-/*
-	File: fn_dispatchRadio.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Add or remove the selected unit to the custom dispatch channel.
-	Please ask for permission to use this and stop stealing my stuff.
-*/
+//	File: fn_dispatchRadio.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description:
+//	Add or remove the selected unit to the custom dispatch channel.
+//	Please ask for permission to use this and stop stealing my stuff.
 
 disableSerialization;
 

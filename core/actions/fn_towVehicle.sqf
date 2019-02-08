@@ -1,7 +1,5 @@
-/*
-	File: fn_towVehicle.sqf
-	Author: Skalicon
-*/
+//	File: fn_towVehicle.sqf
+//	Author: Skalicon
 //Error checking
 if (vehicle player == player) exitWith {hint "You must be in a vehicle to tow.";};
 // Setup Vars

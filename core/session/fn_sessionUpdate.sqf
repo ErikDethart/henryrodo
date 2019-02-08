@@ -1,10 +1,7 @@
-/*
-	File: fn_sessionUpdate.sqf
-	Author: John "Paratus" VanderZwet
+//	File: fn_sessionUpdate.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Sends the update request to the server to save information in session.
 
-	Description:
-	Sends the update request to the server to save information in session.
-*/
 private["_packet","_val","_inv","_blockNetwork","_x","_send"];
 _blockNetwork = [_this,0,false,[false]] call BIS_fnc_param;//is this even used?
 

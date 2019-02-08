@@ -1,11 +1,6 @@
-/*
-	File: fn_mining.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Master mining script!
-*/
-
+//	File: fn_mining.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Master mining script!
 private["_sum","_stones","_items","_random","_delay"];
 
 _yield = switch(true) do {
@@ -42,7 +37,7 @@ if (50 in life_talents) then { _delay = 3; };
 
 _success = false;
 _abort = false;
-while{life_carryWeight < life_maxWeight - 3} do 
+while{life_carryWeight < life_maxWeight - 3} do
 {
 	if (speed player > 2) exitWith {};
 	if (player distance _startPos > 4) exitWith {};

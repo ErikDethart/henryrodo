@@ -1,10 +1,6 @@
-/*
-	File: fn_varHandle.sqf
-	Author: Bryan "Tonic" Boardwine, rewritten by Gnashes
-	
-	Description:
-	Rewritten master handler for getting a variables name, short name, etc.
-*/
+//	File: fn_varHandle.sqf
+//	Author: Bryan "Tonic" Boardwine, rewritten by Gnashes
+//	Description: Rewritten master handler for getting a variables name, short name, etc.
 params [
 	["_var","",[""]],
 	["_mode",-1,[0]]
@@ -26,7 +22,7 @@ switch (_mode) do {
 			default {format["life_inv_%1",_var]};
 		};
 	};
-	
+
 	case 1: {
 		switch (_var) do {
 			case "life_money": {"money"};

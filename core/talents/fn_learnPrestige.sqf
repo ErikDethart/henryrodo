@@ -1,12 +1,6 @@
-/*
-	File: fn_learnPrestige.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Player has learned a new speciality.
-	Please either get Asylum permission to use this or create this system yourself.
-*/
-
+//	File: fn_learnPrestige.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Player has learned a new speciality. Please either get Asylum permission to use this or create this system yourself.
 [] spawn
 {
 	private["_display","_index","_id","_max","_free","_str","_cost"];
@@ -42,7 +36,7 @@
 	_str = format["You have learned %1.", _talent select 2];
 	hint _str;
 	systemChat _str;
-	
+
 	[] spawn life_fnc_prestigeMenu;
 	if(playerSide == civilian) exitWith {};
 	life_track_radius = switch (true) do

@@ -1,10 +1,6 @@
-/*
-	File: fn_gangMembersReceive.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Player received initial listing of own gang members from server
-*/
+//	File: fn_gangMembersReceive.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Player received initial listing of own gang members from server
 
 private["_members","_dialog","_list"];
 

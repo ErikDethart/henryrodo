@@ -1,10 +1,7 @@
-/*
-	File: fn_weather.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Populate weather app for smartphone
-*/
+//	File: fn_weather.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Populate weather app for smartphone
+
 private["_display","_icon","_weather"];
 
 disableSerialization;

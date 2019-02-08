@@ -1,11 +1,6 @@
-/*
-	File: fn_earnPrestige.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Player earned prestige.  Distribute!
-*/
-
+//	File: fn_earnPrestige.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Player earned prestige.  Distribute!
 private ["_amount"];
 
 _amount = [_this,0,0,[0]] call BIS_fnc_param;

@@ -1,12 +1,8 @@
-/*
-	File: fn_blindfold.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Apply a blindfold to the player
-*/
+//	File: fn_blindfold.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Apply a blindfold to the player
 
-_unit = cursorTarget;
+private _unit = cursorTarget;
 if (!isPlayer _unit || !alive _unit || !(_unit getVariable ["restrained",false])) exitWith { hint "Your target isn't a living, restrained, player!  You can't blindfold that."; };
 
 if(!([false,"blindfold",1] call life_fnc_handleInv)) exitWith {};

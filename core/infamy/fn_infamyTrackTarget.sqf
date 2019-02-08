@@ -1,10 +1,8 @@
-/*
-	File: fn_infamyTrackTarget.sqf
-	Author: Poseidon
-	
-	Description: Loop that tracks the current target, automatically exits if you choose a new contract.
-		ToDo: Add more situations for it to exit? Like player not found for > 5 minutes or somethin
-*/
+//	File: fn_infamyTrackTarget.sqf
+//	Author: Poseidon
+//	Description: Loop that tracks the current target, automatically exits if you choose a new contract.
+//		ToDo: Add more situations for it to exit? Like player not found for > 5 minutes or somethin
+
 if(!params [["_contractID", 0, [0]]]) exitWith {};
 
 private _targetPlayer = objNull;
@@ -68,7 +66,7 @@ while{life_infamyContractID == _contractID} do {
 		if((serverTime % _updateFrequency) < 3) then {//we use servertime to have somewhat synchronized updates for group members
 			if(_targetPlayer getVariable["infamy_contract_ID",-1] isEqualTo _contractID) then {
 				systemChat format["%1 located", life_infamyContractTargetName];
-				
+
 				_lastUpdate = serverTime;
 				if(_useMarker) then {
 					_pos = [(getPos _targetPlayer), [1,_accuracyRadius] call BIS_fnc_randomInt, [0,359] call BIS_fnc_randomInt] call BIS_fnc_relPos;
@@ -80,7 +78,7 @@ while{life_infamyContractID == _contractID} do {
 					_marker setMarkerPosLocal _pos;
 					_marker2 setMarkerPosLocal _pos;
 				};
-				
+
 				waitUntil{uisleep 1; (vehicle player == player && (player distance _pos < 100)) || (life_infamyContractID != _contractID)};
 				if(life_infamyContractID != _contractID) exitWith {_exitTracking = true;};
 				waitUntil{uiSleep 1; serverTime >= (_lastUpdate + _updateFrequency)};

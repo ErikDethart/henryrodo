@@ -1,10 +1,6 @@
-/*
-	File: fn_captureSel.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Selected capture item for information
-*/
+//	File: fn_captureSel.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Selected capture item for information
 private["_display","_list","_text","_data"];
 
 disableSerialization;

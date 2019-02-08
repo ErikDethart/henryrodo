@@ -1,10 +1,7 @@
-/*
-	File: fn_craftRecipe.sqf
-	Author: John "Paratus" VanderZwet
+//	File: fn_craftRecipe.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Converts recipe items into another product
 
-	Description:
-	Converts recipe items into another product
-*/
 disableSerialization;
 if (isNull (findDisplay 1800)) exitWith {};
 

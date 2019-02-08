@@ -1,10 +1,6 @@
-/*
-	File: fn_spawnConfirm.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Spawns the player where he selected.
-*/
+//	File: fn_spawnConfirm.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Spawns the player where he selected.
 private["_spCfg","_sp","_spawnPos","_marker"];
 closeDialog 0;
 
@@ -15,17 +11,17 @@ if (!life_swatSpawn) then
 		private["_sp","_spCfg"];
 		_spCfg = [playerSide] call life_fnc_spawnPointCfg;
 		_sp = _spCfg select 0;
-		
+
 		if(playerSide == civilian) then
 		{
 			_spawnPos = [];
 			switch (true) do
 			{
-				case ( (_sp select 0) in ["turf_label_1","turf_label_2","turf_label_3"] || worldName == "Tanoa") : 
+				case ( (_sp select 0) in ["turf_label_1","turf_label_2","turf_label_3"] || worldName == "Tanoa") :
 				{
 					_spawnPos = getMarkerPos (_sp select 0);
 				};
-				case ( (_sp select 0) in ["civ_spawn_1","civ_spawn_2","civ_spawn_3","civ_spawn_4","donor_town"] ) : 
+				case ( (_sp select 0) in ["civ_spawn_1","civ_spawn_2","civ_spawn_3","civ_spawn_4","donor_town"] ) :
 				{
 					_spawnPos = (call compile format["%1", _sp select 0]) call BIS_fnc_selectRandom;
 					_spawnPos = _spawnPos buildingPos 0;
@@ -57,11 +53,11 @@ if (!life_swatSpawn) then
 		{
 			switch (true) do
 			{
-				case ( (life_spawn_point select 0) in ["turf_label_1","turf_label_2","turf_label_3"] || worldName == "Tanoa" ) : 
+				case ( (life_spawn_point select 0) in ["turf_label_1","turf_label_2","turf_label_3"] || worldName == "Tanoa" ) :
 				{
 					_spawnPos = getMarkerPos (life_spawn_point select 0);
 				};
-				case ( (life_spawn_point select 0) in ["civ_spawn_1","civ_spawn_2","civ_spawn_3","civ_spawn_4","donor_town"] ) : 
+				case ( (life_spawn_point select 0) in ["civ_spawn_1","civ_spawn_2","civ_spawn_3","civ_spawn_4","donor_town"] ) :
 				{
 					_spawnPos = (call compile format["%1", life_spawn_point select 0]) call BIS_fnc_selectRandom;
 					_spawnPos = _spawnPos buildingPos 0;
@@ -72,11 +68,11 @@ if (!life_swatSpawn) then
 					_spawnPos = _spawnPos buildingPos 0;
 				};
 			};
-			
+
 			player setPos _spawnPos;
 		}
 		else
-		{			
+		{
 			_marker = life_spawn_point select 0;
 			_zOffset = 0;
 			if (_marker == "cop_spawn_4") then { life_last_airhq = time; };
@@ -96,11 +92,11 @@ else
 	publicVariable "life_deploySWAT";
 };
 
-if (playerSide == civilian) then { 
+if (playerSide == civilian) then {
 	//check for bad position, and under the right conditions DON'T wipe gear!
 	//First time spawning? Position was bugged? Gear isn't empty? And finally, we said we were alive when we logged out! Thus, don't wipe gear.
 	if(isNil "life_firstSpawn" && {!isNil "life_badPosition"} && {count civ_gear > 0} && {life_badPosition}) exitWith {};
-	[] call life_fnc_civDefault; 
+	[] call life_fnc_civDefault;
 };
 
 0 cutText ["","PLAIN"];

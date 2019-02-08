@@ -1,10 +1,6 @@
-/*
-	File: fn_runDialog.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Display the run for office dialog.
-*/
+//	File: fn_runDialog.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Display the run for office dialog.
 
 life_run_data = nil;
 life_run_dialog = true;

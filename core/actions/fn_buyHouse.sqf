@@ -1,10 +1,6 @@
-/*
-	File: fn_buyHouse.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Purchases a house and initiates DB entry
-*/
+//	File: fn_buyHouse.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Purchases a house and initiates DB entry
 private["_house", "_buildingID", "_buildingName", "_owners", "_isLocked", "_uid", "_price"];
 if (life_corruptData) exitWith { hint "YOUR PLAYER DATA IS DAMAGED. You must log out to the lobby and rejoin. Your progress will not save until you do this. Most likely caused by a script-kiddie." };
 

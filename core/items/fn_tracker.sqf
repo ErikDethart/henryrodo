@@ -1,10 +1,6 @@
-/*
-	File: fn_tracker.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Attaches a tracking device to a vehicle.
-*/
+//	File: fn_tracker.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Attaches a tracking device to a vehicle.
 private["_unit"];
 _unit = cursorTarget;
 

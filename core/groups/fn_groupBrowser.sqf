@@ -1,10 +1,7 @@
-/*
-	File: fn_groupBrowser.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Fills out the group 'browser' menu with groups.
-*/
+//	File: fn_groupBrowser.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Fills out the group 'browser' menu with groups.
+
 private["_groups","_dialog","_group","_locked"];
 disableSerialization;
 
@@ -26,7 +23,7 @@ lbClear _groups;
 			_locked = "";
 		};
 		if (count (units(_group select 1)) > life_groupCap) then { _locked = " [FULL]" };
-		
+
 		_groups lbAdd format["%1 [Members: %2]%3",_group select 0,count (units(_group select 1)),_locked];
 		_groups lbSetData [(lbSize _groups)-1,_group select 0];
 	};

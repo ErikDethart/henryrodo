@@ -1,11 +1,6 @@
-/*
-	File: fn_jailCL.sqf
-	Author: Gnashes
-	
-	Description:
-	Starts the process of jailing a combat logger!
-*/
-
+//	File: fn_jailCL.sqf
+//	Author: Gnashes
+//	Description: Starts the process of jailing a combat logger!
 params [["_unit",objNull,[objNull]]];
 
 if (isNull _unit) exitWith {};

@@ -1,10 +1,6 @@
-/*
-	File: fn_buy.sqf
-	Author: Skalicon
-	
-	Description:
-	Handles buying anything
-*/
+//	File: fn_buy.sqf
+//	Author: Skalicon
+//	Description: Handles buying anything
 private["_buy"];
 _buyArray = _this select 3;
 if (_buyArray select 0 == "insurance") then {

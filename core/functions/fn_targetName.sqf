@@ -1,10 +1,7 @@
-/*
-	File: fn_targetName.sqf
-	Author: John "Paratus" VanderZwet
+//	File: fn_targetName.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Adds nametag for cursorTarget if a player/vehicle.
 
-	Description:
-	Adds nametag for cursorTarget if a player/vehicle.
-*/
 scopeName "main";
 ["targetTag", "onEachFrame",
 {

@@ -1,9 +1,7 @@
-/*
-	File: fn_infamyOpenMenu.sqf
-	Author: Poseidon
-	
-	Description: Opens the infamy talent page in the phone.
-*/
+//	File: fn_infamyOpenMenu.sqf
+//	Author: Poseidon
+//	Description: Opens the infamy talent page in the phone.
+
 disableSerialization;
 waitUntil {!isNull (findDisplay 643700)};
 private _display = findDisplay 643700;

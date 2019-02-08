@@ -1,10 +1,6 @@
-/*
-	File: fn_vehAmmo.sqf
-	Author: John "Paratus" VanderZwet & Gen. Henry Arnold
-		
-	Description: Reload offroad 50cal and armored vehicle smoke.
-*/
-
+//	File: fn_vehAmmo.sqf
+//	Author: John "Paratus" VanderZwet & Gen. Henry Arnold
+//	Description: Reload offroad 50cal and armored vehicle smoke.
 if (playerSide == civilian && !(32 in life_talents)) exitWith {hint "You don't have the talent to work with such weaponry.";};
 if !(typeOf (vehicle player) in ["B_G_Offroad_01_armed_F","O_LSV_02_armed_F","I_C_Offroad_02_LMG_F","O_MRAP_02_F","I_MRAP_03_F"]) exitWith {hint "The ammunition does not fit this vehicles weapons."};
 if (!([false,"vammo",1] call life_fnc_handleInv)) exitWith {};
@@ -42,14 +38,14 @@ if (_success) then
 	if (typeOf (vehicle player) in ["O_MRAP_02_F","I_MRAP_03_F"]) then
 	{
 		_turret = if (typeOf (vehicle player) == "O_MRAP_02_F") then {[-1]} else {[0]};
-		_emptySmoke = if (typeOf (vehicle player) == "O_MRAP_02_F") then 
-		{ 
+		_emptySmoke = if (typeOf (vehicle player) == "O_MRAP_02_F") then
+		{
 			(magazinesAllTurrets (vehicle player) select 0) select 2;
 		} else
 		{
 			(magazinesAllTurrets (vehicle player) select 1) select 2;
 		}; //fix for 0 smoke arma bug
-		
+
 		if(_emptySmoke == 0) then
 		{
 			(vehicle player) setVehicleAmmoDef 1; //resets original smokes
@@ -61,11 +57,11 @@ if (_success) then
 				(vehicle player) addMagazineTurret ["SmokeLauncherMag", _turret];
 			};
 		};
-		
+
 		life_experience = life_experience + 20;
 		hint "Vehicle smokes have been reloaded.";
 	}
-	else 
+	else
 	{
 		(vehicle player) setVehicleAmmoDef 1;
 		life_experience = life_experience + 20;

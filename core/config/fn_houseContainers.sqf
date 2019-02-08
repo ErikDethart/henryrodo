@@ -1,10 +1,7 @@
-/*
-	File: fn_houseContainers.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Returns the max number of containers by house type.
-*/
+//	File: fn_houseContainers.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Returns the max number of containers by house type.
+
 private["_type"];
 _type = [_this,0,"",[""]] call BIS_fnc_param;
 if(_type == "") exitWith {-1};

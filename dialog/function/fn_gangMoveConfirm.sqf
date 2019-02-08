@@ -1,10 +1,7 @@
-/*
-	File: fn_gangMoveConfirm.sqf
-	Author: Gnashes
-	
-	Description:
-	Changes the gang house!
-*/
+//	File: fn_gangMoveConfirm.sqf
+//	Author: Gnashes
+//	Description: Changes the gang house!
+
 closeDialog 0;
 
 private _gangHouse = (life_gang_newHouse select 0);

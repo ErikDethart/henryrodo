@@ -1,10 +1,7 @@
-/*
-	File: fn_onRespawn.sqf
-	Author: Bryan "Tonic" Boardwine
+//	File: fn_onRespawn.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Execute various actions when the _unit respawns.
 
-	Description:
-	Execute various actions when the _unit respawns.
-*/
 params [
 	["_unit",objNull,[objNull]],
 	["_corpse",objNull,[objNull]]

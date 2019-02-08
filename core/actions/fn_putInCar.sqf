@@ -1,8 +1,5 @@
-/*
-	File: fn_putInCar.sqf
+//	File: fn_putInCar.sqf
 
-	Description:
-*/
 private["_unit","_ nearest"];
 _unit = cursorTarget;
 _nearest = life_escort;

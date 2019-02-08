@@ -1,10 +1,7 @@
-/*
-	File: fn_searchClient.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Searches the player and he returns information back to the player.
-*/
+//	File: fn_searchClient.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Searches the player and he returns information back to the player.
+
 private["_cop","_licenses","_inv","_var","_val","_robber","_seizableMoney","_runner"];
 _cop = [_this,0,Objnull,[objNull]] call BIS_fnc_param;
 if(isNull _cop) exitWith {};
@@ -41,7 +38,7 @@ if (license_civ_bounty) then { missionNamespace setVariable["license_civ_gun",tr
 
 if(_licenses == "") then {_licenses = "No licenses<br/>"};
 
-if(!life_use_atm) then 
+if(!life_use_atm) then
 {
 	if (life_money > 0) then {_seizableMoney = life_money};
 	["cash","set",0] call life_fnc_updateMoney;

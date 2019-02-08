@@ -1,10 +1,6 @@
-/*
-	File: fn_robStoreAction.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Starts the robbing process
-*/
+//	File: fn_robStoreAction.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Starts the robbing process
 
 private ["_lastRobbed","_unit"];
 
@@ -61,8 +57,8 @@ while{true} do
 	if (player getVariable ["downed", false]) exitWith { _robSuccess = false; };
 	if ((player distance _unit) > 15) exitWith {};
 };
-		
-if (_robSuccess) then 
+
+if (_robSuccess) then
 {
 	_duration = (time - _started) / 60;
 	_cash = round(_duration * 1500); // $1,500 per minute

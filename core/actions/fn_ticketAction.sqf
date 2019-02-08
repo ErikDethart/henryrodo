@@ -1,10 +1,6 @@
-/*
-	File: fn_ticketAction.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Starts the ticketing process.
-*/
+//	File: fn_ticketAction.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Starts the ticketing process.
 private["_unit"];
 _unit = cursorTarget;
 disableSerialization;

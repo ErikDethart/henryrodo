@@ -1,10 +1,6 @@
-/*
-	File: fn_newCandidate.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Send candidacy to server for review.
-*/
+//	File: fn_newCandidate.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Send candidacy to server for review.
 
 private _invest = parseNumber(ctrlText 6802);
 private _policy = ctrlText 6804;

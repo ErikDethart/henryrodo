@@ -1,10 +1,6 @@
-/*
-	File: fn_getMoneyCap.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	How much money can I have?
-*/
+//	File: fn_getMoneyCap.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: How much money can I have?
 
 private ["_cap"];
 

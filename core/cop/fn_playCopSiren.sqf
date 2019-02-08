@@ -1,11 +1,6 @@
-/*
-	File: fn_playCopSiren.sqf
-	Author: Chronic
-
-	Description:
-	Plays a siren sound from the given object
-*/
-
+//	File: fn_playCopSiren.sqf
+//	Author: Chronic
+//	Description: Plays a siren sound from the given object
 private ["_sirenLogic", "_vehicle", "_sirenType", "_sirenDuration", "_sameDual", "_local"];
 
 _vehicle = _this select 0;

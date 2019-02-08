@@ -1,10 +1,6 @@
-/*
-	File: fn_revived.sqf
-	Author: John "Paratus" VanderZwet
+//	File: fn_revived.sqf
+//	Author: John "Paratus" VanderZwet
 
-	Description:
-	THANK YOU JESUS I WAS SAVED!
-*/
 private["_medic","_dir","_pos","_hospital"];
 _medic = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _hospital = [_this,1,false,[false]] call BIS_fnc_param;

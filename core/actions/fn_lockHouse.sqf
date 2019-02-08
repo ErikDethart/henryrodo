@@ -1,10 +1,7 @@
-/*
-	File: fn_lockHouse.sqf
-	Author: John "Paratus" VanderZwet
+//	File: fn_lockHouse.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Toggles locks on all doors of selected house
 
-	Description:
-	Toggles locks on all doors of selected house
-*/
 private["_house", "_buildingName", "_type", "_owners", "_isLocked", "_uid", "_index", "_soundFile", "_numDoors", "_notify"];
 
 _house = cursorObject;

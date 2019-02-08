@@ -1,10 +1,6 @@
-/*
-	File: fn_rehab.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Drugs are bad, mmkay?
-*/
+//	File: fn_rehab.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Drugs are bad, mmkay?
 
 private ["_level","_startPos"];
 

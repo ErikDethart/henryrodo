@@ -1,10 +1,7 @@
-/*
-	File: fn_sessionUpdatePartial.sqf
+//	File: fn_sessionUpdatePartial.sqf
+//	Author: Poseidon
+//	Description: Update small bits of player data as they change, instead of 1 big update.
 
-	Author: Poseidon
-
-	Description: Update small bits of player data as they change, instead of 1 big update.
-*/
 private["_mode","_packet","_array","_flag","_inv","_select","_abort","_pos","_cache"];
 _mode = param [0,0,[0]];
 _abort = false;

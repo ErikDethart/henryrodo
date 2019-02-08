@@ -1,10 +1,7 @@
-/*
-	File: fn_firedHandler.sqf
-	Author: Chronic [MIT]
+//	File: fn_firedHandler.sqf
+//	Author: Chronic [MIT]
+//	Description: Handles weapon shots
 
-	Description:
-	Handles weapon shots
-*/
 params [
     ["_unit",objNull,[objNull]],
     "",

@@ -1,11 +1,6 @@
-/*
-	File: fn_weaponShopBuySell.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Master handling of the weapon shop for buying / selling an item.
-
-*/
+//	File: fn_weaponShopBuySell.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Master handling of the weapon shop for buying / selling an item.
 private["_isWeapon","_price","_item","_itemInfo","_bad","_exit","_qty","_point"];
 
 _isWeapon = [_this,0,true,[true]] call BIS_fnc_param;

@@ -1,11 +1,6 @@
-/*
-	File: fn_setUniform.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Sets given uniform texture to a unit, should be done LOCAL
-*/
-
+//	File: fn_setUniform.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Sets given uniform texture to a unit, should be done LOCAL
 private ["_unit","_texture"];
 _unit = [_this, 0, objNull, [objNull]] call BIS_fnc_param;
 _tarray = [_this, 1, ["",""], [[]]] call BIS_fnc_param;

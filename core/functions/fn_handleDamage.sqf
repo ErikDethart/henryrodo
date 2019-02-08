@@ -1,12 +1,9 @@
-/*
-	File: fn_handleDamage.sqf
-	Author: John "Paratus" VanderZwet & Skalicon. Optimized by Gnashes
+//	File: fn_handleDamage.sqf
+//	Author: John "Paratus" VanderZwet & Skalicon. Optimized by Gnashes
+//	Description:
+//	Handles special damage events
+//	NOTE: Multiple "HandleDamage" event handlers can be added to the same unit. If multiple EHs return damage value for custom damage handling, ***only last returned value will be considered by the engine***. EHs that do not return value can be safely added after EHs that do return value. - https://community.bistudio.com/wiki/Arma_3:_Event_Handlers#HandleDamage
 
-	Description:
-	Handles special damage events
-
-	NOTE: Multiple "HandleDamage" event handlers can be added to the same unit. If multiple EHs return damage value for custom damage handling, ***only last returned value will be considered by the engine***. EHs that do not return value can be safely added after EHs that do return value. - https://community.bistudio.com/wiki/Arma_3:_Event_Handlers#HandleDamage
-*/
 params [
     ["_unit",objNull,[objNull]],
     ["_hitBox","",[""]],

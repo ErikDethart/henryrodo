@@ -1,10 +1,7 @@
-/*
-	File: fn_admininfo.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Output information received to admin menu.
-*/
+//	File: fn_admininfo.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Output information received to admin menu.
+
 private["_display","_ret","_text","_unit","_prim","_sec","_vest","_uni","_bp","_attach","_tmp"];
 _ret = _this;
 disableSerialization;

@@ -1,10 +1,7 @@
-/*
-	File: fn_setGroupLeader.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Sets / appoints the new group leader selected.
-*/
+//	File: fn_setGroupLeader.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Sets / appoints the new group leader selected.
+
 private["_dialog","_index","_members","_sel","_user"];
 disableSerialization;
 

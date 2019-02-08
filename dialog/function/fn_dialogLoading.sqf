@@ -1,9 +1,7 @@
-/*
-	File: fn_dialogLoading.sqf
-	Author: Poseidon
-	
-	Description: Displays an animated loading icon until the provided condition equals false
-*/
+//	File: fn_dialogLoading.sqf
+//	Author: Poseidon
+//	Description: Displays an animated loading icon until the provided condition equals false
+
 private["_idc","_position","_controlGroup","_display","_control","_conditionVariable","_text","_loadingText"];
 disableSerialization;
 

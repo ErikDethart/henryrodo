@@ -1,13 +1,8 @@
-/*
-	File: fn_filterChat.sqf
-	Author: John "Paratus" VanderZwet & Animusx
-	
-	Description:
-	Intercept chat command from client
-*/
-
-_unit = _this select 0; 
-_msg = _this select 1; 
+//	File: fn_filterChat.sqf
+//	Author: John "Paratus" VanderZwet & Animusx
+//	Description: Intercept chat command from client
+_unit = _this select 0;
+_msg = _this select 1;
 
 if (_unit != player) exitWith {};
 if ((_msg call aniChatEvents_strlen) > 3) then
@@ -45,7 +40,7 @@ if ((_msg call aniChatEvents_strlen) > 3) then
 		{
 			if (!isNil "life_last_message") then
 			{
-				_message = [_msg, 3] call aniChatEvents_substr; 
+				_message = [_msg, 3] call aniChatEvents_substr;
 				if ((_message call aniChatEvents_strlen) > 0) then
 				{
 					_to = objNull;

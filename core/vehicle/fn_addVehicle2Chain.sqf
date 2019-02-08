@@ -1,6 +1,4 @@
-/*
-	File: fn_addVehicle2Chain.sqf
-*/
+//	File: fn_addVehicle2Chain.sqf
 _vehicle = param [0,ObjNull,[ObjNull]];
 
 life_vehicles pushBackUnique _vehicle;
@@ -18,7 +16,7 @@ if (count _dbInfo > 2) then {
 				_vehicle addBackpackCargoGlobal ["B_AssaultPack_cbr",1];
 				_vehicle addItemCargoGlobal ["ToolKit",2];
 			};
-	
+
 			if (22 in life_talents) then {
 				clearBackpackCargoGlobal _vehicle;
 				_num = (count(fullCrew [_vehicle,"",true]));

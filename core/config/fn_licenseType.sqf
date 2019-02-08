@@ -1,10 +1,7 @@
-/*
-	File: fn_licenseType.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Returns the short-var of the license name to a long var and display name.
-*/
+//	File: fn_licenseType.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Returns the short-var of the license name to a long var and display name.
+
 private["_type","_ret","_var","_mode"];
 _type = [_this,0,"",[""]] call BIS_fnc_param;
 _mode = [_this,1,-1,[0]] call BIS_fnc_param;
@@ -47,7 +44,7 @@ switch (_mode) do
 			default {_var = ""};
 		};
 	};
-	
+
 	case 1:
 	{
 		switch (_type) do
@@ -76,7 +73,7 @@ switch (_mode) do
 			case "license_civ_copper": {_var = "copper"};
 			case "license_civ_cement": {_var = "cement"};
 			case "license_civ_meth": {_var = "meth"};
-			case "license_civ_bounty": {_var = "bounty"}; //Vigilante license 
+			case "license_civ_bounty": {_var = "bounty"}; //Vigilante license
 			default {_var = ""};
 		};
 	};

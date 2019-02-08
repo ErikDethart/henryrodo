@@ -1,10 +1,6 @@
-/*
-	File: fn_cocaineGather.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Monitors player in cocaine gathering pen.
-*/
+//	File: fn_cocaineGather.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Monitors player in cocaine gathering pen.
 
 private ["_enabled","_pure","_item","_itemName","_sum"];
 
@@ -43,8 +39,8 @@ if (life_cocaine_gather) then
 		_checks = 0;
 		private _checkLimit = 8;
 		_checkLimit = round(_checkLimit * ([3,"coke"] call life_fnc_infamyModifiers));
-		
-		
+
+
 		while {life_cocaine_gather && (life_carryWeight < life_maxWeight)} do
 		{
 			_qtyPerTick = 1;

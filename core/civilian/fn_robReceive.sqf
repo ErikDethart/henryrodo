@@ -1,7 +1,6 @@
-/*
-	File: fn_robReceive.sqf
-	Author: Bryan "Tonic" Boardwine
-*/
+//	File: fn_robReceive.sqf
+//	Author: Bryan "Tonic" Boardwine
+
 private["_cash","_victim","_rnd"];
 _cash = [_this,0,0,[0]] call BIS_fnc_param;
 _victim = [_this,1,objNull,[objNull]] call BIS_fnc_param;

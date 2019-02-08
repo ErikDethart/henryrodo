@@ -1,10 +1,7 @@
-/*
-	File: fn_setRankGang.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Initiates setting a gang member's rank up or down
-*/
+//	File: fn_setRankGang.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Initiates setting a gang member's rank up or down
+
 private["_dialog","_index","_members","_sel","_user","_promote","_rank","_active"];
 
 _promote = [_this,0,false,[false]] call BIS_fnc_param;

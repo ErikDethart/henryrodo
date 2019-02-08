@@ -1,12 +1,7 @@
-/*
-	File: fn_toggleCaptureUI.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Toggles the display of capture point user interface.
-	
-	//this file is no longer used
-*/
+//	File: fn_toggleCaptureUI.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Toggles the display of capture point user interface.
+
 private ["_point","_data"];
 
 _point = [_this,0,0,[0]] call BIS_fnc_param;

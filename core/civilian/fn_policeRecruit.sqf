@@ -1,10 +1,6 @@
-/*
-	File: fn_policeRecruit.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Show recruiting information.
-*/
+//	File: fn_policeRecruit.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Show recruiting information.
 
 _notice = [];
 _civ = [format["So you'd like to become a police officer, %1?,<br/><br/>

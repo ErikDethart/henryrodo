@@ -1,11 +1,6 @@
-/*
-	File: standup.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Stand up from chair
-*/
-
+//	File: standup.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Stand up from chair
 detach player;
 [player,"","switch",0] remoteExecCall ["life_fnc_animSync",-2];
 if (!isNull life_sitting) then { deleteVehicle life_sitting; };

@@ -1,9 +1,7 @@
-/*
-	File: fn_swatActivate.sqf
-	Author: John "Paratus" VanderZwet
+//	File: fn_swatActivate.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Reporting in for activate SWAT duty!
 
-	Description: Reporting in for activate SWAT duty!
-*/
 
 private ["_oldPos","_oldGroup"];
 

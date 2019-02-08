@@ -1,10 +1,7 @@
-/*
-	File: fn_ropeLength.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Increases or decreases the length of a tow rope
-*/
+//	File: fn_ropeLength.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Increases or decreases the length of a tow rope
+
 if (true) exitWith { hint "This feature is disabled until Bohemia fixes a related memory leak!" };
 _increase = [_this,3,false,[false]] call BIS_fnc_param;
 

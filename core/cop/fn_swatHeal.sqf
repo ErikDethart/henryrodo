@@ -1,9 +1,6 @@
-/*
-	File: swatHeal.sqf
-	Author: Skalicon
-	
-	Description:
-*/
+//	File: swatHeal.sqf
+//	Author: Skalicon
+
 private["_unit"];
 if ((_this select 3) == 1) then
 {
@@ -42,7 +39,7 @@ while{true} do
 	if(!alive player) exitWith {};
 	if(player != vehicle player) exitWith {};
 };
-		
+
 5 cutText ["","PLAIN"];
 player playActionNow "stop";
 if(player != vehicle player) exitWith {titleText["You cannot heal people while in a vehicle.","PLAIN"];};

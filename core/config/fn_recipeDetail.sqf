@@ -1,11 +1,7 @@
-/*
-	File: fn_recipeDetail.sqf
-	Author: John "Paratus" VanderZwet
+//	File: fn_recipeDetail.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Returns an array of virtual items which are required for crafting the given item class.
 
-	Description:
-	Returns an array of virtual items which are required for crafting
-	the given item class.
-*/
 params [
 	["_item","",[""]]
 ];
@@ -68,4 +64,4 @@ private _items = switch (_item) do
 if (worldName == "Tanoa" && _item == "SMG_01_F") then { _items = [["life_inv_ironore",10],["life_inv_sugar",6]] };
 if (worldName == "Tanoa" && _item == "SMG_02_F") then { _items = [["life_inv_ironore",8],["life_inv_sugar",8]] };
 
-_items; 
+_items;

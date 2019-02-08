@@ -1,10 +1,6 @@
-/*
-	File: fn_welcomeCredits.sqf
-	Author: GR8 & John "Paratus" VanderZwet
-
-	Description:
-	Displays welcome message on connection
-*/
+//	File: fn_welcomeCredits.sqf
+//	Author: GR8 & John "Paratus" VanderZwet
+//	Description: Displays welcome message on connection
 
 private ["_players","_Delay"];
 _players = _this select 0;
@@ -83,4 +79,4 @@ player enableSimulation true;
     _tm = round (count toArray (_t+_s) / 6 / 2) + 3;
     [ _m, [_pX * safeZoneW + safeZoneX, _pW], [_pY * safezoneH + safezoneY, 1 * safezoneH + safezoneY], _tm, _FadeIn ] spawn BIS_fnc_dynamicText;
     uiSleep (_tm+_FadeIn+4);
-} forEach _ms; 
+} forEach _ms;

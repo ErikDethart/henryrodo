@@ -1,10 +1,6 @@
-/*
-	File: fn_respawned.sqf
-	Author: Bryan "Tonic" Boardwine
-
-	Description:
-	Sets the player up if he/she used the respawn option.
-*/
+//	File: fn_respawned.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Sets the player up if he/she used the respawn option.
 
 //Reset our weight and other stuff
 life_use_atm = TRUE;

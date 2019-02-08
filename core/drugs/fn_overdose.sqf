@@ -1,11 +1,6 @@
-/*
-	File: fn_overdose.sqf
-	Author: John "Paratus" VanderZwet / cptjames32
-	
-	Description:
-	Took things a little too far!
-*/
-
+//	File: fn_overdose.sqf
+//	Author: John "Paratus" VanderZwet / cptjames32
+//	Description: Took things a little too far!
 _gesture = "GestureSpasm%1";
 _duration = ceil random 20;
 

@@ -1,11 +1,6 @@
-/*
-	File: fn_surrender.sqf
-	Author: Alan
-	
-	Description:
-	Player Surrender
-*/
-//Checks
+//	File: fn_surrender.sqf
+//	Author: Alan
+//	Description: Player Surrender
 if(player getVariable ["downed",false]) exitWith {};
 if(player getVariable ["restrained",false]) exitWith {};
 if(player getVariable ["Escorting",false]) exitWith{};

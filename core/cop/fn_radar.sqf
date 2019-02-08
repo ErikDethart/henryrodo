@@ -1,10 +1,7 @@
-/*
-	File: fn_radar.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Police radar gun scan
-*/
+//	File: fn_radar.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Police radar gun scan
+
 if(playerSide != west) exitWith {};
 life_radar_active = !life_radar_active;
 
@@ -25,6 +22,6 @@ life_radar_active = !life_radar_active;
 		hintSilent parseText format ["<t color='#ffffff'><t size='2'><t align='center'>Speed Radar<br/><t align='center'><t size='1'>Active Speed: %1 km/h<br/><t color='%3'>Recorded High: %2 km/h", _speed, _highest, _color];
 	};
 
-	life_radar_active = false; 
+	life_radar_active = false;
 	hintSilent parseText format ["<t color='#ffffff'><t size='2'><t align='center'>Speed Radar<br/><t color='#33CC33'><t align='center'><t size='1'>Deactivated"];
 };

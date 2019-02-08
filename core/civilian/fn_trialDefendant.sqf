@@ -1,10 +1,6 @@
-/*
-	File: fn_trialDefendant.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Your trial has begun!
-*/
+//	File: fn_trialDefendant.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Your trial has begun!
 
 [[0,1,2], "Your trial has begun. You have three minutes to convince the jury of your innocence. Good luck."] spawn life_fnc_broadcast;
 

@@ -1,11 +1,7 @@
-/*
-	File: fn_kickGroup.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Kicks the selected player out of the group.
-	*Needs revised, complete mess*
-*/
+//	File: fn_kickGroup.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Kicks the selected player out of the group.
+
 private["_dialog","_index","_members","_sel","_user"];
 disableSerialization;
 
@@ -33,7 +29,7 @@ switch (true) do
 		life_group_list set [_index,[_name,_group,_locked,str(player),getPlayerUID player]];
 		publicVariable "life_group_list";
 	};
-	
+
 	case ((getPlayerUID _data) == _ownerID) :
 	{
 		life_group_list set [_index,[_name,_group,_locked,str(player),getPlayerUID player]];

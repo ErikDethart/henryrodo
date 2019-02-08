@@ -1,10 +1,6 @@
-/*
-	File: fn_addToGang.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Sets player as a member of given gang
-*/
+//	File: fn_addToGang.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Sets player as a member of given gang
 
 private ["_id","_rank","_name","_update","_group","_joined"];
 
@@ -50,7 +46,7 @@ if (_update) then {
 if (!_joined) then
 {
 	player setVariable ["gangGroup", (group player), true];
-	life_gang_group = (group player); 
+	life_gang_group = (group player);
 };
 
 if(group player getVariable["gangTag",""] != "") exitWith {};

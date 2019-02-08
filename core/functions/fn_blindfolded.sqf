@@ -1,11 +1,6 @@
-/*
-	File: fn_blindfolded.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Blinds the player when he's restrained
-*/
-
+//	File: fn_blindfolded.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Blinds the player when he's restrained
 _unit = [_this,0,Objnull,[Objnull]] call BIS_fnc_param;
 
 _GPS = ("ItemGPS" in (assignedItems player));

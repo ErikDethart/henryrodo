@@ -1,9 +1,5 @@
-/*
-	File: fn_stopEscorting.sqf
+//	File: fn_stopEscorting.sqf
 
-	Description:
-	ASFSDFHAGFASF
-*/
 private["_escortee"];
 
 _escortee = life_escort;
@@ -16,7 +12,7 @@ player setVariable["currentlyEscorting",nil];
 life_escort = objnull;
 //[45, player, format["Stopped escorting %1", name _escortee]] remoteExecCall ["ASY_fnc_logIt",2];
 
-/*if(playerSide == civilian) then 
+/*if(playerSide == civilian) then
 {
 [] remoteExecCall [life_fnc_escortCheck, _escortee];
 };*/

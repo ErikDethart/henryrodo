@@ -1,10 +1,6 @@
-/*
-	File: fn_skyDive.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Initiate a sky dive!
-*/
+//	File: fn_skyDive.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Initiate a sky dive!
 
 if (backpack player != "") exitWith { hint "You can't be wearing a backpack when you skydive.  Parachutes are somewhat essential!" };
 if (player getVariable ["restrained",false]) exitWith {hint "You probably want your hands unbound to pull a parachute cord."};

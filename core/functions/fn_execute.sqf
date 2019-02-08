@@ -1,10 +1,6 @@
-/*
-	File: fn_execute.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Execute an unconcious player.
-*/
+//	File: fn_execute.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Execute an unconcious player.
 
 private _unit = cursorTarget;
 params ["","","",["_harvest",false,[false]]];

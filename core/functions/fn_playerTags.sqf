@@ -1,10 +1,6 @@
-/*
-	File: fn_playerTags.sqf
-	Author: John "Paratus" VanderZwet & Bryan "Tonic" Boardwine
-	Description:
-	Adds the tags above other players heads when close and have visible range.
-*/
-
+//	File: fn_playerTags.sqf
+//	Author: John "Paratus" VanderZwet & Bryan "Tonic" Boardwine
+//	Description: Adds the tags above other players heads when close and have visible range.
 private["_ui","_units","_masks","_text"];
 
 disableSerialization;

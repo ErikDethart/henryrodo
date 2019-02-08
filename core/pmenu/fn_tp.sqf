@@ -1,10 +1,7 @@
-/*
-	File: fn_visible.sqf
-	Author: Alan
-	
-	Description:
-	To teleport an admin to a location.
-*/
+//	File: fn_visible.sqf
+//	Author: Alan
+//	Description: To teleport an admin to a location.
+
 _toMe = param[0];
 if(_toMe) exitWith {
 	_toThem = param[1,false];

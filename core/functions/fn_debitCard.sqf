@@ -1,11 +1,6 @@
-/*
-	File: fn_debitCard.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Routines for spending money in a place which allows debit
-*/
-
+//	File: fn_debitCard.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Routines for spending money in a place which allows debit
 private _amount = param [0,0,[0]];
 private _success = false;
 

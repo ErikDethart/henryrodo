@@ -1,10 +1,7 @@
-/*
-	File: fn_chopShopSell.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Sells the selected vehicle off.
-*/
+//	File: fn_chopShopSell.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Sells the selected vehicle off.
+
 disableSerialization;
 //_myGarage = param[0,false];
 private["_control","_price","_vehicle","_nearVehicles"];
@@ -22,12 +19,12 @@ if !(_vehicle getVariable ["canChop",true]) exitWith {hint "You cannot chop this
 if (life_action_in_use) exitWith {};
 hint "Selling vehicle please wait....";
 life_action_in_use = true;
-/*if(_myGarage) then {
-[getPlayerUID player, _vehicle] remoteExecCall ["KBW_fnc_chopMyGarage",2];
+//if(_myGarage) then {
+//[getPlayerUID player, _vehicle] remoteExecCall ["KBW_fnc_chopMyGarage",2];
 	hint "The vehicle is now being delivered to your personal garage.";
-} else {
-[player,_vehicle,_price] remoteExecCall ["ASY_fnc_chopShopSell",2];
-};*/
+//} else {
+//[player,_vehicle,_price] remoteExecCall ["ASY_fnc_chopShopSell",2];
+//};
 [player,_vehicle,_price] remoteExecCall ["ASY_fnc_chopShopSell",2];
 closeDialog 0;
 life_action_in_use = false;

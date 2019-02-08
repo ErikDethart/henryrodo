@@ -1,10 +1,7 @@
-/*
-	File: fn_suicideBomb.sqf
-	Author: Gnashes
-	
-	Description:
-	Voluntarily (or involuntarily) detonates a player's suicide vest.
-*/
+//	File: fn_suicideBomb.sqf
+//	Author: Gnashes
+//	Description: Voluntarily (or involuntarily) detonates a player's suicide vest.
+
 params [
 	["_type","self",[""]],
 	["_source",nil,[objNull,nil]],
@@ -24,7 +21,7 @@ if(((getPosATL player) select 2 > 20) && (_type == "shot")) exitWith {
 	[0,format["%1 was shot by %2 causing their suicide vest to explode!",name player, name _source]] remoteExecCall ["life_fnc_broadcast",-2];
 	life_dead_gear set [5, ""];
 };
-	
+
 removeVest player;
 
 if((_type == "shot") && (vehicle player != player)) then {_unit = vehicle player};

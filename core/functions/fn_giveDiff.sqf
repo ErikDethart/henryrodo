@@ -1,10 +1,6 @@
-/*
-	File: fn_giveDiff.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	??A?SD?ADS?A
-*/
+//	File: fn_giveDiff.sqf
+//	Author: Bryan "Tonic" Boardwine
+
 private["_unit","_item","_val","_from","_bool"];
 _unit = _this select 0;
 if(_unit != player) exitWith {};

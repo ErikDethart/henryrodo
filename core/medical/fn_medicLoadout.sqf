@@ -1,10 +1,6 @@
-/*
-	File: fn_medicLoadout.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Loads the medic out with the default gear.
-*/
+//	File: fn_medicLoadout.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Loads the medic out with the default gear.
 
 {missionNamespace setVariable[_x,0];} foreach life_inv_items;
 life_carryWeight = 0;
@@ -33,7 +29,7 @@ else {
 	player addItem "FirstAidKit";
 	player addItem "FirstAidKit";
 	player addItem "FirstAidKit";
-	player addItem "FirstAidKit"; 
+	player addItem "FirstAidKit";
 };
 
 /* What??

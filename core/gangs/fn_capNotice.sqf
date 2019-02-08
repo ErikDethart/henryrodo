@@ -1,10 +1,7 @@
-/*
-	File: fn_capNotice.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Toggles the display of capture point user interface.
-*/
+//	File: fn_capNotice.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Toggles the display of capture point user interface.
+
 private ["_point","_row"];
 
 _point = [_this,0,"0",[""]] call BIS_fnc_param;

@@ -1,10 +1,7 @@
-/*
-	File: fn_buyClothes.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Buys the current set of clothes and closes out of the shop interface.
-*/
+//	File: fn_buyClothes.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Buys the current set of clothes and closes out of the shop interface.
+
 private["_price"];
 if((lbCurSel 3101) == -1) exitWith {titleText["You didn't choose the clothes you wanted to buy.","PLAIN"];};
 

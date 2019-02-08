@@ -1,10 +1,7 @@
-//
 //	File: fn_endorse.sqf
 //	Author: John "Paratus" VanderZwet
-//	
 //	Description:
 //	Convert prestige to hard cash!
-//
 
 private ["_display","_val","_cash"];
 

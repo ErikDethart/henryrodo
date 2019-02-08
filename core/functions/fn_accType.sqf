@@ -1,16 +1,14 @@
-/*
-	File: fn_accType.sqf
-	Author: TAW_Tonic
-	
-	Description:
-	Checks what type of an attachment is passed and what it is compatible with.
-	
-	Returns:
-	0: Unknown Error
-	1: Primary
-	2: Secondary
-	3: Handgun
-*/
+//	File: fn_accType.sqf
+//	Author: TAW_Tonic
+//	Description:
+//	Checks what type of an attachment is passed and what it is compatible with.
+//
+//	Returns:
+//	0: Unknown Error
+//	1: Primary
+//	2: Secondary
+//	3: Handgun
+
 private["_item","_type","_tmp","_ret","_arr"];
 _item = [_this,0,"",[""]] call BIS_fnc_param;
 _type = [_this,1,0,[0]] call BIS_fnc_param;
@@ -36,7 +34,7 @@ switch (_type) do
 				if(_item in _arr) then {_ret = 3;};
 			};
 		};
-		
+
 		//Secondary
 		if(secondaryWeapon player != "") then
 		{
@@ -51,7 +49,7 @@ switch (_type) do
 				if(_item in _arr) then {_ret = 2;};
 			};
 		};
-		
+
 		//Primary
 		if(primaryWeapon player != "") then
 		{
@@ -67,7 +65,7 @@ switch (_type) do
 			};
 		};
 	};
-	
+
 	case 301:
 	{
 		//Pistol first
@@ -84,7 +82,7 @@ switch (_type) do
 				if(_item in _arr) then {_ret = 3;};
 			};
 		};
-		
+
 		//Secondary
 		if(secondaryWeapon player != "") then
 		{
@@ -99,7 +97,7 @@ switch (_type) do
 				if(_item in _arr) then {_ret = 2;};
 			};
 		};
-		
+
 		//Primary
 		if(primaryWeapon player != "") then
 		{
@@ -115,7 +113,7 @@ switch (_type) do
 			};
 		};
 	};
-	
+
 	case 101:
 	{
 		//Pistol first
@@ -132,7 +130,7 @@ switch (_type) do
 				if(_item in _arr) then {_ret = 3;};
 			};
 		};
-		
+
 		//Secondary
 		if(secondaryWeapon player != "") then
 		{
@@ -147,7 +145,7 @@ switch (_type) do
 				if(_item in _arr) then {_ret = 2;};
 			};
 		};
-		
+
 		//Primary
 		if(primaryWeapon player != "") then
 		{

@@ -1,10 +1,5 @@
-/*
-	File: fn_spawnMenu.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Initializes the spawn point selection menu.
-*/
+//	File: fn_spawnMenu.sqf
+//	Author: Bryan "Tonic" Boardwine
 private["_spCfg","_sp","_menu","_from"];
 
 cutText["","BLACK FADED"];
@@ -36,11 +31,11 @@ _spCfg = [playerSide] call life_fnc_spawnPointCfg;
 
 ctrlShow[38514,(playerSide != independent)];
 
-/*if(playerSide == civilian) then
-{
-	if (life_donator > 1) then { ctrlEnable[38514,true]; }
-	else { ctrlEnable[38514,false]; };
-};*/
+//if(playerSide == civilian) then
+//{
+//	if (life_donator > 1) then { ctrlEnable[38514,true]; }
+//	else { ctrlEnable[38514,false]; };
+//};
 ctrlEnable[38514,true]; // REMOVE THIS LINE WHEN TOWN IS CHANGED
 
 if (playerSide == west) then
@@ -60,7 +55,7 @@ else
 	_from = 4;
 	if (worldName in ["Altis","Tanoa"]) then { (_menu) ctrlSetEventHandler ["LBSelChanged","[(lbCurSel 38520)+4] call life_fnc_spawnPointSelected"]; }
 	else { _from = 2; (_menu) ctrlSetEventHandler ["LBSelChanged","[(lbCurSel 38520)+2] call life_fnc_spawnPointSelected"]; };
-	
+
 	for "_i" from _from to (count _spCfg)-1 do
 	{
 		_menu lbAdd ((_spCfg select _i) select 1);

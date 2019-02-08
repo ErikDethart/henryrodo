@@ -1,10 +1,6 @@
-/*
-	File: fn_money.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	View and trade money dialog
-*/
+//	File: fn_money.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description:View and trade money dialog
 private["_display","_near","_taxRate"];
 
 _taxRate = life_configuration select 3;

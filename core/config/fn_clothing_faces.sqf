@@ -1,10 +1,7 @@
-/*
-	File: fn_clothing_faces.sqf
-	Author: John "Paratus" VanderZwetr
+//	File: fn_clothing_faces.sqf
+//	Author: John "Paratus" VanderZwetr
+//	Description: Master configuration file for faces
 
-	Description:
-	Master configuration file for faces
-*/
 private["_filter"];
 _filter = [_this,0,0,[0]] call BIS_fnc_param;
 //Classname, Custom Display name (use nil for Cfg->DisplayName, price
@@ -69,7 +66,7 @@ switch (worldName) do
 		];
 	};
 	default
-	{	
+	{
 		[
 			["AfricanHead_01","African 1",250],
 			["AfricanHead_02","African 2",250],

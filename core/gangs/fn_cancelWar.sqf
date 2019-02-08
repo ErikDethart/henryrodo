@@ -1,10 +1,6 @@
-/*
-	File: fn_cancelWar.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Cancel an existing gang war
-*/
+//	File: fn_cancelWar.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Cancel an existing gang war
 
 _dialog = findDisplay 9580;
 _gang = (lbData[9581,(lbCurSel 9581)]);

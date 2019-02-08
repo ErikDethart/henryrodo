@@ -1,10 +1,6 @@
-/*
-	File: fn_revivePlayer.sqf
-	Author: Bryan "Tonic" Boardwine and Chronic [MIT]
-
-	Description:
-	Starts the revive process on the player.
-*/
+//	File: fn_revivePlayer.sqf
+//	Author: Bryan "Tonic" Boardwine and Chronic [MIT]
+//	Description: Starts the revive process on the player.
 private["_target","_revivable","_targetName","_ui","_progressBar","_titleText","_cP","_title","_delay"];
 _target = cursorTarget;
 if(isNull _target) exitWith {};

@@ -1,10 +1,6 @@
-/*
-	File: fn_vehicleWeight.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Base configuration for vehicle weight
-*/
+//	File: fn_vehicleWeight.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Base configuration for vehicle weight
 private["_vehicle","_weight","_used"];
 _vehicle = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 if(isNull _vehicle) exitWith {};

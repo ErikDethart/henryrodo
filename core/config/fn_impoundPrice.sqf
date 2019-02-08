@@ -1,11 +1,7 @@
-/*
-	File: fn_impoundPrice.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Sort of a config for the price of unimpounding a vehicle based on damage states.
-	Will be whiped on new system.
-*/
+//	File: fn_impoundPrice.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Sort of a config for the price of unimpounding a vehicle based on damage states.
+
 private["_veh","_price"];
 _veh = _this select 0;
 if(isNull _veh) exitWith {};
@@ -21,7 +17,7 @@ switch (true) do
 			case (damage _veh > 0.03) : {_price = 40;};
 			default {_price = 25;};
 		};
-		
+
 		switch (true) do
 		{
 			case (fuel _veh < 0.2) : {_price = _price + 30;};
@@ -30,7 +26,7 @@ switch (true) do
 			default { _price = _price + 5;};
 		};
 	};
-	
+
 	case (_veh isKindOf "Air") :
 	{
 		switch(true) do
@@ -40,7 +36,7 @@ switch (true) do
 			case (damage _veh > 0.03) : {_price = 350;};
 			default {_price = 25;};
 		};
-		
+
 		switch (true) do
 		{
 			case (fuel _veh < 0.2) : {_price = _price + 200;};
@@ -59,7 +55,7 @@ switch (true) do
 			case (damage _veh > 0.03) : {_price = 25;};
 			default {_price = 10;};
 		};
-		
+
 		switch (true) do
 		{
 			case (fuel _veh < 0.2) : {_price = _price + 20;};

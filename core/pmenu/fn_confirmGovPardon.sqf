@@ -1,7 +1,5 @@
-/*
-	File: fn_confirmGovPardon.sqf
-	Description: Call to confirm a pardon by the governor.
-*/
+//	File: fn_confirmGovPardon.sqf
+//	Description: Call to confirm a pardon by the governor.
 
 params [["_governor",objNull,[objNull]]];
 if (isNull _governor) exitWith {};

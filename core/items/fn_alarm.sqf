@@ -1,10 +1,7 @@
-/*
-	File: fn_alarm.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Attaches an alarm system to a vehicle.
-*/
+//	File: fn_alarm.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Attaches an alarm system to a vehicle.
+
 private["_unit","_type"];
 _unit = cursorTarget;
 _type = _this select 0;

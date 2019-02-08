@@ -1,11 +1,6 @@
-/*
-	File: fn_gangManagement.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Called when the gang UI is initiated
-*/
-
+//	File: fn_gangManagement.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Called when the gang UI is initiated
 disableSerialization;
 
 _sleep = [_this,0,false,[false]] call BIS_fnc_param;

@@ -1,10 +1,7 @@
-/*
-	File: fn_vehInvSeize.sqf
-	Author: Bryan "Tonic" Boardwine & Gnashes
+//	File: fn_vehInvSeize.sqf
+//	Author: Bryan "Tonic" Boardwine & Gnashes
+//	Description: Moves Illegal Items, Weapons, and Magazines into a nearby police vehicle.
 
-	Description:
-	Moves Illegal Items, Weapons, and Magazines into a nearby police vehicle.
-*/
 private["_vehicle","_vehicleInfo","_value"];
 _vehicle = cursorTarget;
 if(isNull _vehicle) exitWith {};

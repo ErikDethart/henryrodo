@@ -1,9 +1,5 @@
-/*
-	File: fn_toggleActions.sqf
-	
-	Description:
-	Clears or reloads action menu options for performance testing.
-*/
+//	File: fn_toggleActions.sqf
+//	Description: Clears or reloads action menu options for performance testing.
 
 life_show_actions = !life_show_actions;
 

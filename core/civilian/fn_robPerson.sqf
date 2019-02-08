@@ -1,10 +1,7 @@
-/*
-	File: fn_robPerson.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Getting tired of adding descriptions...
-*/
+//	File: fn_robPerson.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Getting tired of adding descriptions...
+
 private["_robber","_robbed"];
 _robber = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
 _yMenu = param[1,false,[false]];

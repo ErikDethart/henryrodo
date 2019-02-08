@@ -1,10 +1,7 @@
-/*
-	File: fn_seizePlayerillegal.sqf
-	Author: Gnashes
+//	File: fn_seizePlayerillegal.sqf
+//	Author: Gnashes
+//	Description: Determines if a cop can seize a player/vehicle's gear, and makes it happen.
 
-	Description:
-	Determines if a cop can seize a player/vehicle's gear, and makes it happen.
-*/
 params [
 	["_unit",objNull,[objNull]],
 	["_type","",[""]]

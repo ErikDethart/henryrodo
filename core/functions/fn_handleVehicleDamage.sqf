@@ -1,10 +1,7 @@
-/*
-	File: fn_handleVehicleDamage.sqf
-	Author: John "Paratus" VanderZwet
+//	File: fn_handleVehicleDamage.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Handles special damage events
 
-	Description:
-	Handles special damage events
-*/
 private ["_unit","_damage","_source","_projectile","_hitBox"];
 
 _unit = _this select 0;

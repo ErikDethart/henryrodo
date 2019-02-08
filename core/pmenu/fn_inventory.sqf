@@ -1,11 +1,8 @@
-/*
-	File: fn_inventory.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	IMPORTANT! Use of this system, or any modification of it, is not permitted outside of Asylum servers.
-	Violation of this may result in BattlEye blacklisting.
-*/
+//	File: fn_inventory.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description:
+//	IMPORTANT! Use of this system, or any modification of it, is not permitted outside of Asylum servers.
+//	Violation of this may result in BattlEye blacklisting.
 
 params [
 	["_newLoad",true,[false]],
@@ -72,7 +69,7 @@ if (_newLoad && !life_virt_open && !_isPhone) then
 	_title ctrlSetText "Asylum Items";
 	_title ctrlSetPosition [_panelX + _padding, _panelY + _padding, _progressW, _progressH];
 	_title ctrlCommit 0;
-	
+
 	_players = _display ctrlCreate ["RscCombo", 2023];
 	_players ctrlSetPosition [_panelX + _padding, _panelY + _padding, _progressW / 2, _progressH];
 	_players ctrlCommit 0;
@@ -112,7 +109,7 @@ if (_newLoad && !life_virt_open && !_isPhone) then
 		_x ctrlSetPosition [((ctrlPosition _x) select 0) - _offset,((ctrlPosition _x) select 1)];
 		_x ctrlCommit 0;
 	} forEach allControls _display;
-	
+
 	[] spawn { disableSerialization; waitUntil {isNull (findDisplay 602)}; life_virt_open = false; };
 };
 

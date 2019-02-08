@@ -1,10 +1,7 @@
-/*
-	File: fn_swatSpawnMenu.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	SWAT deployment point selection menu.
-*/
+//	File: fn_swatSpawnMenu.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: SWAT deployment point selection menu.
+
 private["_spCfg","_sp","_menu","_from"];
 
 cutText["","BLACK FADED"];

@@ -1,10 +1,6 @@
-/*
-	File: fn_dropOil.sqf
-	Author: Alan
-
-	Description:
-	Drop oil barrel.
-*/
+//	File: fn_dropOil.sqf
+//	Author: Alan
+//	Description: Drop oil barrel.
 
 if (isNull life_holding_barrel) exitWith { hint "You are not holding a barrel!" };
 

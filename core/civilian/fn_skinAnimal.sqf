@@ -1,10 +1,7 @@
-/*
-	File: fn_skinAnimal.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Removes epidermis.
-*/
+//	File: fn_skinAnimal.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Removes epidermis.
+
 private["_corpse","_animals","_success"];
 
 _corpse = cursorTarget;

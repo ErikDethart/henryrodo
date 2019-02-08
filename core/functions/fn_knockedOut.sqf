@@ -1,9 +1,6 @@
-/*
-	File: fn_knockedOut.sqf
-	Author: Skalicon
-	
-	Description: Downed state for rubber bullets
-*/
+//	File: fn_knockedOut.sqf
+//	Author: Skalicon
+//	Description: Downed state for rubber bullets
 private["_obj","_inVehicle","_time","_downed","_hndlBlur","_hndlBlack","_eff1","_eff2","_effects","_unit"];
 _unit = [_this,1,Objnull,[Objnull]] call BIS_fnc_param;
 if (!life_isdowned) then {
@@ -52,10 +49,10 @@ if (!life_isdowned) then {
 		} else {
 			_downed = false;
 		};
-		_time = _time + 1; 
+		_time = _time + 1;
 		uiSleep 1;
 	};
-	
+
 	[_hndlBlur,_hndlBlack,_eff1,_eff2,_effects] spawn {
 		_hndlBlur = _this select 0;
 		_hndlBlack = _this select 1;
@@ -68,7 +65,7 @@ if (!life_isdowned) then {
 
 			_hndlBlur ppEffectAdjust [_eff1];
 			_hndlBlur ppEffectCommit 0;
-			
+
 			_hndlBlack ppEffectAdjust [1.0, 1.0, 0.0, [0, 0, 0, _eff2], [1.0, 1.0, 1.0, 1.0],[1.0, 1.0, 1.0, 0.0]];
 			_hndlBlack ppEffectCommit 0;
 
@@ -78,10 +75,10 @@ if (!life_isdowned) then {
 		ppEffectDestroy _hndlBlur;
 		ppEffectDestroy _hndlBlack;
 
-		
+
 	};
 	if(vehicle _unit != _unit) exitWith{};
-	
+
 	if (_unit getVariable ["playerSurrender",false])
 	then
 	{

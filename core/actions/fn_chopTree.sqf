@@ -1,11 +1,6 @@
-/*
-	File: fn_chopTree.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Chop down the targeted tree!
-*/
-
+//	File: fn_chopTree.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Chop down the targeted tree!
 private _tree = param[0,objNull,[objNull]];
 if (life_action_in_use) exitWith {};
 

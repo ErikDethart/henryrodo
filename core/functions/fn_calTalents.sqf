@@ -1,10 +1,6 @@
-/*
-	File: fn_calTalents.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Calculates the maximum number of talents the player can have given their experience.
-*/
+//	File: fn_calTalents.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Calculates the maximum number of talents the player can have given their experience.
 private["_max","_req","_i","_maxTalents"];
 
 _max = 0;

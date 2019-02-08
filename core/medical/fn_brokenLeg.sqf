@@ -1,10 +1,5 @@
-/*
-	File: fn_brokenLeg.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Holy crip I'm a crapple!
-*/
+//	File: fn_brokenLeg.sqf
+//	Author: John "Paratus" VanderZwet
 
 _broken = [_this,0,false,[false]] call BIS_fnc_param;
 

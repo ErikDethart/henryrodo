@@ -1,10 +1,6 @@
-/*
-	File: fn_searchWreck.sqf
-	Author: Mike "Revir" Berlin
-
-	Description:
-	Searches shipwrecks for the items within the _items array.
-*/
+//	File: fn_searchWreck.sqf
+//	Author: Mike "Revir" Berlin
+//	Description: Searches shipwrecks for the items within the _items array.
 private["_sum","_items","_random","_delay"];
 
 if (life_last_gather > time - 10) exitWith { hint "You just finished gathering; wait a few seconds before gathering again." };
@@ -31,7 +27,7 @@ _delay = 4;
 if (65 in life_talents) then { _delay = 3; };
 
 _success = false;
-while{life_carryWeight < life_maxWeight} do 
+while{life_carryWeight < life_maxWeight} do
 {
 	if (speed player > 1) exitWith {};
 	if (player distance (nearestObject[player,"Land_UWreck_FishingBoat_F"]) > 50) exitWith {titleText["You need to be closer to a ship wreck to use the excavator.","PLAIN"]};

@@ -1,10 +1,7 @@
-/*
-	File: fn_atmMenu.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Opens and manages the bank menu.
-*/
+//	File: fn_atmMenu.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Opens and manages the bank menu.
+
 private["_display","_text","_units","_unit","_type","_isBank","_isGov","_rnd"];
 life_gang_atm = [_this,3,false,[false]] call BIS_fnc_param;
 life_gov_atm = [_this,4,false,[false]] call BIS_fnc_param;
@@ -42,7 +39,7 @@ if (life_gang_atm) then
 	_units ctrlShow false;
 	(_display displayCtrl 2705) ctrlShow false;
 	if (!life_gov_atm) then {
-[player, life_gang] remoteExecCall ["ASY_fnc_queryGangBank",2]; 
+[player, life_gang] remoteExecCall ["ASY_fnc_queryGangBank",2];
 		group player setVariable["gangBankInUse",getPlayerUID player,true];
 	}
 	else {[player, "999999"] remoteExecCall ["ASY_fnc_queryGangBank",2]; };

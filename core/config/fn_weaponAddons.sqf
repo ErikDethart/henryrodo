@@ -1,8 +1,5 @@
-/*
-	File: fn_weaponAddons.sqf
-	Author: John "Paratus" VanderZwet
-*/
-
+//	File: fn_weaponAddons.sqf
+//	Author: John "Paratus" VanderZwet
 private["_shop", "_ret"];
 _shop = [_this,0,"",[""]] call BIS_fnc_param;
 

@@ -1,10 +1,7 @@
-/*
-	File: fn_openSafe.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Try to open a bank safe.
-*/
+//	File: fn_openSafe.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Try to open a bank safe.
+
 params ["","_caller","","_explosive"];
 _safe = cursorObject;
 if (life_action_in_use) exitWith {};

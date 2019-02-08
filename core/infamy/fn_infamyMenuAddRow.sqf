@@ -1,9 +1,7 @@
-/*
-	File: fn_infamyMenuAddRow.sqf
-	Author: Poseidon
-	
-	Description: This is the function for adding a new row to the infamy talent page in the phone.
-*/
+//	File: fn_infamyMenuAddRow.sqf
+//	Author: Poseidon
+//	Description: This is the function for adding a new row to the infamy talent page in the phone.
+
 private["_label","_list","_parent","_depth","_id","_i","_d"];
 _list = [_this,0,controlNull,[controlNull]] call BIS_fnc_param;
 _parent = [_this,1,0,[0]] call BIS_fnc_param;

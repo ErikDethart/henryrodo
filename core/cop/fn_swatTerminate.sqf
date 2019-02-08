@@ -1,9 +1,6 @@
-/*
-	File: fn_swatTerminate.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description: SWAT leader has chosen to deactivate.
-*/
+//	File: fn_swatTerminate.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: SWAT leader has chosen to deactivate.
 
 if (!life_activeSWAT) exitWith {};
 if (life_roleSWAT != 2) exitWith {};

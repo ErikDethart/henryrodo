@@ -1,15 +1,14 @@
-/*
-	File: fn_infamyModifiers.sqf
-	Author: Pizza Man
-	Contributor(s): Poseidon
-	
-	Description: Used for various variables in the infamy system
-*/
+//	File: fn_infamyModifiers.sqf
+//	Author: Pizza Man
+//	Contributor(s): Poseidon
+
+//	Description: Used for various variables in the infamy system
+
 params[["_mode", -1, [0]], ["_subMode", ""]];
 private["_modifier", "_talentID", "_index", "_return"];
 if (_mode isEqualTo -1) exitWith {1};
 if(!license_civ_rebel) exitWith {1};//modifiers not active unless they are a rebel
- 
+
 _return = switch (_mode) do {
 	case 1: {// Illegal Buying
 		_talents = [13, 14, 15];
@@ -74,7 +73,7 @@ _return = switch (_mode) do {
 		}else{
 			_talentID = -1;
 		};
-		
+
 		_modifier = switch (_talentID) do {
 			case 24: {0.9};
 			case 25: {0.8};
@@ -116,7 +115,7 @@ _return = switch (_mode) do {
 
 		_modifier
 	};
-	
+
 	case 7: {//Amount of bounty to receive
 		_talents = [8, 9, 10];
 		_talents sort false;
@@ -140,5 +139,5 @@ _return = switch (_mode) do {
 
 	default {1};
 };
- 
+
 _return

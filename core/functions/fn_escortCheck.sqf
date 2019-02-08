@@ -1,13 +1,10 @@
-/*
-	File: fn_escortCheck.sqf
-	Author: Alan
-	
-	Description:
-	Runs to check if player will die while escorted.
-*/
+//	File: fn_escortCheck.sqf
+//	Author: Alan
+//	Description: Runs to check if player will die while escorted.
+
 _escorter = player getVariable ["escorted_by",[objNull, false]];
 _escorter = _escorter select 0;
-_checkTime = 15; 
+_checkTime = 15;
 _exit = false;
 
 for "_i" from 0 to _checkTime do {

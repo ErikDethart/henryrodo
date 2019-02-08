@@ -1,11 +1,6 @@
-/*
-	File: fn_doRespawn.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Force respawn when at death screen.
-*/
-
+//	File: fn_doRespawn.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Force respawn when at death screen.
 private ["_unit"];
 
 _unit = player;

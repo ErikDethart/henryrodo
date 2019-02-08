@@ -1,10 +1,7 @@
-/*
-	File: fn_dropBounty.sqf
-	Author: Gnashes
+//	File: fn_dropBounty.sqf
+//	Author: Gnashes
+//	Description: removes the selected bounty from the player's list of bounty targets
 
-	Description:
-	removes the selected bounty from the player's list of bounty targets
-*/
 private["_data","_droppedUID"];
 disableSerialization;
 

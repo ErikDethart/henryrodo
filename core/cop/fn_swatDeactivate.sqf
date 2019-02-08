@@ -1,9 +1,6 @@
-/*
-	File: fn_swatDeactivate.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description: Abandon all current SWAT action.
-*/
+//	File: fn_swatDeactivate.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Abandon all current SWAT action.
 
 life_activeSWAT = false;
 publicVariable "life_activeSWAT";

@@ -1,11 +1,5 @@
-/*
-	File: fn_clientWireTransfer.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	
-*/
-
+//	File: fn_clientWireTransfer.sqf
+//	Author: Bryan "Tonic" Boardwine
 private["_unit","_val","_from"];
 _val = _this select 0;
 _from = _this select 1;

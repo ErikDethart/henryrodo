@@ -1,14 +1,12 @@
-/*
-	File: fn_infamyPickupSkalp.sqf
-	Author: Poseidon
-	
-	Description: Handle picking up scalps off the ground.
-*/
+//	File: fn_infamyPickupSkalp.sqf
+//	Author: Poseidon
+//	Description: Handle picking up scalps off the ground.
+
 private["_obj","_itemInfo","_itemName","_illegal","_diff","_duped"];
 if((time - life_action_delay) < 1) exitWith {hint "You can't rapidly use action keys!"};
 
-if (isNull (findDisplay 1520)) then { 
-	_obj = cursorObject; 
+if (isNull (findDisplay 1520)) then {
+	_obj = cursorObject;
 }else{
 	_obj = objNull;
 	if ((lbCurSel 1521) > -1) then

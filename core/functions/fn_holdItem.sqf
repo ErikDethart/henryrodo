@@ -1,11 +1,6 @@
-/*
-	File: fn_holdItem.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Place an object in the player's hand.
-*/
-
+//	File: fn_holdItem.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Place an object in the player's hand.
 private ["_started"];
 
 _item = [_this,0,"",[""]] call BIS_fnc_param;

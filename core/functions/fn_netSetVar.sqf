@@ -1,10 +1,7 @@
-/*
-	File: fn_netSetVar.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Set a variable on a client.
-*/
+//	File: fn_netSetVar.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Set a variable on a client.
+
 disableSerialization;
 private["_varName","_ns","_value"];
 _varName = [_this,0,"",[""]] call BIS_fnc_param;

@@ -1,10 +1,7 @@
-/*
-	File: fn_pickupMoney.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Picks up money
-*/
+//	File: fn_pickupMoney.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Picks up money
+
 private["_obj","_val"];
 
 _obj = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;
@@ -18,7 +15,7 @@ if(isNull _obj || player distance _obj > 4) exitWith {};
 if(!isNil {_val}) then
 {
 	deleteVehicle _obj;
-	
+
 	//Stop people picking up huge values of money which should stop spreading dirty money.
 	switch (true) do
 	{
@@ -26,7 +23,7 @@ if(!isNil {_val}) then
 		//case (_val > 5000000) : {_val = 250000;}; //VAL>5mil->250k
 		default {};
 	};
-	
+
 	player playmove "AinvPknlMstpSlayWrflDnon";
 	titleText[format["You have picked up $%1",[_val] call life_fnc_numberText],"PLAIN"];
 [34, player, format["Picked up $%1", [_val] call life_fnc_numberText]] remoteExecCall ["ASY_fnc_logIt",2];

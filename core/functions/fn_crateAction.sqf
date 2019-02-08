@@ -1,10 +1,6 @@
-/*
-	File: fn_crateAction.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Adds interaction to specified crate.
-*/
+//	File: fn_crateAction.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Adds interaction to specified crate.
 
 _crate = [_this,0,objNull,[objNull]] call BIS_fnc_param;
 

@@ -1,10 +1,7 @@
-/*
-	File: fn_getBounty.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Requests a bounty from the server.
-*/
+//	File: fn_getBounty.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Requests a bounty from the server.
+
 private ["_max"];
 
 if (!license_civ_bounty && !(playerSide == west && (life_coprole in ["warrant","all"]))) exitWith {};

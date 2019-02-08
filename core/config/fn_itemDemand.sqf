@@ -1,10 +1,6 @@
-/*
-	File: fn_itemDemand.sqf
-	Author: John "Paratus" VanderZwet
-
-	Description:
-	Returns demand for item (when it's at it's least value)
-*/
+//	File: fn_itemDemand.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Returns demand for item (when it's at it's least value)
 
 switch (_this) do
 {

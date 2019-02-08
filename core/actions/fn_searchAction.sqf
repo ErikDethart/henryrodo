@@ -1,10 +1,7 @@
-/*
-	File: fn_searchAction.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Starts the searching process.
-*/
+//	File: fn_searchAction.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Starts the searching process.
+
 private["_unit"];
 _unit = cursorTarget;
 if(isNull _unit) exitWith {};

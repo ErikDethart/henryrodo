@@ -1,10 +1,6 @@
-/*
-	File: fn_rankGang.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Update rank of player
-*/
+//	File: fn_rankGang.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Update rank of player
 
 private ["_id","_rank","_name"];
 

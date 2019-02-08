@@ -1,10 +1,6 @@
-/*
-	File: fn_configChanged.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Event fired when server configuration is changed.
-*/
+//	File: fn_configChanged.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Event fired when server configuration is changed.
 
 {
 	if ((_x select 0) in ["cannabis","marijuana","marijuanam"]) then { life_illegal_items set [_forEachIndex, -1]; };

@@ -1,10 +1,6 @@
-/*
-	File: fn_fireEMP.sqf
-	Author: Chronic [MIT]
-
-	Description:
-	Handles the creation of an EMP grenade
-*/
+//	File: fn_fireEMP.sqf
+//	Author: Chronic [MIT]
+//	Description: Handles the creation of an EMP grenade
 
 _projectile = _this select 0;
 

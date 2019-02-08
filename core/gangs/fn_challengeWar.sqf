@@ -1,10 +1,6 @@
-/*
-	File: fn_challengeWar.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Challenge another gang to war
-*/
+//	File: fn_challengeWar.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Challenge another gang to war
 
 disableSerialization;
 

@@ -1,11 +1,6 @@
-/*
-	File: fn_medicRespondDone.sqf
-	Author: speed
-
-	Description:
-	Rewards the medic for reviving a player, or notifies them that they no longer require attention
-*/
-
+//	File: fn_medicRespondDone.sqf
+//	Author: speed
+//	Description: Rewards the medic for reviving a player, or notifies them that they no longer require attention
 private["_caller","_responder","_travelBonus"];
 
 _caller = [_this,0,ObjNull,[ObjNull]] call BIS_fnc_param;

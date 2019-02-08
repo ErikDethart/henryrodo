@@ -1,10 +1,6 @@
-/*
-	File: fn_gatherZone.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Spawns up objects to be gathered.
-*/
+//	File: fn_gatherZone.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Spawns up objects to be gathered.
 
 private ["_className","_obj","_center","_radius","_max","_asset","_sprite","_enable","_item","_total","_objects"];
 
@@ -72,7 +68,7 @@ else
 	{
 		deleteVehicle _x;
 	} forEach _objects;
-	
+
 	life_gather_spawned = false;
 	life_gather_spawned_time = -1000;
 };

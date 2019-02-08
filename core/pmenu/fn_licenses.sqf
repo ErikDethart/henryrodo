@@ -1,10 +1,6 @@
-/*
-	File: fn_licenses.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Views all current licenses
-*/
+//	File: fn_licenses.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Views all current licenses
 private["_display","_near"];
 
 disableSerialization;

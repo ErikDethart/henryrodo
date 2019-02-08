@@ -1,18 +1,13 @@
-/*
-	File: fn_achievementScan.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Scans achievement conditions for new matches.
-*/
-
+//	File: fn_achievementScan.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Scans achievement conditions for new matches.
 {
 	_x params [
 		["_sides",[civilian,west,independent],[[]]],
 		"",
 		["_condition",{false},[{}]]
 	];
-	
+
 	if (!(_forEachIndex in life_achievements)) then {
 		if (playerSide in _sides && (call _condition)) then
 		{

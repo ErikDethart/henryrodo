@@ -1,11 +1,6 @@
-/*
-	File: fn_refuelVehicle.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Refuel a vehicle!
-*/
-
+//	File: fn_refuelVehicle.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Refuel a vehicle!
 private ["_vehicle","_capacity","_litres","_cost","_level","_tick","_delay"];
 private _success = true;
 if (vehicle player != player) exitWith { hint "Your arm isn't long enough to operate the pump from inside the vehicle." };
@@ -29,15 +24,15 @@ while {_level < 1} do
 	uiSleep _delay;
 	if (speed player > 1) exitWith {};
 	if (player distance (_this select 0) > 5) exitWith {};
-	
+
 	_litres = _litres + 1;
 	_cost = _cost + (6 * (1 + ((life_configuration select 7) / 100)));
 	if (life_atmmoney < _cost) exitWith {_success = false;};
-	
+
 	_tick = 1 / _capacity;
 	_level = _level + _tick;
 	if (_level > 1) then { _level = 1; };
-	
+
 	hintSilent parseText format["<t color='#cec25b'>Litres:</t> %1<br/><t color='#cec25b'>Fuel Tax:</t> %5%4<br/><t color='#cec25b'>Cost:</t> $%2<br/><t color='#cec25b'>Filled:</t> %3%4", _litres, [_cost] call life_fnc_numberText, floor (_level * 100), "%", (life_configuration select 7)];
 };
 

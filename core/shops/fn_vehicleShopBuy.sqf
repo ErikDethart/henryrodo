@@ -1,10 +1,6 @@
-/*
-	File: fn_vehicleShopBuy.sqf
-	Author: Skalicon & Paratus
-	
-	Description:
-	Creates a new vehicle
-*/
+//	File: fn_vehicleShopBuy.sqf
+//	Author: Skalicon & Paratus
+//	Description: Creates a new vehicle
 private["_index","_veh","_color","_price","_sp","_dir","_name","_fuel","_damage","_insured"];
 
 _insured = [_this,0,false,[false]] call BIS_fnc_param;
@@ -82,7 +78,7 @@ if (_insured) then
 {
 	if (life_veh_sp in ["civ_air","reb_air","cop_air","med_air"]) then { _price = round (_price * 1.08); } // 5% cost for air
 	else { _price = round (_price * 1.3); }; // 30% cost for others
-}; 
+};
 
 if(count(nearestObjects[_sp,["Car","Ship","Air"],4]) > 0) exitWith {hint "There is a vehicle on the spawn point. The transaction has been cancelled and you have not been charged"};
 if(_qty == 0) then { _price = _price * 1.25; };

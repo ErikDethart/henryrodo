@@ -1,12 +1,7 @@
-/*
-	File: fn_openGate.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Try to open a bank gate.
-*/
-
-_die = false; 
+//	File: fn_openGate.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Try to open a bank gate.
+_die = false;
 if (!isNil "life_bank_lastRobbed") then
 {
 	if (life_bank_lastRobbed > (time - 1800)) exitWith {_die = true; hint format["Security is high due to a recent robbery and you cannot open this gate.  Try again in %1 minute(s).", ceil ((life_bank_lastRobbed - (time - 1800))/60)]};

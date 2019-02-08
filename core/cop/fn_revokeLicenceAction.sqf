@@ -1,9 +1,6 @@
-/*
-	File: fn_revokeLicenceAction.sqf
-	
-	Description:
-	Handles the removal of any license
-*/
+//	File: fn_revokeLicenceAction.sqf
+//	Description: Handles the removal of any license
+
 private["_type","_cop"];
 _type = _this select 0;
 _cop = _this select 1;

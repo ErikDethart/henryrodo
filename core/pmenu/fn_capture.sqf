@@ -1,10 +1,7 @@
-/*
-	File: fn_capture.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Displays capturable points
-*/
+//	File: fn_capture.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Displays capturable points
+
 private["_display","_list","_str","_qty","_price","_shrt","_captureData"];
 
 disableSerialization;

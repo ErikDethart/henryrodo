@@ -1,11 +1,9 @@
 #include "..\..\macro.h"
 if(scriptAvailable(2)) exitWith {};
-/*
-	File: fn_infamyContractSell.sqf
-	Author: Poseidon
+//	File: fn_infamyContractSell.sqf
+//	Author: Poseidon
+//	Description: clientside function for selling last scalp in the array.
 
-	Description: clientside function for selling last scalp in the array.
-*/
 if(count(life_infamyScalps) == 0) exitWith {hint "You have no scalps to turn in."};
 if(!license_civ_rebel) exitWith {hint "You must have a rebel license to turn in a contract.";};
 

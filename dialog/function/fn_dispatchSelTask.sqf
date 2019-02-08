@@ -1,11 +1,6 @@
-/*
-	File: fn_dispatchSelTask.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Player has selected a task for dispatch dispatch.
-	Please ask for permission to use this and stop stealing my stuff.
-*/
+//	File: fn_dispatchSelTask.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Player has selected a task for dispatch dispatch.
 
 disableSerialization;
 

@@ -1,11 +1,6 @@
-/*
-	File: fn_renown.sqf
-	Author: John "Paratus" VanderZwet && Gnashes
-	
-	Description:
-	Convert cash into prestige!
-*/
-
+//	File: fn_renown.sqf
+//	Author: John "Paratus" VanderZwet && Gnashes
+//	Description: Convert cash into prestige!
 private ["_display","_val"];
 
 if (!(4 in life_achievements)) exitWith {hint "You must have the Eminent achievement in order to purchase Renown!"};

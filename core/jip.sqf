@@ -1,10 +1,6 @@
-/*
-	File: jip.sqf
-	Author: Bryan "Tonic" Boardwine / John "Paratus" VanderZwet
-	
-	Description:
-	JIP functionality for JIP required things like vehicles.
-*/
+//	File: jip.sqf
+//	Author: Bryan "Tonic" Boardwine / John "Paratus" VanderZwet
+//	Description: JIP functionality for JIP required things like vehicles.
 
 /*{
 	_index = _x getVariable "life_VEH_color";
@@ -41,7 +37,7 @@
 	if (!isNil "_texture2") then
 	{
 		[_x, _texture2, true] call life_fnc_setUniform;
-	};	
+	};
 	_face = _x getVariable "customFace";
 	if (!isNil "_face" && _x != player) then
 	{

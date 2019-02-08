@@ -1,7 +1,6 @@
-/*
-	File: fn_pullOutVeh.sqf
-	Author: Bryan "Tonic" Boardwine
-*/
+//	File: fn_pullOutVeh.sqf
+//	Author: Bryan "Tonic" Boardwine
+
 _unit = [_this,0,ObjNull,[Objnull]] call BIS_fnc_param;
 
 if((playerSide == west && !((player getVariable["restrained",false]) || (player getVariable["downed",false]))) || (isNull objectParent player)) exitWith {};

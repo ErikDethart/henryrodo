@@ -1,10 +1,6 @@
-/*
-	File: fn_blindfoldRemove.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Removes blindfold from the target
-*/
+//	File: fn_blindfoldRemove.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Removes blindfold from the target
 
 _unit = [_this,3,Objnull,[Objnull]] call BIS_fnc_param;
 if (_unit != player) then { _unit = cursorTarget };

@@ -1,10 +1,6 @@
-/*
-	File: fn_spikeStrip.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Creates a spike strip and preps it.
-*/
+//	File: fn_spikeStrip.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Creates a spike strip and preps it.
 if (vehicle player isKindOf "Air") exitWith {hint "That's a touch dangerous to try, don't you think?"};
 private _spikeStrip = "Land_Razorwire_F" createVehicle [0,0,0];
 uiSleep 1;

@@ -1,10 +1,7 @@
-/*
-	File: fn_adminMenu.sqf
-	Author: Bryan "Tonic" Boardwine
+//	File: fn_adminMenu.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Opens the admin menu, sorry nothing special in here. Take a look for yourself.
 
-	Description:
-	Opens the admin menu, sorry nothing special in here. Take a look for yourself.
-*/
 if(((call life_adminlevel)) < 2) exitWith {closeDialog 0;};
 private["_display","_list","_side"];
 disableSerialization;

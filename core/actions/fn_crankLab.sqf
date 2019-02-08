@@ -1,10 +1,6 @@
-/*
-	File: fn_crankLab.sqf
-	Author: Bamf and Gnashes
-	
-	Description:
-	Toggles a mobile meth (crank) lab on and off
-*/
+//	File: fn_crankLab.sqf
+//	Author: Bamf and Gnashes
+//	Description: Toggles a mobile meth (crank) lab on and off
 private["_vehicle","_fuel","_pos","_ui","_progress","_pgText","_cP","_delayInt","_upp","_nBuilding"];
 
 _vehicle = param [3,ObjNull,[ObjNull]];
@@ -24,7 +20,7 @@ if (count (nearestObjects [player, ["Land_i_Shed_Ind_F"], 20]) > 0) exitWith {hi
 if({player distance getMarkerPos format["police_hq_%1",_x] < 300} count [1,2,3,4,5] > 0) exitWith { hint "You want to go to jail right?"};
 
 //Building checks
-_nBuilding = nearestBuilding player; 
+_nBuilding = nearestBuilding player;
 if (player distance _nBuilding <= 10) exitWith { hint "You're too close to a building to be messing with a mobile lab."};
 
 _exit = false;
@@ -35,9 +31,9 @@ for "_i" from 1 to _numDP do
         };
 if (_exit) exitWith {};
 
-if !(_vehicle getVariable["labMode", false]) then {    
+if !(_vehicle getVariable["labMode", false]) then {
     hint "The lab is warming up.";
-	
+
 	//Setup our progress bar.
 	_upp = "Warming up the lab";
 	disableSerialization;
@@ -73,7 +69,7 @@ if !(_vehicle getVariable["labMode", false]) then {
 	life_is_processing = false;
 	life_action_in_use = false;
 	_vehicle setVariable["labMode", true, true];
-	
+
 _vehicle remoteExec ["life_fnc_crankSmoke",-2];
 }
 else
@@ -112,5 +108,5 @@ else
 	life_is_processing = false;
 	life_action_in_use = false;
 	(_vehicle setVariable["labMode", false, true]);
-    
+
 };

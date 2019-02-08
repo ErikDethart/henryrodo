@@ -1,10 +1,6 @@
-/*
-	File: fn_copLights.sqf
-	Author: Chronic [MIT], Modified by: Destrah
-
-	Description:
-	Adds the light effect to cop vehicles
-*/
+//	File: fn_copLights.sqf
+//	Author: Chronic [MIT], Modified by: Destrah
+//	Description: Adds the light effect to cop vehicles
 
 private ["_ownerCopLevel", "_offroad", "_SUV", "_hatchback", "_prowler", "_hunter", "_strider", "_hummingbird", "_huron","_hellcat","_orca","_ghosthawk", "_lightBlue", "_lightBrightBlue", "_lightHighBrightness", "_lightLowBrightness", "_lightAttenuation", "_lightIntensity", "_lightFlareSize", "_lightFlareMaxDistance", "_numStrobes", "_strobeTimeOn", "_strobeTimeOff","_offsetMultiplier","_advancedLights", "_extraLights"];
 
@@ -68,7 +64,7 @@ while {_modeChanged && !isNil "_vehicle" && !isNull _vehicle && _vehicle getVari
     // set the ambient colours
     _lightRed = [0.025, 0.005, 0.005];
     _lightBlue = [0.005, 0.005, 0.025];
-   
+
     // set the light colours
     _lightBrightRed = [1, 0.2, 0.2];
     _lightBrightBlue = [0.2, 0.2, 1];
@@ -131,7 +127,7 @@ while {_modeChanged && !isNil "_vehicle" && !isNull _vehicle && _vehicle getVari
 				_light setLightAmbient _lightStrobe;
 			};
 		};
-		
+
 		if(_isAlpha) then {
 			_alphaLights = _alphaLights + [[_light, _position]];
 		} else {
@@ -146,7 +142,7 @@ while {_modeChanged && !isNil "_vehicle" && !isNull _vehicle && _vehicle getVari
 		[true, "blue", [-0.07, 1, -0.7]] call _attachLight;
 		[false, "red", [0.07, 1, -0.7]] call _attachLight;
 	};
-	
+
 	if(_jeep) then {
 		_offsetMultiplier = 0.07;
 		[true, "blue", [0.5, 1.25, -0.16]] call _attachLight;
@@ -188,7 +184,7 @@ while {_modeChanged && !isNil "_vehicle" && !isNull _vehicle && _vehicle getVari
 
 			[true, "red", [-0.45, 2.15, -1]] call _attachLight;
 			[false, "blue", [0.45, 2.15, -1]] call _attachLight;
-			
+
 			if (!_yieldLights) then {
 				[false, "blue", [0.4, -1.8, 0.25]] call _attachLight;
 				[false, "blue", [-0.4, -1.8, 0.25]] call _attachLight;
@@ -226,7 +222,7 @@ while {_modeChanged && !isNil "_vehicle" && !isNull _vehicle && _vehicle getVari
 			[false, "blue", [-0.8, -2.3, -0.3]] call _attachLight;
 		};
 	};
-	
+
 	// put the lights on the prowler in the appropriate location
     if(_prowler) then {
         _offsetMultiplier = 0.072;
@@ -237,18 +233,18 @@ while {_modeChanged && !isNil "_vehicle" && !isNull _vehicle && _vehicle getVari
         if(_extraLights) then {
 			[true, "red", [-0.91, -0.4, -1.5]] call _attachLight;
 			[false, "blue", [-0.91, 0.49, -1.5]] call _attachLight;
-			
+
 			[true, "red", [0.975, 0.49, -1.5]] call _attachLight;
 			[false, "blue", [0.975, -0.4, -1.5]] call _attachLight;
-			
+
 			[true, "red", [-0.94, 1.1, -0.975]] call _attachLight;
 			[false, "blue", [-0.94, -1.025, -0.815]] call _attachLight;
-			
+
 			[true, "red", [1.005, -1.025, -0.815]] call _attachLight;
 			[false, "blue", [1.005, 1.1, -0.975]] call _attachLight;
         }
     };
-	
+
 	// put the lights on the hatchback in the appropriate location
 	if(_van) then {
 		_offsetMultiplier = 0.072;
@@ -280,7 +276,7 @@ while {_modeChanged && !isNil "_vehicle" && !isNull _vehicle && _vehicle getVari
 
 		[true, "red", [-0.4, -1.2, 0.55]] call _attachLight;
 		[false, "blue", [0.4, -1.2, 0.55]] call _attachLight;
-		
+
 		[true, "red", [0.95, -4.25, -0.75]] call _attachLight;
 		[false, "blue", [-0.95, -4.25, -0.75]] call _attachLight;
 
@@ -301,7 +297,7 @@ while {_modeChanged && !isNil "_vehicle" && !isNull _vehicle && _vehicle getVari
 
 		[true, "red", [-0.5, 1.3, 0.4]] call _attachLight;
 		[false, "blue", [0.5, 1.3, 0.4]] call _attachLight;
-		
+
 		[true, "red", [0.75, -3.2, 0.03]] call _attachLight;
 		[false, "blue", [-0.75, -3.2, 0.03]] call _attachLight;
 
@@ -419,9 +415,9 @@ while {_modeChanged && !isNil "_vehicle" && !isNull _vehicle && _vehicle getVari
 	};
 
 	_modeChanged = false;
-	
+
 	_vehicle setVariable ["modeChange", false, false];
-	
+
 	//Sets that the lights are currently still on
 	_vehicle setVariable ["lightsActive", true, false];
 
@@ -458,12 +454,12 @@ while {_modeChanged && !isNil "_vehicle" && !isNull _vehicle && _vehicle getVari
 		{
 			(_x select 0) setLightBrightness 0;
 		} forEach _betaLights;
-				
+
 		// has someone changed our lighting mode?
 		_daytime = daytime;
 		_modeChanged = ((_daytime >= 18.5 || (_daytime >= 0.0 && _daytime <= 5.5)) && _isDaytime) || (!(_daytime >= 18.5 || (_daytime >= 0.0 && _daytime <= 5.5)) && !_isDaytime) || (_vehicle getVariable ["modeChange",false]);
 	};
-	
+
 	//Sets that all the lights have shut off.
 	_vehicle setVariable ["lightsActive", false, false]; // set the vehicle's lights variable locally
 

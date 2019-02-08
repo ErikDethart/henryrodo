@@ -1,10 +1,7 @@
-/*
-	File: fn_clothing_kart.sqf
-	Author: Bryan "Tonic" Boardwine
+//	File: fn_clothing_kart.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Master configuration file for Bobby's Kart Racing Outfits
 
-	Description:
-	Master configuration file for Bobby's Kart Racing Outfits
-*/
 private["_filter"];
 _filter = [_this,0,0,[0]] call BIS_fnc_param;
 //Classname, Custom Display name (use nil for Cfg->DisplayName, price

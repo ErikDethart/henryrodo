@@ -1,11 +1,6 @@
-/*
-	File: fn_saveGear.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Saves the player / cops gear in a formatted array.
-*/
-
+//	File: fn_saveGear.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Saves the player / cops gear in a formatted array.
 if (life_deadSWAT || isServer) exitWith {};
 
 private["_primary","_handgun","_magazines","_uniform","_vest","_backpack","_items","_primitems","_secitems","_handgunitems","_uitems","_vitems","_bitems","_curWep"];

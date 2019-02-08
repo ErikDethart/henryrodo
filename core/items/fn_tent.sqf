@@ -1,10 +1,6 @@
-/*
-	File: fn_tent.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Plants a tent down near the player.
-*/
+//	File: fn_tent.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Plants a tent down near the player.
 private["_unit"];
 _item = _this select 0;
 _unit = cursorTarget;

@@ -1,10 +1,6 @@
-/*
-	File: fn_pickupOil.sqf
-	Author: Alan
-
-	Description:
-	Pickup oil barrel for transport.
-*/
+//	File: fn_pickupOil.sqf
+//	Author: Alan
+//	Description: Pickup oil barrel for transport.
 
 _barrel = cursorTarget;
 if (isNull _barrel) exitWith {};

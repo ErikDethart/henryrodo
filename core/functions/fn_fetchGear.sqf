@@ -1,12 +1,7 @@
-/*
-	Copyright © 2013 Bryan "Tonic" Boardwine, All rights reserved
-	See http://armafiles.info/life/list.txt for servers that are permitted to use this code.
-	File: fn_fetchGear.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Fetches the players current gear and returns it in the correct formatted array.
-*/
+//	File: fn_fetchGear.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Fetches the players current gear and returns it in the correct formatted array.
+
 private["_primary,_launcher","_handgun","_magazines","_uniform","_vest","_backpack","_items","_primitems","_secitems","_handgunitems","_uitems","_vitems","_bitems","_headgear","_goggles"];
 _primitems = [];
 _secitems = [];
@@ -29,7 +24,7 @@ _bitems = [];
 if(_uniform != "") then {{_uitems set[count _uitems,_x];} foreach (uniformItems player);};
 if(_vest != "") then {{_vitems set[count _vitems,_x];} foreach (vestItems player);};
 if(_backpack != "") then {{_bitems set[count _bitems,_x];} foreach (backPackItems player);};
-	
+
 if(primaryWeapon player != "") then
 {
 	if (count (primaryWeaponMagazine player) > 0) then

@@ -1,10 +1,7 @@
-/*
-	File: fn_createGroup.sqf
-	Author: Bryan "Tonic" Boardwine
-	
-	Description:
-	Functionality meant for creating groups.
-*/
+//	File: fn_createGroup.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Functionality meant for creating groups.
+
 private["_value","_len","_group"];
 _value = ctrlText 2522;
 _len = [_value] call KRON_StrLen;

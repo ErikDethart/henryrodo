@@ -1,11 +1,9 @@
-/*
-	File: fn_dropItems.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Called on death, player drops any 'virtual' items they may be carrying.
-	Needs redone very badly, when I'm not too lazy.
-*/
+//	File: fn_dropItems.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description:
+//	Called on death, player drops any 'virtual' items they may be carrying.
+//	Needs redone very badly, when I'm not too lazy.
+
 if (life_corruptData) exitWith { hint "YOUR PLAYER DATA IS DAMAGED. You must log out to the lobby and rejoin. Your progress will not save until you do this. Most likely caused by a script-kiddie." };
 params [
     ["_unit",objNull,[objNull]],
@@ -52,7 +50,7 @@ life_last_transfer = time;
 	};
 	_itemShort = [_item,1] call life_fnc_varHandle;
 	_weight = ([_itemShort] call life_fnc_itemWeight) * _value;
-	
+
 	_model = switch(_item) do
 	{
 		case "life_inv_saltwater";
@@ -116,10 +114,10 @@ life_last_transfer = time;
 		case "life_inv_bank_money": { "Land_Money_F" };
 		default { "Land_Suitcase_F" };
 	};
-	
+
 	if (_item == "life_inv_dirty_money" && life_inv_dirty_money > 0) then {[223, _unit, format["Dropped Dirty Money: $%1 ", _value ]] remoteExecCall ["ASY_fnc_logIt",2]; };
 	if (_item == "life_inv_bank_money" && life_inv_bank_money > 0) then {[223, _unit, format["Dropped Banded Bank Notes: $%1 ", _value ]] remoteExecCall ["ASY_fnc_logIt",2]; };
-	
+
 	if ((_value > 0) && !(_item in ["life_inv_debitcard","life_money"])) then
 	{
 		_var = [_item,1] call life_fnc_varHandle;
@@ -137,7 +135,7 @@ life_last_transfer = time;
 		missionNamespace setVariable[_x,(_total - _value)];
 		life_carryWeight = life_carryWeight - _weight;
 	};
-	
+
 } foreach _data;
 
 if (life_money > 0 && _death && (playerSide != west)) then
@@ -160,7 +158,7 @@ if (life_money > 0 && _death && (playerSide != west)) then
 	if (_inVeh) then {
 		_pos set[2,0];
 	};
-	
+
 	[_pos, [(_x select 0), (_x select 1), (_x select 2)]] spawn{
 		private _skull = createVehicle ["Land_HumanSkull_F", (_this select 0), [], 2, "CAN_COLLIDE"];
 		waitUntil{!isNull _skull};

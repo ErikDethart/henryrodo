@@ -1,11 +1,6 @@
- /*
-	File: fn_initCop.sqf
-	Author: Bryan "Tonic" Boardwine
-
-	Description:
-	Cop Initialization file.
-*/
-
+//	File: fn_initCop.sqf
+//	Author: Bryan "Tonic" Boardwine
+//	Description: Cop Initialization file.
 life_maxTalents = switch (life_configuration select 12) do {
 	case 1:{21};
 	case 2:{22};

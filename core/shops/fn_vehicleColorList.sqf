@@ -1,10 +1,5 @@
-/*
-	File: fn_vehicleColorList.sqf
-	Author: Bryan "Tonic" Boardwine & John "Paratus" VanderZwet
-
-	Description:
-	FUCK I DON"T KNOW!
-*/
+//	File: fn_vehicleColorList.sqf
+//	Author: Bryan "Tonic" Boardwine & John "Paratus" VanderZwet
 private["_index","_veh","_text","_c_arr","_donation_req","_forceCiv","_indexId","_comboId"];
 
 _indexId = [_this,0,2302,[0]] call BIS_fnc_param;

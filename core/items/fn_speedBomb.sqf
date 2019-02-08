@@ -1,10 +1,6 @@
-/*
-	File: fn_speedBomb.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Attaches a speed bomb to a vehicle.
-*/
+//	File: fn_speedBomb.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Attaches a speed bomb to a vehicle.
 private["_unit"];
 _unit = cursorTarget;
 
@@ -26,7 +22,7 @@ life_action_in_use = false;
 if(player distance _unit > 7) exitWith {titleText["The vehicle moved too far away to arm the speedbomb!","PLAIN"];[true,"speedbomb",1] call life_fnc_handleInv};
 
 titleText["You have attached an armed speed bomb to this vehicle.","PLAIN"];
-life_experience = life_experience + 25; 
+life_experience = life_experience + 25;
 
 [_unit] spawn
 {

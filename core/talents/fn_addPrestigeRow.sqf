@@ -1,11 +1,6 @@
-/*
-	File: fn_addPrestigeRow.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Recursive function to add tree row to list control.
-*/
-
+//	File: fn_addPrestigeRow.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Recursive function to add tree row to list control.
 private["_label","_list","_parent","_depth","_id","_i","_d"];
 
 _list = [_this,0,controlNull,[controlNull]] call BIS_fnc_param;

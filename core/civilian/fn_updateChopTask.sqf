@@ -1,11 +1,6 @@
-/*
-	File: fn_updateChopTask.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Update tasking based on chop shop status!
-*/
-
+//	File: fn_updateChopTask.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Update tasking based on chop shop status!
 private ["_msg","_showHint","_names"];
 
 _showHint = [_this,0,true,[true]] call BIS_fnc_param;

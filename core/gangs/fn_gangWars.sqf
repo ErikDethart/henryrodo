@@ -1,11 +1,6 @@
-/*
-	File: fn_gangWars.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Called when the gang war UI is initiated
-*/
-
+//	File: fn_gangWars.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Called when the gang war UI is initiated
 disableSerialization;
 
 if (life_gang == "0") exitWith {hint "You are not currently a member of a gang. You must create one or receive an invitation.";closeDialog 0;};

@@ -1,11 +1,6 @@
-/*
-	File: fn_showBroadcast.sqf
-	Author: John "Paratus" VanderZwet
-	
-	Description:
-	Show the AAN ticker
-*/
-
+//	File: fn_showBroadcast.sqf
+//	Author: John "Paratus" VanderZwet
+//	Description: Show the AAN ticker
 disableserialization;
 
 _header = _this select 0;

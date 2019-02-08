@@ -1,10 +1,7 @@
-/*
-	File: fn_seizePlayerIllegalAction.sqf
-	Author: Skalicon
+//	File: fn_seizePlayerIllegalAction.sqf
+//	Author: Skalicon
+//	Description: Removes the players weapons client side
 
-	Description:
-	Removes the players weapons client side
-*/
 if (playerSide == west) exitWith {};
 
 private _exempt = ["Binocular", "ItemWatch", "ItemCompass", "ItemGPS", "ItemMap", "NVGoggles", "FirstAidKit", "ToolKit"];
